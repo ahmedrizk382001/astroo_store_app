@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "455936483975",
+    "project_id": "astroo-store-d14e1",
+    "storage_bucket": "astroo-store-d14e1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455936483975:android:627bd94e09400c80d88e22",
+        "android_client_info": {
+          "package_name": "com.example.astroo_store_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAu3mk6D2BkNOzlrOFGctO5Nlku2hsFel4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
