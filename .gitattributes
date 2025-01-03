@@ -1,5 +1,10 @@
+# Exclude C++ files from language detection
 *.cpp linguist-vendored
 *.h linguist-vendored
-* linguist-language=Dart
+
+# Exclude CMake files from language detection
 CMakeLists.txt linguist-vendored
 *.cmake linguist-vendored
+
+# Explicitly set Dart as the main language
+* linguist-language=Dart
