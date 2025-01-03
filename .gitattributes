@@ -1,11 +1,11 @@
-# Exclude C++ files from language detection
+# Exclude all C++ files from language detection
 *.cpp linguist-vendored
 *.h linguist-vendored
 
-# Exclude CMake files from language detection
+# Exclude all CMake files from language detection
 CMakeLists.txt linguist-vendored
 *.cmake linguist-vendored
-**/*.cmake linguist-vendored  # Ensure all cmake files are excluded
+**/*.cmake linguist-vendored  # Catch-all for any cmake files in subdirectories
 
 # Explicitly set Dart as the main language
 * linguist-language=Dart
