@@ -4,19 +4,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AuthButton extends StatelessWidget {
-  const AuthButton({super.key, required this.buttonText});
+  const AuthButton(
+      {super.key, required this.buttonText, required this.onPressed});
 
   final String buttonText;
+  final void Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
       child: CustomLinearButton(
-        onPressed: () {},
+        onPressed: onPressed,
         padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 12.h),
         child: Text(
-          "Login",
+          buttonText.toUpperCase(),
           style: AppTextStyles.font14Bold(context),
         ),
       ),

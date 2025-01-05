@@ -4,14 +4,14 @@ import 'package:astroo_store_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class LoginFields extends StatefulWidget {
-  const LoginFields({super.key});
+class RegisterFields extends StatefulWidget {
+  const RegisterFields({super.key});
 
   @override
-  State<LoginFields> createState() => _LoginFieldsState();
+  State<RegisterFields> createState() => _RegisterFieldsState();
 }
 
-class _LoginFieldsState extends State<LoginFields> {
+class _RegisterFieldsState extends State<RegisterFields> {
   bool isPasswordShown = false;
 
   @override
@@ -19,6 +19,13 @@ class _LoginFieldsState extends State<LoginFields> {
     return Form(
       child: Column(
         children: [
+          CustomTextField(
+            controller: TextEditingController(),
+            hintText: S.of(context).full_name,
+          ),
+          SizedBox(
+            height: 24.h,
+          ),
           CustomTextField(
             controller: TextEditingController(),
             hintText: S.of(context).your_email,

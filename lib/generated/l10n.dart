@@ -80,6 +80,16 @@ class S {
     );
   }
 
+  /// `Login Now`
+  String get login_now {
+    return Intl.message(
+      'Login Now',
+      name: 'login_now',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Welcome, Please enter your email and get started.`
   String get welcome {
     return Intl.message(
@@ -150,10 +160,10 @@ class S {
     );
   }
 
-  /// `Create account`
+  /// `Create one`
   String get create_account {
     return Intl.message(
-      'Create account',
+      'Create one',
       name: 'create_account',
       desc: '',
       args: [],
@@ -180,11 +190,21 @@ class S {
     );
   }
 
-  /// `You have an account?`
-  String get you_have_account {
+  /// `Don't have an account?`
+  String get dont_have_account {
     return Intl.message(
-      'You have an account?',
-      name: 'you_have_account',
+      'Don\'t have an account?',
+      name: 'dont_have_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already have an account?`
+  String get already_have_account {
+    return Intl.message(
+      'Already have an account?',
+      name: 'already_have_account',
       desc: '',
       args: [],
     );

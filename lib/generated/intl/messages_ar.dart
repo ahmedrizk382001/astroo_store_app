@@ -22,6 +22,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "already_have_account":
+            MessageLookupByLibrary.simpleMessage("لديك حساب بالفعل؟"),
         "app_name": MessageLookupByLibrary.simpleMessage("متجر آسرو"),
         "application_features":
             MessageLookupByLibrary.simpleMessage("مميزات التطبيق"),
@@ -34,6 +36,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("اختر منتجاتك آلان"),
         "create_account": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
         "dark_mode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
+        "dont_have_account":
+            MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "full_name": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
         "image_removed": MessageLookupByLibrary.simpleMessage("تم مسح الصورة"),
         "image_uploaded":
@@ -49,6 +53,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "logged_successfully":
             MessageLookupByLibrary.simpleMessage("تم تسجيل الدخول بنجاح"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "login_now": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "no": MessageLookupByLibrary.simpleMessage("لا"),
         "notifications": MessageLookupByLibrary.simpleMessage("إشعارات"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
@@ -72,7 +77,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "welcome": MessageLookupByLibrary.simpleMessage(
             "مرحباً! الرجاء إدخال بريدك إلكتروني والبدء."),
         "yes": MessageLookupByLibrary.simpleMessage("نعم"),
-        "you_have_account": MessageLookupByLibrary.simpleMessage("لديك حساب "),
         "your_email": MessageLookupByLibrary.simpleMessage("بريدك الالكتروني")
       };
 }

@@ -22,6 +22,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "already_have_account":
+            MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "app_name": MessageLookupByLibrary.simpleMessage("Asroo Store"),
         "application_features":
             MessageLookupByLibrary.simpleMessage("Application Features"),
@@ -33,9 +35,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Do you want to confirm the language change to Arabic?"),
         "choose_products":
             MessageLookupByLibrary.simpleMessage("Choose Your Products"),
-        "create_account":
-            MessageLookupByLibrary.simpleMessage("Create account"),
+        "create_account": MessageLookupByLibrary.simpleMessage("Create one"),
         "dark_mode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
+        "dont_have_account":
+            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "full_name": MessageLookupByLibrary.simpleMessage("Full Name"),
         "image_removed":
             MessageLookupByLibrary.simpleMessage("The image has been Deleted."),
@@ -52,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "logged_successfully": MessageLookupByLibrary.simpleMessage(
             "You have been logged in successfully"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "login_now": MessageLookupByLibrary.simpleMessage("Login Now"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
         "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
@@ -75,8 +79,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "welcome": MessageLookupByLibrary.simpleMessage(
             "Welcome, Please enter your email and get started."),
         "yes": MessageLookupByLibrary.simpleMessage("Yes"),
-        "you_have_account":
-            MessageLookupByLibrary.simpleMessage("You have an account?"),
         "your_email": MessageLookupByLibrary.simpleMessage("Your Email")
       };
 }
