@@ -1,3 +1,4 @@
+import 'package:astroo_store_app/core/shared/animations/animation_do.dart';
 import 'package:astroo_store_app/core/shared/widgets/custom_linear_button.dart';
 import 'package:astroo_store_app/core/styles/fonts/app_text_styles.dart';
 import 'package:flutter/material.dart';
@@ -14,12 +15,15 @@ class AuthButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      child: CustomLinearButton(
-        onPressed: onPressed,
-        padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 12.h),
-        child: Text(
-          buttonText.toUpperCase(),
-          style: AppTextStyles.font14Bold(context),
+      child: CustomFadeInDown(
+        duration: animationDuration,
+        child: CustomLinearButton(
+          onPressed: onPressed,
+          padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 12.h),
+          child: Text(
+            buttonText.toUpperCase(),
+            style: AppTextStyles.font14Bold(context),
+          ),
         ),
       ),
     );

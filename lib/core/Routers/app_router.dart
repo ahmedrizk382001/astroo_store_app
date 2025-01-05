@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 class AppRouter {
   static Route? generateRoute(RouteSettings routeSettings) {
     //this arguments to be passed in any screen like this ( arguments as ClassName )
-    final arguments = routeSettings.arguments;
 
     switch (routeSettings.name) {
       case Routers.login:

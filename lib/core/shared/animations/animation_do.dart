@@ -1,5 +1,9 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:astroo_store_app/core/helpers/shared_pref/shared_pref.dart';
+import 'package:astroo_store_app/core/helpers/shared_pref/shared_pref_keys.dart';
 import 'package:flutter/material.dart';
+
+int animationDuration = 200;
 
 class CustomFadeInDown extends StatelessWidget {
   const CustomFadeInDown({
@@ -14,11 +18,17 @@ class CustomFadeInDown extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FadeInDown(
-      delay: const Duration(milliseconds: 300),
-      duration: Duration(milliseconds: duration),
-      child: child,
-    );
+    return SharedPref.instance.getValue<String>(SharedPrefKeys.language) == 'ar'
+        ? FadeInDown(
+            delay: const Duration(milliseconds: 200),
+            duration: Duration(milliseconds: duration),
+            child: child,
+          )
+        : FadeInUp(
+            delay: const Duration(milliseconds: 200),
+            duration: Duration(milliseconds: duration),
+            child: child,
+          );
   }
 }
 
@@ -35,11 +45,17 @@ class CustomFadeInUp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FadeInUp(
-      delay: const Duration(milliseconds: 300),
-      duration: Duration(milliseconds: duration),
-      child: child,
-    );
+    return SharedPref.instance.getValue<String>(SharedPrefKeys.language) == 'ar'
+        ? FadeInUp(
+            delay: const Duration(milliseconds: 200),
+            duration: Duration(milliseconds: duration),
+            child: child,
+          )
+        : FadeInDown(
+            delay: const Duration(milliseconds: 200),
+            duration: Duration(milliseconds: duration),
+            child: child,
+          );
   }
 }
 
@@ -56,22 +72,17 @@ class CustomFadeInLeft extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FadeInLeft(
-      delay: const Duration(milliseconds: 300),
-      duration: Duration(milliseconds: duration),
-      child: child,
-    );
-    // return SharedPref().getString(PrefKeys.language) == 'ar'
-    //     ? FadeInLeft(
-    //         delay: const Duration(milliseconds: 300),
-    //         duration: Duration(milliseconds: duration),
-    //         child: child,
-    //       )
-    //     : FadeInRight(
-    //         delay: const Duration(milliseconds: 300),
-    //         duration: Duration(milliseconds: duration),
-    //         child: child,
-    //       );
+    return SharedPref.instance.getValue<String>(SharedPrefKeys.language) == 'ar'
+        ? FadeInLeft(
+            delay: const Duration(milliseconds: 300),
+            duration: Duration(milliseconds: duration),
+            child: child,
+          )
+        : FadeInRight(
+            delay: const Duration(milliseconds: 300),
+            duration: Duration(milliseconds: duration),
+            child: child,
+          );
   }
 }
 
@@ -88,21 +99,16 @@ class CustomFadeInRight extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FadeInRight(
-      delay: const Duration(milliseconds: 300),
-      duration: Duration(milliseconds: duration),
-      child: child,
-    );
-    // return SharedPref().getString(PrefKeys.language) == 'ar'
-    //     ? FadeInRight(
-    //         delay: const Duration(milliseconds: 300),
-    //         duration: Duration(milliseconds: duration),
-    //         child: child,
-    //       )
-    //     : FadeInLeft(
-    //         delay: const Duration(milliseconds: 300),
-    //         duration: Duration(milliseconds: duration),
-    //         child: child,
-    //       );
+    return SharedPref.instance.getValue<String>(SharedPrefKeys.language) == 'ar'
+        ? FadeInRight(
+            delay: const Duration(milliseconds: 300),
+            duration: Duration(milliseconds: duration),
+            child: child,
+          )
+        : FadeInLeft(
+            delay: const Duration(milliseconds: 300),
+            duration: Duration(milliseconds: duration),
+            child: child,
+          );
   }
 }

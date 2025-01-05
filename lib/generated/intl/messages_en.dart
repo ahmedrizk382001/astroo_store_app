@@ -40,6 +40,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "dont_have_account":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "full_name": MessageLookupByLibrary.simpleMessage("Full Name"),
+        "has_lower_case":
+            MessageLookupByLibrary.simpleMessage("At least 1 lowercase letter"),
+        "has_min_lenght":
+            MessageLookupByLibrary.simpleMessage("At least 8 characters long"),
+        "has_one_number":
+            MessageLookupByLibrary.simpleMessage("At least 1 number"),
+        "has_special_char": MessageLookupByLibrary.simpleMessage(
+            "At least 1 special character"),
+        "has_upper_case":
+            MessageLookupByLibrary.simpleMessage("At least 1 uppercase letter"),
         "image_removed":
             MessageLookupByLibrary.simpleMessage("The image has been Deleted."),
         "image_uploaded": MessageLookupByLibrary.simpleMessage(

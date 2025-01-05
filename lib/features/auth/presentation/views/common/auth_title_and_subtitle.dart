@@ -1,3 +1,4 @@
+import 'package:astroo_store_app/core/shared/animations/animation_do.dart';
 import 'package:astroo_store_app/core/styles/fonts/app_text_styles.dart';
 import 'package:astroo_store_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -11,21 +12,24 @@ class AuthTitleAndSubtitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(
-          title.toUpperCase(),
-          style: AppTextStyles.font32Bold(context),
-        ),
-        SizedBox(
-          height: 8.h,
-        ),
-        Text(
-          subTitle,
-          textAlign: TextAlign.center,
-          style: AppTextStyles.font13Regular(context),
-        ),
-      ],
+    return CustomFadeInDown(
+      duration: animationDuration,
+      child: Column(
+        children: [
+          Text(
+            title.toUpperCase(),
+            style: AppTextStyles.font32Bold(context),
+          ),
+          SizedBox(
+            height: 8.h,
+          ),
+          Text(
+            subTitle,
+            textAlign: TextAlign.center,
+            style: AppTextStyles.font13Regular(context),
+          ),
+        ],
+      ),
     );
   }
 }

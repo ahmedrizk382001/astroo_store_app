@@ -39,6 +39,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "dont_have_account":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "full_name": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
+        "has_lower_case":
+            MessageLookupByLibrary.simpleMessage("على الأقل حرف صغير واحد"),
+        "has_min_lenght":
+            MessageLookupByLibrary.simpleMessage("لا يقل عن 8 أحرف"),
+        "has_one_number":
+            MessageLookupByLibrary.simpleMessage("على الأقل رقم واحد"),
+        "has_special_char":
+            MessageLookupByLibrary.simpleMessage("على الأقل رمز خاص واحد"),
+        "has_upper_case":
+            MessageLookupByLibrary.simpleMessage("على الأقل حرف كبير واحد"),
         "image_removed": MessageLookupByLibrary.simpleMessage("تم مسح الصورة"),
         "image_uploaded":
             MessageLookupByLibrary.simpleMessage("تم تحميل الصورة بنجاح"),

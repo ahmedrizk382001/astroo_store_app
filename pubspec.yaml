@@ -34,11 +34,15 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-  firebase_core: ^3.9.0
-  flutter_launcher_icons: ^0.14.2
-  flutter_native_splash: ^2.4.4
-  flutter_screenutil: ^5.9.3
-  animate_do: ^3.3.4
+  firebase_core: ^3.9.0 # Core Firebase package for Flutter, required to initialize Firebase services.
+  flutter_launcher_icons: ^0.14.2 # A package to generate launcher icons for your Flutter app.
+  flutter_native_splash: ^2.4.4 # Adds a native splash screen to your Flutter app for a better user experience during app startup.
+  flutter_screenutil: ^5.9.3 # A package for responsive and adaptive UI design, supports different screen sizes and resolutions.
+  animate_do: ^3.3.4 # Provides pre-built, customizable animations for Flutter widgets.
+  freezed: ^2.5.7 # Code generator for immutable classes and union types in Dart.
+  freezed_annotation: ^2.4.4
+  flutter_bloc: ^8.1.6 # State management library using the BLoC (Business Logic Component) pattern.
+  shared_preferences: ^2.3.5 # Enables storing key-value pairs locally on the user's device for small amounts of persistent data.
 
 dev_dependencies:
   flutter_test:
@@ -52,6 +56,9 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
+  build_runner: ^2.4.14
+  # to generate code use the below command
+  # dart run build_runner build --delete-conflicting-outputs
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
