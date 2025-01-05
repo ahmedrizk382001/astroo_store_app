@@ -210,6 +210,56 @@ class S {
     );
   }
 
+  /// `At least 1 lowercase letter`
+  String get has_lower_case {
+    return Intl.message(
+      'At least 1 lowercase letter',
+      name: 'has_lower_case',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `At least 1 uppercase letter`
+  String get has_upper_case {
+    return Intl.message(
+      'At least 1 uppercase letter',
+      name: 'has_upper_case',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `At least 1 special character`
+  String get has_special_char {
+    return Intl.message(
+      'At least 1 special character',
+      name: 'has_special_char',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `At least 1 number`
+  String get has_one_number {
+    return Intl.message(
+      'At least 1 number',
+      name: 'has_one_number',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `At least 8 characters long`
+  String get has_min_lenght {
+    return Intl.message(
+      'At least 8 characters long',
+      name: 'has_min_lenght',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Full Name`
   String get full_name {
     return Intl.message(
