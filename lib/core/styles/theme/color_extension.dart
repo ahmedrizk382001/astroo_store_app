@@ -1,7 +1,7 @@
 import 'package:astroo_store_app/core/styles/colors/light_theme_colors.dart';
 import 'package:flutter/material.dart';
 
-import '../styles/colors/dark_theme_colors.dart';
+import '../colors/dark_theme_colors.dart';
 
 class ColorExtension extends ThemeExtension<ColorExtension> {
   const ColorExtension({
