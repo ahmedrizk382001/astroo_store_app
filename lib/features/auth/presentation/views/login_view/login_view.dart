@@ -11,7 +11,7 @@ class LoginView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CustomPaint(
-        size: Size(double.infinity, 150.h),
+        size: Size(double.infinity, 50.h),
         painter: AuthCustomPainter(
             gradient: LinearGradient(
                 begin: Alignment.topCenter,

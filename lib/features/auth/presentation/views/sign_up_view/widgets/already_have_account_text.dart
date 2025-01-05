@@ -3,9 +3,10 @@ import 'package:astroo_store_app/core/extensions/context_extension.dart';
 import 'package:astroo_store_app/core/styles/fonts/app_text_styles.dart';
 import 'package:astroo_store_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class CreateAccountText extends StatelessWidget {
-  const CreateAccountText({super.key});
+class AlreadyHaveAccountText extends StatelessWidget {
+  const AlreadyHaveAccountText({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,20 +15,21 @@ class CreateAccountText extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          S.of(context).dont_have_account,
+          S.of(context).already_have_account,
           style: AppTextStyles.font14Regular(context).copyWith(
             color: context.color.textColor,
           ),
         ),
         TextButton(
           onPressed: () {
-            context.pushNamedAndRemoveUntil(Routers.signUp);
+            context.pushNamedAndRemoveUntil(Routers.login);
           },
           style: ButtonStyle(
-            padding: WidgetStatePropertyAll(EdgeInsets.all(8)),
+            padding: WidgetStatePropertyAll(
+                EdgeInsets.symmetric(horizontal: 8.w, vertical: 8.h)),
           ),
           child: Text(
-            S.of(context).create_account,
+            S.of(context).login_now,
             style: AppTextStyles.font14Bold(context).copyWith(
               color: context.color.bluePinkLight,
             ),

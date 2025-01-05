@@ -3,22 +3,25 @@ import 'package:astroo_store_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class LoginTitleAndSubtitle extends StatelessWidget {
-  const LoginTitleAndSubtitle({super.key});
+class AuthTitleAndSubtitle extends StatelessWidget {
+  const AuthTitleAndSubtitle(
+      {super.key, required this.title, required this.subTitle});
+
+  final String title, subTitle;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Text(
-          S.of(context).login,
+          title.toUpperCase(),
           style: AppTextStyles.font32Bold(context),
         ),
         SizedBox(
           height: 8.h,
         ),
         Text(
-          S.of(context).welcome,
+          subTitle,
           textAlign: TextAlign.center,
           style: AppTextStyles.font13Regular(context),
         ),
