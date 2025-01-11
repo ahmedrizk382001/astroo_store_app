@@ -1,6 +1,6 @@
-import 'package:astroo_store_app/features/auth/presentation/views/common/auth_button.dart';
 import 'package:astroo_store_app/features/auth/presentation/views/login_view/widgets/create_account_text.dart';
 import 'package:astroo_store_app/features/auth/presentation/views/common/light_mode_and_language.dart';
+import 'package:astroo_store_app/features/auth/presentation/views/login_view/widgets/login_button.dart';
 import 'package:astroo_store_app/features/auth/presentation/views/login_view/widgets/login_fields.dart';
 import 'package:astroo_store_app/features/auth/presentation/views/common/auth_title_and_subtitle.dart';
 import 'package:astroo_store_app/generated/l10n.dart';
@@ -34,10 +34,7 @@ class LoginBody extends StatelessWidget {
             SizedBox(
               height: 32.h,
             ),
-            AuthButton(
-              buttonText: S.of(context).login,
-              onPressed: () {},
-            ),
+            LoginButton(),
             SizedBox(
               height: 32.h,
             ),

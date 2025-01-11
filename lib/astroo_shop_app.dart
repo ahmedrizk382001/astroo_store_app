@@ -1,5 +1,6 @@
 import 'package:astroo_store_app/core/Routers/app_router.dart';
 import 'package:astroo_store_app/core/Routers/routers.dart';
+import 'package:astroo_store_app/core/di/dependency_injection.dart';
 import 'package:astroo_store_app/core/helpers/shared_pref/shared_pref.dart';
 import 'package:astroo_store_app/core/helpers/shared_pref/shared_pref_keys.dart';
 import 'package:astroo_store_app/core/shared/app_cubit/app_settings_cubit_cubit.dart';
@@ -20,11 +21,9 @@ class AstrooShopApp extends StatelessWidget {
       designSize: const Size(390, 844),
       minTextAdapt: true,
       child: BlocProvider(
-        create: (context) {
-          return AppSettingsCubit()
-            ..getCurrenTheme()
-            ..getCurrentLanguage();
-        },
+        create: (context) => getIt<AppSettingsCubit>()
+          ..getCurrenTheme()
+          ..getCurrentLanguage(),
         child: BlocBuilder<AppSettingsCubit, AppSettingsState>(
           buildWhen: (previous, current) => previous != current,
           builder: (context, state) {

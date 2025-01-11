@@ -23,9 +23,9 @@ class LoginDataModel {
 
 @JsonSerializable()
 class LoginModel {
-  @JsonKey(name: "access_token")
+  @JsonKey(name: 'access_token')
   final String? accessToken;
-  @JsonKey(name: "refresh_token")
+  @JsonKey(name: 'refresh_token')
   final String? refreshToken;
 
   LoginModel({this.accessToken, this.refreshToken});

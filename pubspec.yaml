@@ -65,6 +65,8 @@ dependencies:
 
   # Logging
   logger: ^2.4.0 # A flexible logging utility for better debug information during development.
+  get_it: ^8.0.3
+  fluttertoast: ^8.2.10
 
 dev_dependencies:
   flutter_test:

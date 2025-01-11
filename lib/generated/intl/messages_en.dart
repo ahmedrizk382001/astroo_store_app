@@ -82,7 +82,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "valid_name":
             MessageLookupByLibrary.simpleMessage("Please enter your full name"),
         "valid_passwrod": MessageLookupByLibrary.simpleMessage(
-            "Please enter a valid password, not less than 6 characters"),
+            "Please enter a valid password"),
         "valid_pick_image": MessageLookupByLibrary.simpleMessage(
             "Please Select Your Image Avatar"),
         "view_all": MessageLookupByLibrary.simpleMessage("View all"),

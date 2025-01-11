@@ -130,10 +130,10 @@ class S {
     );
   }
 
-  /// `Please enter a valid password, not less than 6 characters`
+  /// `Please enter a valid password`
   String get valid_passwrod {
     return Intl.message(
-      'Please enter a valid password, not less than 6 characters',
+      'Please enter a valid password',
       name: 'valid_passwrod',
       desc: '',
       args: [],

@@ -6,13 +6,13 @@ class AuthQueries {
   static AuthQueries instance = AuthQueries._();
 
   static Map<String, dynamic> loginQuery(LoginRequestModel loginRequestModel) {
-    String mutation = r"""
+    String mutation = r'''
       mutation Login($email: String!, $password: String!){
         login(email: $email, password: $password) {
           access_token
           refresh_token
         }
-      }""";
+      }''';
 
     Map<String, dynamic> variables = {
       "email": loginRequestModel.email,

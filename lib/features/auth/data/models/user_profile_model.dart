@@ -14,7 +14,8 @@ part 'user_profile_model.g.dart';
 
 @JsonSerializable()
 class UserProfileModel {
-  final String? id, email, name, role, avatar;
+  final int? id;
+  final String? email, name, role, avatar;
 
   UserProfileModel({this.id, this.email, this.name, this.role, this.avatar});
 

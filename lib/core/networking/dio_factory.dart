@@ -7,45 +7,29 @@ import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 class DioFactory {
   DioFactory._();
 
-  static Dio? dio;
+  static final Dio _dio = Dio();
 
   static Dio getDio() {
     Duration timeOut = const Duration(seconds: 30);
 
-    if (dio == null) {
-      dio = Dio();
-      dio!
-        ..options.connectTimeout = timeOut
-        ..options.receiveTimeout = timeOut;
+    _dio
+      ..options.connectTimeout = timeOut
+      ..options.receiveTimeout = timeOut;
 
-      debugPrint(
-        "[USER Token] ====> ${SharedPref.instance.getSecuredString(SharedPrefKeys.accessToken)}",
-      );
+    debugPrint(
+      "[USER Token] ====> ${SharedPref.instance.getSecuredString(SharedPrefKeys.accessToken)}",
+    );
 
-      addDioInterceptor();
-      return dio!;
-    } else {
-      return dio!;
-    }
-  }
-
-  static void setTokenIntoHeaderAfterLogin(String token) {
-    dio?.options.headers = {
-      'Authorization': 'Bearer $token',
-    };
+    addDioInterceptor();
+    return _dio;
   }
 
   static void addDioInterceptor() {
-    dio!.interceptors.add(PrettyDioLogger(
-      requestBody: true,
-      requestHeader: true,
-      responseHeader: true,
-    ));
-
-    dio!.interceptors.add(InterceptorsWrapper(
+    _dio.interceptors.add(InterceptorsWrapper(
       onRequest: (options, handler) {
         options.headers['Authorization'] =
             "Bearer ${SharedPref.instance.getSecuredString(SharedPrefKeys.accessToken)}";
+        return handler.next(options);
       },
     ));
   }

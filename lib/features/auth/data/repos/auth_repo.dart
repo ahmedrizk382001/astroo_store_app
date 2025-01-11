@@ -3,6 +3,7 @@ import 'package:astroo_store_app/features/auth/data/data_source/auth_data_source
 import 'package:astroo_store_app/features/auth/data/models/login_response_model.dart';
 import 'package:astroo_store_app/features/auth/data/models/user_profile_model.dart';
 import 'package:astroo_store_app/generated/l10n.dart';
+import 'package:flutter/material.dart';
 import '../models/login_request_model.dart';
 
 class AuthRepo {
@@ -17,6 +18,7 @@ class AuthRepo {
           await _authDataSource.login(loginRequestModel: loginRequestModel);
       return ApiResult.success(response);
     } catch (e) {
+      debugPrint("Error in auth repo (login method)");
       return ApiResult.failure(S.current.logged_error);
     }
   }

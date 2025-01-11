@@ -48,7 +48,7 @@ class SharedPref {
     await _preferences.clear();
   }
 
-  Future<void> setSecuredString(String key, String value) async {
+  Future<void> setSecuredString(String key, String? value) async {
     await _storage.write(key: key, value: value);
     debugPrint(
         "FlutterSecureStorage : setSecuredString with key : $key and value : $value");
