@@ -31,13 +31,13 @@ class AuthCubit extends Cubit<AuthState> {
 
     response.when(
       success: (result) async {
-        var token = result.data.login.accessToken ?? '';
+        var token = result.data.login.accessToken;
 
         debugPrint("Access token is =>>>>>>>>> $token");
 
         await _sharedPref.setSecuredString(SharedPrefKeys.accessToken, token);
 
-        await getUserDate(token: token);
+        await getUserDate(token: token!);
 
         emit(AuthState.loginSuccess(loginResponseModel: result));
       },

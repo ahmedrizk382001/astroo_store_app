@@ -1,8 +1,7 @@
 import 'package:astroo_store_app/core/Routers/app_router.dart';
 import 'package:astroo_store_app/core/Routers/routers.dart';
 import 'package:astroo_store_app/core/di/dependency_injection.dart';
-import 'package:astroo_store_app/core/helpers/shared_pref/shared_pref.dart';
-import 'package:astroo_store_app/core/helpers/shared_pref/shared_pref_keys.dart';
+
 import 'package:astroo_store_app/core/shared/app_cubit/app_settings_cubit_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -14,36 +13,78 @@ import 'generated/l10n.dart';
 class AstrooShopApp extends StatelessWidget {
   const AstrooShopApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: const Size(390, 844),
       minTextAdapt: true,
       child: BlocProvider(
-        create: (context) => getIt<AppSettingsCubit>()
+        create: (_) => getIt<AppSettingsCubit>()
           ..getCurrenTheme()
           ..getCurrentLanguage(),
-        child: BlocBuilder<AppSettingsCubit, AppSettingsState>(
-          buildWhen: (previous, current) => previous != current,
-          builder: (context, state) {
-            var appCubit = context.read<AppSettingsCubit>();
-            return MaterialApp(
-              debugShowCheckedModeBanner: false,
-              theme: appCubit.isDark ? darkTheme() : lightTheme(),
-              locale: Locale(appCubit.language),
-              localizationsDelegates: _localizationDelegateList,
-              supportedLocales: S.delegate.supportedLocales,
-              onGenerateRoute: AppRouter.generateRoute,
-              initialRoute: Routers.login,
-            );
-          },
-        ),
+        child: const _AppSettingsHandler(),
       ),
     );
   }
+}
 
-  List<LocalizationsDelegate<dynamic>> get _localizationDelegateList {
+class _AppSettingsHandler extends StatelessWidget {
+  const _AppSettingsHandler();
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocBuilder<AppSettingsCubit, AppSettingsState>(
+      buildWhen: (previous, current) => previous != current,
+      builder: (context, state) {
+        return const _InitialRouteResolver();
+      },
+    );
+  }
+}
+
+class _InitialRouteResolver extends StatelessWidget {
+  const _InitialRouteResolver();
+
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<String?>(
+      future: AppRouter.initialRoute(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Center(child: CircularProgressIndicator());
+        }
+        if (snapshot.hasError) {
+          return Center(child: Text('Error: ${snapshot.error}'));
+        }
+
+        final initialRoute = snapshot.data ?? Routers.login;
+        return _AstrooMaterialApp(initialRoute: initialRoute);
+      },
+    );
+  }
+}
+
+class _AstrooMaterialApp extends StatelessWidget {
+  final String initialRoute;
+
+  const _AstrooMaterialApp({required this.initialRoute});
+
+  @override
+  Widget build(BuildContext context) {
+    final appCubit = context.read<AppSettingsCubit>();
+
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: appCubit.isDark ? darkTheme() : lightTheme(),
+      locale: Locale(appCubit.language),
+      localizationsDelegates: _localizationDelegateList,
+      supportedLocales: S.delegate.supportedLocales,
+      onGenerateRoute: AppRouter.generateRoute,
+      initialRoute: initialRoute,
+    );
+  }
+
+  static List<LocalizationsDelegate<dynamic>> get _localizationDelegateList {
     return [
       S.delegate,
       GlobalMaterialLocalizations.delegate,
