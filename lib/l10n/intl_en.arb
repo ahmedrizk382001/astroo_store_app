@@ -20,6 +20,8 @@
     "has_special_char" : "At least 1 special character",
     "has_one_number" : "At least 1 number",
     "has_min_lenght" : "At least 8 characters long",
+    "signed_up_successfully": "You account has been created successfully",
+    "signed_up_error":"An error occured. Try again",
     "full_name": "Full Name",
     "valid_name":"Please enter your full name",
     "valid_pick_image":  "Please Select Your Image Avatar",

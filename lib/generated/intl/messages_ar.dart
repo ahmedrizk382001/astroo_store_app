@@ -70,6 +70,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "sign_up": MessageLookupByLibrary.simpleMessage("آنشاء حساب"),
         "sign_up_welcome": MessageLookupByLibrary.simpleMessage(
             "مرحبا، الرجاء إضافة المعلومات الخاصة بك"),
+        "signed_up_error":
+            MessageLookupByLibrary.simpleMessage("حدث خطأ. حاول مرة أخرى"),
+        "signed_up_successfully":
+            MessageLookupByLibrary.simpleMessage("تم إنشاء حسابك بنجاح"),
         "subscribed_to_notifications":
             MessageLookupByLibrary.simpleMessage("تم الاشتراك في إشعارات"),
         "sure": MessageLookupByLibrary.simpleMessage("تآكيد"),

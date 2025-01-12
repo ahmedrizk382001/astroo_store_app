@@ -18,10 +18,7 @@ class AppRouter {
     switch (routeSettings.name) {
       case Routers.login:
         return MaterialPageRoute(
-          builder: (_) => BlocProvider(
-            create: (context) => getIt<AuthCubit>(),
-            child: LoginView(),
-          ),
+          builder: (_) => LoginView(),
         );
       case Routers.signUp:
         return MaterialPageRoute(

@@ -20,6 +20,8 @@
     "has_special_char": "على الأقل رمز خاص واحد",
     "has_one_number": "على الأقل رقم واحد",
     "has_min_lenght": "لا يقل عن 8 أحرف",
+     "signed_up_successfully": "تم إنشاء حسابك بنجاح",
+    "signed_up_error": "حدث خطأ. حاول مرة أخرى",
     "full_name": "الاسم الكامل",
     "valid_name":"من فضلك إدخال اسمك كاملا",
     "valid_pick_image":  "الرجاء تحديد الصورة الرمزية الخاصة بك",

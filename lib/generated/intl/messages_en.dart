@@ -72,6 +72,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "sign_up": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "sign_up_welcome": MessageLookupByLibrary.simpleMessage(
             "Welcome, Please add your information"),
+        "signed_up_error":
+            MessageLookupByLibrary.simpleMessage("An error occured. Try again"),
+        "signed_up_successfully": MessageLookupByLibrary.simpleMessage(
+            "You account has been created successfully"),
         "subscribed_to_notifications": MessageLookupByLibrary.simpleMessage(
             "Notifications have been subscribed"),
         "sure": MessageLookupByLibrary.simpleMessage("Sure"),

@@ -20,12 +20,12 @@ class _ApiService implements ApiService {
   final ParseErrorLogger? errorLogger;
 
   @override
-  Future<LoginResponseModel> login(Map<String, dynamic> mutation) async {
+  Future<LoginResponseModel> login(Map<String, dynamic> loginReq) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    _data.addAll(mutation);
+    _data.addAll(loginReq);
     final _options = _setStreamType<LoginResponseModel>(
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
@@ -67,6 +67,34 @@ class _ApiService implements ApiService {
     late UserProfileModel _value;
     try {
       _value = UserProfileModel.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
+  }
+
+  @override
+  Future<SignUpResponseModel> signUp(Map<String, dynamic> signUpReq) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(signUpReq);
+    final _options = _setStreamType<SignUpResponseModel>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/graphql',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late SignUpResponseModel _value;
+    try {
+      _value = SignUpResponseModel.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;

@@ -260,6 +260,26 @@ class S {
     );
   }
 
+  /// `You account has been created successfully`
+  String get signed_up_successfully {
+    return Intl.message(
+      'You account has been created successfully',
+      name: 'signed_up_successfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An error occured. Try again`
+  String get signed_up_error {
+    return Intl.message(
+      'An error occured. Try again',
+      name: 'signed_up_error',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Full Name`
   String get full_name {
     return Intl.message(

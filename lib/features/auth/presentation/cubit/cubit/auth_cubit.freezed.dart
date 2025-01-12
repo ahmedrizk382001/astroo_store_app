@@ -23,10 +23,10 @@ mixin _$AuthState {
     required TResult Function(LoginResponseModel loginResponseModel)
         loginSuccess,
     required TResult Function(String error) loginError,
-    required TResult Function() getUserDataLoading,
-    required TResult Function(UserProfileModel userProfileModel)
-        getUserDataSuccess,
-    required TResult Function(String error) getUserDataError,
+    required TResult Function() signUpLoading,
+    required TResult Function(SignUpResponseModel signUpResponseModel)
+        signUpSuccess,
+    required TResult Function(String error) signUpError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,9 +35,9 @@ mixin _$AuthState {
     TResult? Function()? loginLoading,
     TResult? Function(LoginResponseModel loginResponseModel)? loginSuccess,
     TResult? Function(String error)? loginError,
-    TResult? Function()? getUserDataLoading,
-    TResult? Function(UserProfileModel userProfileModel)? getUserDataSuccess,
-    TResult? Function(String error)? getUserDataError,
+    TResult? Function()? signUpLoading,
+    TResult? Function(SignUpResponseModel signUpResponseModel)? signUpSuccess,
+    TResult? Function(String error)? signUpError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -46,9 +46,9 @@ mixin _$AuthState {
     TResult Function()? loginLoading,
     TResult Function(LoginResponseModel loginResponseModel)? loginSuccess,
     TResult Function(String error)? loginError,
-    TResult Function()? getUserDataLoading,
-    TResult Function(UserProfileModel userProfileModel)? getUserDataSuccess,
-    TResult Function(String error)? getUserDataError,
+    TResult Function()? signUpLoading,
+    TResult Function(SignUpResponseModel signUpResponseModel)? signUpSuccess,
+    TResult Function(String error)? signUpError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -58,9 +58,9 @@ mixin _$AuthState {
     required TResult Function(LoginLoadingState value) loginLoading,
     required TResult Function(LoginSuccessState value) loginSuccess,
     required TResult Function(LoginErrorState value) loginError,
-    required TResult Function(GetUserDataLoadingState value) getUserDataLoading,
-    required TResult Function(GetUserDataSuccessState value) getUserDataSuccess,
-    required TResult Function(GetUserDataErrorState value) getUserDataError,
+    required TResult Function(SignUpLoadingState value) signUpLoading,
+    required TResult Function(SignUpSuccessState value) signUpSuccess,
+    required TResult Function(SignUpErrorState value) signUpError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -69,9 +69,9 @@ mixin _$AuthState {
     TResult? Function(LoginLoadingState value)? loginLoading,
     TResult? Function(LoginSuccessState value)? loginSuccess,
     TResult? Function(LoginErrorState value)? loginError,
-    TResult? Function(GetUserDataLoadingState value)? getUserDataLoading,
-    TResult? Function(GetUserDataSuccessState value)? getUserDataSuccess,
-    TResult? Function(GetUserDataErrorState value)? getUserDataError,
+    TResult? Function(SignUpLoadingState value)? signUpLoading,
+    TResult? Function(SignUpSuccessState value)? signUpSuccess,
+    TResult? Function(SignUpErrorState value)? signUpError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -80,9 +80,9 @@ mixin _$AuthState {
     TResult Function(LoginLoadingState value)? loginLoading,
     TResult Function(LoginSuccessState value)? loginSuccess,
     TResult Function(LoginErrorState value)? loginError,
-    TResult Function(GetUserDataLoadingState value)? getUserDataLoading,
-    TResult Function(GetUserDataSuccessState value)? getUserDataSuccess,
-    TResult Function(GetUserDataErrorState value)? getUserDataError,
+    TResult Function(SignUpLoadingState value)? signUpLoading,
+    TResult Function(SignUpSuccessState value)? signUpSuccess,
+    TResult Function(SignUpErrorState value)? signUpError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -154,10 +154,10 @@ class _$InitialImpl implements _Initial {
     required TResult Function(LoginResponseModel loginResponseModel)
         loginSuccess,
     required TResult Function(String error) loginError,
-    required TResult Function() getUserDataLoading,
-    required TResult Function(UserProfileModel userProfileModel)
-        getUserDataSuccess,
-    required TResult Function(String error) getUserDataError,
+    required TResult Function() signUpLoading,
+    required TResult Function(SignUpResponseModel signUpResponseModel)
+        signUpSuccess,
+    required TResult Function(String error) signUpError,
   }) {
     return initial();
   }
@@ -169,9 +169,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loginLoading,
     TResult? Function(LoginResponseModel loginResponseModel)? loginSuccess,
     TResult? Function(String error)? loginError,
-    TResult? Function()? getUserDataLoading,
-    TResult? Function(UserProfileModel userProfileModel)? getUserDataSuccess,
-    TResult? Function(String error)? getUserDataError,
+    TResult? Function()? signUpLoading,
+    TResult? Function(SignUpResponseModel signUpResponseModel)? signUpSuccess,
+    TResult? Function(String error)? signUpError,
   }) {
     return initial?.call();
   }
@@ -183,9 +183,9 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loginLoading,
     TResult Function(LoginResponseModel loginResponseModel)? loginSuccess,
     TResult Function(String error)? loginError,
-    TResult Function()? getUserDataLoading,
-    TResult Function(UserProfileModel userProfileModel)? getUserDataSuccess,
-    TResult Function(String error)? getUserDataError,
+    TResult Function()? signUpLoading,
+    TResult Function(SignUpResponseModel signUpResponseModel)? signUpSuccess,
+    TResult Function(String error)? signUpError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -201,9 +201,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function(LoginLoadingState value) loginLoading,
     required TResult Function(LoginSuccessState value) loginSuccess,
     required TResult Function(LoginErrorState value) loginError,
-    required TResult Function(GetUserDataLoadingState value) getUserDataLoading,
-    required TResult Function(GetUserDataSuccessState value) getUserDataSuccess,
-    required TResult Function(GetUserDataErrorState value) getUserDataError,
+    required TResult Function(SignUpLoadingState value) signUpLoading,
+    required TResult Function(SignUpSuccessState value) signUpSuccess,
+    required TResult Function(SignUpErrorState value) signUpError,
   }) {
     return initial(this);
   }
@@ -215,9 +215,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(LoginLoadingState value)? loginLoading,
     TResult? Function(LoginSuccessState value)? loginSuccess,
     TResult? Function(LoginErrorState value)? loginError,
-    TResult? Function(GetUserDataLoadingState value)? getUserDataLoading,
-    TResult? Function(GetUserDataSuccessState value)? getUserDataSuccess,
-    TResult? Function(GetUserDataErrorState value)? getUserDataError,
+    TResult? Function(SignUpLoadingState value)? signUpLoading,
+    TResult? Function(SignUpSuccessState value)? signUpSuccess,
+    TResult? Function(SignUpErrorState value)? signUpError,
   }) {
     return initial?.call(this);
   }
@@ -229,9 +229,9 @@ class _$InitialImpl implements _Initial {
     TResult Function(LoginLoadingState value)? loginLoading,
     TResult Function(LoginSuccessState value)? loginSuccess,
     TResult Function(LoginErrorState value)? loginError,
-    TResult Function(GetUserDataLoadingState value)? getUserDataLoading,
-    TResult Function(GetUserDataSuccessState value)? getUserDataSuccess,
-    TResult Function(GetUserDataErrorState value)? getUserDataError,
+    TResult Function(SignUpLoadingState value)? signUpLoading,
+    TResult Function(SignUpSuccessState value)? signUpSuccess,
+    TResult Function(SignUpErrorState value)? signUpError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -291,10 +291,10 @@ class _$LoginLoadingStateImpl implements LoginLoadingState {
     required TResult Function(LoginResponseModel loginResponseModel)
         loginSuccess,
     required TResult Function(String error) loginError,
-    required TResult Function() getUserDataLoading,
-    required TResult Function(UserProfileModel userProfileModel)
-        getUserDataSuccess,
-    required TResult Function(String error) getUserDataError,
+    required TResult Function() signUpLoading,
+    required TResult Function(SignUpResponseModel signUpResponseModel)
+        signUpSuccess,
+    required TResult Function(String error) signUpError,
   }) {
     return loginLoading();
   }
@@ -306,9 +306,9 @@ class _$LoginLoadingStateImpl implements LoginLoadingState {
     TResult? Function()? loginLoading,
     TResult? Function(LoginResponseModel loginResponseModel)? loginSuccess,
     TResult? Function(String error)? loginError,
-    TResult? Function()? getUserDataLoading,
-    TResult? Function(UserProfileModel userProfileModel)? getUserDataSuccess,
-    TResult? Function(String error)? getUserDataError,
+    TResult? Function()? signUpLoading,
+    TResult? Function(SignUpResponseModel signUpResponseModel)? signUpSuccess,
+    TResult? Function(String error)? signUpError,
   }) {
     return loginLoading?.call();
   }
@@ -320,9 +320,9 @@ class _$LoginLoadingStateImpl implements LoginLoadingState {
     TResult Function()? loginLoading,
     TResult Function(LoginResponseModel loginResponseModel)? loginSuccess,
     TResult Function(String error)? loginError,
-    TResult Function()? getUserDataLoading,
-    TResult Function(UserProfileModel userProfileModel)? getUserDataSuccess,
-    TResult Function(String error)? getUserDataError,
+    TResult Function()? signUpLoading,
+    TResult Function(SignUpResponseModel signUpResponseModel)? signUpSuccess,
+    TResult Function(String error)? signUpError,
     required TResult orElse(),
   }) {
     if (loginLoading != null) {
@@ -338,9 +338,9 @@ class _$LoginLoadingStateImpl implements LoginLoadingState {
     required TResult Function(LoginLoadingState value) loginLoading,
     required TResult Function(LoginSuccessState value) loginSuccess,
     required TResult Function(LoginErrorState value) loginError,
-    required TResult Function(GetUserDataLoadingState value) getUserDataLoading,
-    required TResult Function(GetUserDataSuccessState value) getUserDataSuccess,
-    required TResult Function(GetUserDataErrorState value) getUserDataError,
+    required TResult Function(SignUpLoadingState value) signUpLoading,
+    required TResult Function(SignUpSuccessState value) signUpSuccess,
+    required TResult Function(SignUpErrorState value) signUpError,
   }) {
     return loginLoading(this);
   }
@@ -352,9 +352,9 @@ class _$LoginLoadingStateImpl implements LoginLoadingState {
     TResult? Function(LoginLoadingState value)? loginLoading,
     TResult? Function(LoginSuccessState value)? loginSuccess,
     TResult? Function(LoginErrorState value)? loginError,
-    TResult? Function(GetUserDataLoadingState value)? getUserDataLoading,
-    TResult? Function(GetUserDataSuccessState value)? getUserDataSuccess,
-    TResult? Function(GetUserDataErrorState value)? getUserDataError,
+    TResult? Function(SignUpLoadingState value)? signUpLoading,
+    TResult? Function(SignUpSuccessState value)? signUpSuccess,
+    TResult? Function(SignUpErrorState value)? signUpError,
   }) {
     return loginLoading?.call(this);
   }
@@ -366,9 +366,9 @@ class _$LoginLoadingStateImpl implements LoginLoadingState {
     TResult Function(LoginLoadingState value)? loginLoading,
     TResult Function(LoginSuccessState value)? loginSuccess,
     TResult Function(LoginErrorState value)? loginError,
-    TResult Function(GetUserDataLoadingState value)? getUserDataLoading,
-    TResult Function(GetUserDataSuccessState value)? getUserDataSuccess,
-    TResult Function(GetUserDataErrorState value)? getUserDataError,
+    TResult Function(SignUpLoadingState value)? signUpLoading,
+    TResult Function(SignUpSuccessState value)? signUpSuccess,
+    TResult Function(SignUpErrorState value)? signUpError,
     required TResult orElse(),
   }) {
     if (loginLoading != null) {
@@ -457,10 +457,10 @@ class _$LoginSuccessStateImpl implements LoginSuccessState {
     required TResult Function(LoginResponseModel loginResponseModel)
         loginSuccess,
     required TResult Function(String error) loginError,
-    required TResult Function() getUserDataLoading,
-    required TResult Function(UserProfileModel userProfileModel)
-        getUserDataSuccess,
-    required TResult Function(String error) getUserDataError,
+    required TResult Function() signUpLoading,
+    required TResult Function(SignUpResponseModel signUpResponseModel)
+        signUpSuccess,
+    required TResult Function(String error) signUpError,
   }) {
     return loginSuccess(loginResponseModel);
   }
@@ -472,9 +472,9 @@ class _$LoginSuccessStateImpl implements LoginSuccessState {
     TResult? Function()? loginLoading,
     TResult? Function(LoginResponseModel loginResponseModel)? loginSuccess,
     TResult? Function(String error)? loginError,
-    TResult? Function()? getUserDataLoading,
-    TResult? Function(UserProfileModel userProfileModel)? getUserDataSuccess,
-    TResult? Function(String error)? getUserDataError,
+    TResult? Function()? signUpLoading,
+    TResult? Function(SignUpResponseModel signUpResponseModel)? signUpSuccess,
+    TResult? Function(String error)? signUpError,
   }) {
     return loginSuccess?.call(loginResponseModel);
   }
@@ -486,9 +486,9 @@ class _$LoginSuccessStateImpl implements LoginSuccessState {
     TResult Function()? loginLoading,
     TResult Function(LoginResponseModel loginResponseModel)? loginSuccess,
     TResult Function(String error)? loginError,
-    TResult Function()? getUserDataLoading,
-    TResult Function(UserProfileModel userProfileModel)? getUserDataSuccess,
-    TResult Function(String error)? getUserDataError,
+    TResult Function()? signUpLoading,
+    TResult Function(SignUpResponseModel signUpResponseModel)? signUpSuccess,
+    TResult Function(String error)? signUpError,
     required TResult orElse(),
   }) {
     if (loginSuccess != null) {
@@ -504,9 +504,9 @@ class _$LoginSuccessStateImpl implements LoginSuccessState {
     required TResult Function(LoginLoadingState value) loginLoading,
     required TResult Function(LoginSuccessState value) loginSuccess,
     required TResult Function(LoginErrorState value) loginError,
-    required TResult Function(GetUserDataLoadingState value) getUserDataLoading,
-    required TResult Function(GetUserDataSuccessState value) getUserDataSuccess,
-    required TResult Function(GetUserDataErrorState value) getUserDataError,
+    required TResult Function(SignUpLoadingState value) signUpLoading,
+    required TResult Function(SignUpSuccessState value) signUpSuccess,
+    required TResult Function(SignUpErrorState value) signUpError,
   }) {
     return loginSuccess(this);
   }
@@ -518,9 +518,9 @@ class _$LoginSuccessStateImpl implements LoginSuccessState {
     TResult? Function(LoginLoadingState value)? loginLoading,
     TResult? Function(LoginSuccessState value)? loginSuccess,
     TResult? Function(LoginErrorState value)? loginError,
-    TResult? Function(GetUserDataLoadingState value)? getUserDataLoading,
-    TResult? Function(GetUserDataSuccessState value)? getUserDataSuccess,
-    TResult? Function(GetUserDataErrorState value)? getUserDataError,
+    TResult? Function(SignUpLoadingState value)? signUpLoading,
+    TResult? Function(SignUpSuccessState value)? signUpSuccess,
+    TResult? Function(SignUpErrorState value)? signUpError,
   }) {
     return loginSuccess?.call(this);
   }
@@ -532,9 +532,9 @@ class _$LoginSuccessStateImpl implements LoginSuccessState {
     TResult Function(LoginLoadingState value)? loginLoading,
     TResult Function(LoginSuccessState value)? loginSuccess,
     TResult Function(LoginErrorState value)? loginError,
-    TResult Function(GetUserDataLoadingState value)? getUserDataLoading,
-    TResult Function(GetUserDataSuccessState value)? getUserDataSuccess,
-    TResult Function(GetUserDataErrorState value)? getUserDataError,
+    TResult Function(SignUpLoadingState value)? signUpLoading,
+    TResult Function(SignUpSuccessState value)? signUpSuccess,
+    TResult Function(SignUpErrorState value)? signUpError,
     required TResult orElse(),
   }) {
     if (loginSuccess != null) {
@@ -632,10 +632,10 @@ class _$LoginErrorStateImpl implements LoginErrorState {
     required TResult Function(LoginResponseModel loginResponseModel)
         loginSuccess,
     required TResult Function(String error) loginError,
-    required TResult Function() getUserDataLoading,
-    required TResult Function(UserProfileModel userProfileModel)
-        getUserDataSuccess,
-    required TResult Function(String error) getUserDataError,
+    required TResult Function() signUpLoading,
+    required TResult Function(SignUpResponseModel signUpResponseModel)
+        signUpSuccess,
+    required TResult Function(String error) signUpError,
   }) {
     return loginError(error);
   }
@@ -647,9 +647,9 @@ class _$LoginErrorStateImpl implements LoginErrorState {
     TResult? Function()? loginLoading,
     TResult? Function(LoginResponseModel loginResponseModel)? loginSuccess,
     TResult? Function(String error)? loginError,
-    TResult? Function()? getUserDataLoading,
-    TResult? Function(UserProfileModel userProfileModel)? getUserDataSuccess,
-    TResult? Function(String error)? getUserDataError,
+    TResult? Function()? signUpLoading,
+    TResult? Function(SignUpResponseModel signUpResponseModel)? signUpSuccess,
+    TResult? Function(String error)? signUpError,
   }) {
     return loginError?.call(error);
   }
@@ -661,9 +661,9 @@ class _$LoginErrorStateImpl implements LoginErrorState {
     TResult Function()? loginLoading,
     TResult Function(LoginResponseModel loginResponseModel)? loginSuccess,
     TResult Function(String error)? loginError,
-    TResult Function()? getUserDataLoading,
-    TResult Function(UserProfileModel userProfileModel)? getUserDataSuccess,
-    TResult Function(String error)? getUserDataError,
+    TResult Function()? signUpLoading,
+    TResult Function(SignUpResponseModel signUpResponseModel)? signUpSuccess,
+    TResult Function(String error)? signUpError,
     required TResult orElse(),
   }) {
     if (loginError != null) {
@@ -679,9 +679,9 @@ class _$LoginErrorStateImpl implements LoginErrorState {
     required TResult Function(LoginLoadingState value) loginLoading,
     required TResult Function(LoginSuccessState value) loginSuccess,
     required TResult Function(LoginErrorState value) loginError,
-    required TResult Function(GetUserDataLoadingState value) getUserDataLoading,
-    required TResult Function(GetUserDataSuccessState value) getUserDataSuccess,
-    required TResult Function(GetUserDataErrorState value) getUserDataError,
+    required TResult Function(SignUpLoadingState value) signUpLoading,
+    required TResult Function(SignUpSuccessState value) signUpSuccess,
+    required TResult Function(SignUpErrorState value) signUpError,
   }) {
     return loginError(this);
   }
@@ -693,9 +693,9 @@ class _$LoginErrorStateImpl implements LoginErrorState {
     TResult? Function(LoginLoadingState value)? loginLoading,
     TResult? Function(LoginSuccessState value)? loginSuccess,
     TResult? Function(LoginErrorState value)? loginError,
-    TResult? Function(GetUserDataLoadingState value)? getUserDataLoading,
-    TResult? Function(GetUserDataSuccessState value)? getUserDataSuccess,
-    TResult? Function(GetUserDataErrorState value)? getUserDataError,
+    TResult? Function(SignUpLoadingState value)? signUpLoading,
+    TResult? Function(SignUpSuccessState value)? signUpSuccess,
+    TResult? Function(SignUpErrorState value)? signUpError,
   }) {
     return loginError?.call(this);
   }
@@ -707,9 +707,9 @@ class _$LoginErrorStateImpl implements LoginErrorState {
     TResult Function(LoginLoadingState value)? loginLoading,
     TResult Function(LoginSuccessState value)? loginSuccess,
     TResult Function(LoginErrorState value)? loginError,
-    TResult Function(GetUserDataLoadingState value)? getUserDataLoading,
-    TResult Function(GetUserDataSuccessState value)? getUserDataSuccess,
-    TResult Function(GetUserDataErrorState value)? getUserDataError,
+    TResult Function(SignUpLoadingState value)? signUpLoading,
+    TResult Function(SignUpSuccessState value)? signUpSuccess,
+    TResult Function(SignUpErrorState value)? signUpError,
     required TResult orElse(),
   }) {
     if (loginError != null) {
@@ -733,20 +733,18 @@ abstract class LoginErrorState implements AuthState {
 }
 
 /// @nodoc
-abstract class _$$GetUserDataLoadingStateImplCopyWith<$Res> {
-  factory _$$GetUserDataLoadingStateImplCopyWith(
-          _$GetUserDataLoadingStateImpl value,
-          $Res Function(_$GetUserDataLoadingStateImpl) then) =
-      __$$GetUserDataLoadingStateImplCopyWithImpl<$Res>;
+abstract class _$$SignUpLoadingStateImplCopyWith<$Res> {
+  factory _$$SignUpLoadingStateImplCopyWith(_$SignUpLoadingStateImpl value,
+          $Res Function(_$SignUpLoadingStateImpl) then) =
+      __$$SignUpLoadingStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$GetUserDataLoadingStateImplCopyWithImpl<$Res>
-    extends _$AuthStateCopyWithImpl<$Res, _$GetUserDataLoadingStateImpl>
-    implements _$$GetUserDataLoadingStateImplCopyWith<$Res> {
-  __$$GetUserDataLoadingStateImplCopyWithImpl(
-      _$GetUserDataLoadingStateImpl _value,
-      $Res Function(_$GetUserDataLoadingStateImpl) _then)
+class __$$SignUpLoadingStateImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$SignUpLoadingStateImpl>
+    implements _$$SignUpLoadingStateImplCopyWith<$Res> {
+  __$$SignUpLoadingStateImplCopyWithImpl(_$SignUpLoadingStateImpl _value,
+      $Res Function(_$SignUpLoadingStateImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of AuthState
@@ -755,19 +753,18 @@ class __$$GetUserDataLoadingStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$GetUserDataLoadingStateImpl implements GetUserDataLoadingState {
-  const _$GetUserDataLoadingStateImpl();
+class _$SignUpLoadingStateImpl implements SignUpLoadingState {
+  const _$SignUpLoadingStateImpl();
 
   @override
   String toString() {
-    return 'AuthState.getUserDataLoading()';
+    return 'AuthState.signUpLoading()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$GetUserDataLoadingStateImpl);
+        (other.runtimeType == runtimeType && other is _$SignUpLoadingStateImpl);
   }
 
   @override
@@ -781,12 +778,12 @@ class _$GetUserDataLoadingStateImpl implements GetUserDataLoadingState {
     required TResult Function(LoginResponseModel loginResponseModel)
         loginSuccess,
     required TResult Function(String error) loginError,
-    required TResult Function() getUserDataLoading,
-    required TResult Function(UserProfileModel userProfileModel)
-        getUserDataSuccess,
-    required TResult Function(String error) getUserDataError,
+    required TResult Function() signUpLoading,
+    required TResult Function(SignUpResponseModel signUpResponseModel)
+        signUpSuccess,
+    required TResult Function(String error) signUpError,
   }) {
-    return getUserDataLoading();
+    return signUpLoading();
   }
 
   @override
@@ -796,11 +793,11 @@ class _$GetUserDataLoadingStateImpl implements GetUserDataLoadingState {
     TResult? Function()? loginLoading,
     TResult? Function(LoginResponseModel loginResponseModel)? loginSuccess,
     TResult? Function(String error)? loginError,
-    TResult? Function()? getUserDataLoading,
-    TResult? Function(UserProfileModel userProfileModel)? getUserDataSuccess,
-    TResult? Function(String error)? getUserDataError,
+    TResult? Function()? signUpLoading,
+    TResult? Function(SignUpResponseModel signUpResponseModel)? signUpSuccess,
+    TResult? Function(String error)? signUpError,
   }) {
-    return getUserDataLoading?.call();
+    return signUpLoading?.call();
   }
 
   @override
@@ -810,13 +807,13 @@ class _$GetUserDataLoadingStateImpl implements GetUserDataLoadingState {
     TResult Function()? loginLoading,
     TResult Function(LoginResponseModel loginResponseModel)? loginSuccess,
     TResult Function(String error)? loginError,
-    TResult Function()? getUserDataLoading,
-    TResult Function(UserProfileModel userProfileModel)? getUserDataSuccess,
-    TResult Function(String error)? getUserDataError,
+    TResult Function()? signUpLoading,
+    TResult Function(SignUpResponseModel signUpResponseModel)? signUpSuccess,
+    TResult Function(String error)? signUpError,
     required TResult orElse(),
   }) {
-    if (getUserDataLoading != null) {
-      return getUserDataLoading();
+    if (signUpLoading != null) {
+      return signUpLoading();
     }
     return orElse();
   }
@@ -828,11 +825,11 @@ class _$GetUserDataLoadingStateImpl implements GetUserDataLoadingState {
     required TResult Function(LoginLoadingState value) loginLoading,
     required TResult Function(LoginSuccessState value) loginSuccess,
     required TResult Function(LoginErrorState value) loginError,
-    required TResult Function(GetUserDataLoadingState value) getUserDataLoading,
-    required TResult Function(GetUserDataSuccessState value) getUserDataSuccess,
-    required TResult Function(GetUserDataErrorState value) getUserDataError,
+    required TResult Function(SignUpLoadingState value) signUpLoading,
+    required TResult Function(SignUpSuccessState value) signUpSuccess,
+    required TResult Function(SignUpErrorState value) signUpError,
   }) {
-    return getUserDataLoading(this);
+    return signUpLoading(this);
   }
 
   @override
@@ -842,11 +839,11 @@ class _$GetUserDataLoadingStateImpl implements GetUserDataLoadingState {
     TResult? Function(LoginLoadingState value)? loginLoading,
     TResult? Function(LoginSuccessState value)? loginSuccess,
     TResult? Function(LoginErrorState value)? loginError,
-    TResult? Function(GetUserDataLoadingState value)? getUserDataLoading,
-    TResult? Function(GetUserDataSuccessState value)? getUserDataSuccess,
-    TResult? Function(GetUserDataErrorState value)? getUserDataError,
+    TResult? Function(SignUpLoadingState value)? signUpLoading,
+    TResult? Function(SignUpSuccessState value)? signUpSuccess,
+    TResult? Function(SignUpErrorState value)? signUpError,
   }) {
-    return getUserDataLoading?.call(this);
+    return signUpLoading?.call(this);
   }
 
   @override
@@ -856,39 +853,37 @@ class _$GetUserDataLoadingStateImpl implements GetUserDataLoadingState {
     TResult Function(LoginLoadingState value)? loginLoading,
     TResult Function(LoginSuccessState value)? loginSuccess,
     TResult Function(LoginErrorState value)? loginError,
-    TResult Function(GetUserDataLoadingState value)? getUserDataLoading,
-    TResult Function(GetUserDataSuccessState value)? getUserDataSuccess,
-    TResult Function(GetUserDataErrorState value)? getUserDataError,
+    TResult Function(SignUpLoadingState value)? signUpLoading,
+    TResult Function(SignUpSuccessState value)? signUpSuccess,
+    TResult Function(SignUpErrorState value)? signUpError,
     required TResult orElse(),
   }) {
-    if (getUserDataLoading != null) {
-      return getUserDataLoading(this);
+    if (signUpLoading != null) {
+      return signUpLoading(this);
     }
     return orElse();
   }
 }
 
-abstract class GetUserDataLoadingState implements AuthState {
-  const factory GetUserDataLoadingState() = _$GetUserDataLoadingStateImpl;
+abstract class SignUpLoadingState implements AuthState {
+  const factory SignUpLoadingState() = _$SignUpLoadingStateImpl;
 }
 
 /// @nodoc
-abstract class _$$GetUserDataSuccessStateImplCopyWith<$Res> {
-  factory _$$GetUserDataSuccessStateImplCopyWith(
-          _$GetUserDataSuccessStateImpl value,
-          $Res Function(_$GetUserDataSuccessStateImpl) then) =
-      __$$GetUserDataSuccessStateImplCopyWithImpl<$Res>;
+abstract class _$$SignUpSuccessStateImplCopyWith<$Res> {
+  factory _$$SignUpSuccessStateImplCopyWith(_$SignUpSuccessStateImpl value,
+          $Res Function(_$SignUpSuccessStateImpl) then) =
+      __$$SignUpSuccessStateImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({UserProfileModel userProfileModel});
+  $Res call({SignUpResponseModel signUpResponseModel});
 }
 
 /// @nodoc
-class __$$GetUserDataSuccessStateImplCopyWithImpl<$Res>
-    extends _$AuthStateCopyWithImpl<$Res, _$GetUserDataSuccessStateImpl>
-    implements _$$GetUserDataSuccessStateImplCopyWith<$Res> {
-  __$$GetUserDataSuccessStateImplCopyWithImpl(
-      _$GetUserDataSuccessStateImpl _value,
-      $Res Function(_$GetUserDataSuccessStateImpl) _then)
+class __$$SignUpSuccessStateImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$SignUpSuccessStateImpl>
+    implements _$$SignUpSuccessStateImplCopyWith<$Res> {
+  __$$SignUpSuccessStateImplCopyWithImpl(_$SignUpSuccessStateImpl _value,
+      $Res Function(_$SignUpSuccessStateImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of AuthState
@@ -896,50 +891,50 @@ class __$$GetUserDataSuccessStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? userProfileModel = null,
+    Object? signUpResponseModel = null,
   }) {
-    return _then(_$GetUserDataSuccessStateImpl(
-      userProfileModel: null == userProfileModel
-          ? _value.userProfileModel
-          : userProfileModel // ignore: cast_nullable_to_non_nullable
-              as UserProfileModel,
+    return _then(_$SignUpSuccessStateImpl(
+      signUpResponseModel: null == signUpResponseModel
+          ? _value.signUpResponseModel
+          : signUpResponseModel // ignore: cast_nullable_to_non_nullable
+              as SignUpResponseModel,
     ));
   }
 }
 
 /// @nodoc
 
-class _$GetUserDataSuccessStateImpl implements GetUserDataSuccessState {
-  const _$GetUserDataSuccessStateImpl({required this.userProfileModel});
+class _$SignUpSuccessStateImpl implements SignUpSuccessState {
+  const _$SignUpSuccessStateImpl({required this.signUpResponseModel});
 
   @override
-  final UserProfileModel userProfileModel;
+  final SignUpResponseModel signUpResponseModel;
 
   @override
   String toString() {
-    return 'AuthState.getUserDataSuccess(userProfileModel: $userProfileModel)';
+    return 'AuthState.signUpSuccess(signUpResponseModel: $signUpResponseModel)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GetUserDataSuccessStateImpl &&
-            (identical(other.userProfileModel, userProfileModel) ||
-                other.userProfileModel == userProfileModel));
+            other is _$SignUpSuccessStateImpl &&
+            (identical(other.signUpResponseModel, signUpResponseModel) ||
+                other.signUpResponseModel == signUpResponseModel));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, userProfileModel);
+  int get hashCode => Object.hash(runtimeType, signUpResponseModel);
 
   /// Create a copy of AuthState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetUserDataSuccessStateImplCopyWith<_$GetUserDataSuccessStateImpl>
-      get copyWith => __$$GetUserDataSuccessStateImplCopyWithImpl<
-          _$GetUserDataSuccessStateImpl>(this, _$identity);
+  _$$SignUpSuccessStateImplCopyWith<_$SignUpSuccessStateImpl> get copyWith =>
+      __$$SignUpSuccessStateImplCopyWithImpl<_$SignUpSuccessStateImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -949,12 +944,12 @@ class _$GetUserDataSuccessStateImpl implements GetUserDataSuccessState {
     required TResult Function(LoginResponseModel loginResponseModel)
         loginSuccess,
     required TResult Function(String error) loginError,
-    required TResult Function() getUserDataLoading,
-    required TResult Function(UserProfileModel userProfileModel)
-        getUserDataSuccess,
-    required TResult Function(String error) getUserDataError,
+    required TResult Function() signUpLoading,
+    required TResult Function(SignUpResponseModel signUpResponseModel)
+        signUpSuccess,
+    required TResult Function(String error) signUpError,
   }) {
-    return getUserDataSuccess(userProfileModel);
+    return signUpSuccess(signUpResponseModel);
   }
 
   @override
@@ -964,11 +959,11 @@ class _$GetUserDataSuccessStateImpl implements GetUserDataSuccessState {
     TResult? Function()? loginLoading,
     TResult? Function(LoginResponseModel loginResponseModel)? loginSuccess,
     TResult? Function(String error)? loginError,
-    TResult? Function()? getUserDataLoading,
-    TResult? Function(UserProfileModel userProfileModel)? getUserDataSuccess,
-    TResult? Function(String error)? getUserDataError,
+    TResult? Function()? signUpLoading,
+    TResult? Function(SignUpResponseModel signUpResponseModel)? signUpSuccess,
+    TResult? Function(String error)? signUpError,
   }) {
-    return getUserDataSuccess?.call(userProfileModel);
+    return signUpSuccess?.call(signUpResponseModel);
   }
 
   @override
@@ -978,13 +973,13 @@ class _$GetUserDataSuccessStateImpl implements GetUserDataSuccessState {
     TResult Function()? loginLoading,
     TResult Function(LoginResponseModel loginResponseModel)? loginSuccess,
     TResult Function(String error)? loginError,
-    TResult Function()? getUserDataLoading,
-    TResult Function(UserProfileModel userProfileModel)? getUserDataSuccess,
-    TResult Function(String error)? getUserDataError,
+    TResult Function()? signUpLoading,
+    TResult Function(SignUpResponseModel signUpResponseModel)? signUpSuccess,
+    TResult Function(String error)? signUpError,
     required TResult orElse(),
   }) {
-    if (getUserDataSuccess != null) {
-      return getUserDataSuccess(userProfileModel);
+    if (signUpSuccess != null) {
+      return signUpSuccess(signUpResponseModel);
     }
     return orElse();
   }
@@ -996,11 +991,11 @@ class _$GetUserDataSuccessStateImpl implements GetUserDataSuccessState {
     required TResult Function(LoginLoadingState value) loginLoading,
     required TResult Function(LoginSuccessState value) loginSuccess,
     required TResult Function(LoginErrorState value) loginError,
-    required TResult Function(GetUserDataLoadingState value) getUserDataLoading,
-    required TResult Function(GetUserDataSuccessState value) getUserDataSuccess,
-    required TResult Function(GetUserDataErrorState value) getUserDataError,
+    required TResult Function(SignUpLoadingState value) signUpLoading,
+    required TResult Function(SignUpSuccessState value) signUpSuccess,
+    required TResult Function(SignUpErrorState value) signUpError,
   }) {
-    return getUserDataSuccess(this);
+    return signUpSuccess(this);
   }
 
   @override
@@ -1010,11 +1005,11 @@ class _$GetUserDataSuccessStateImpl implements GetUserDataSuccessState {
     TResult? Function(LoginLoadingState value)? loginLoading,
     TResult? Function(LoginSuccessState value)? loginSuccess,
     TResult? Function(LoginErrorState value)? loginError,
-    TResult? Function(GetUserDataLoadingState value)? getUserDataLoading,
-    TResult? Function(GetUserDataSuccessState value)? getUserDataSuccess,
-    TResult? Function(GetUserDataErrorState value)? getUserDataError,
+    TResult? Function(SignUpLoadingState value)? signUpLoading,
+    TResult? Function(SignUpSuccessState value)? signUpSuccess,
+    TResult? Function(SignUpErrorState value)? signUpError,
   }) {
-    return getUserDataSuccess?.call(this);
+    return signUpSuccess?.call(this);
   }
 
   @override
@@ -1024,48 +1019,47 @@ class _$GetUserDataSuccessStateImpl implements GetUserDataSuccessState {
     TResult Function(LoginLoadingState value)? loginLoading,
     TResult Function(LoginSuccessState value)? loginSuccess,
     TResult Function(LoginErrorState value)? loginError,
-    TResult Function(GetUserDataLoadingState value)? getUserDataLoading,
-    TResult Function(GetUserDataSuccessState value)? getUserDataSuccess,
-    TResult Function(GetUserDataErrorState value)? getUserDataError,
+    TResult Function(SignUpLoadingState value)? signUpLoading,
+    TResult Function(SignUpSuccessState value)? signUpSuccess,
+    TResult Function(SignUpErrorState value)? signUpError,
     required TResult orElse(),
   }) {
-    if (getUserDataSuccess != null) {
-      return getUserDataSuccess(this);
+    if (signUpSuccess != null) {
+      return signUpSuccess(this);
     }
     return orElse();
   }
 }
 
-abstract class GetUserDataSuccessState implements AuthState {
-  const factory GetUserDataSuccessState(
-          {required final UserProfileModel userProfileModel}) =
-      _$GetUserDataSuccessStateImpl;
+abstract class SignUpSuccessState implements AuthState {
+  const factory SignUpSuccessState(
+          {required final SignUpResponseModel signUpResponseModel}) =
+      _$SignUpSuccessStateImpl;
 
-  UserProfileModel get userProfileModel;
+  SignUpResponseModel get signUpResponseModel;
 
   /// Create a copy of AuthState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetUserDataSuccessStateImplCopyWith<_$GetUserDataSuccessStateImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$SignUpSuccessStateImplCopyWith<_$SignUpSuccessStateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$GetUserDataErrorStateImplCopyWith<$Res> {
-  factory _$$GetUserDataErrorStateImplCopyWith(
-          _$GetUserDataErrorStateImpl value,
-          $Res Function(_$GetUserDataErrorStateImpl) then) =
-      __$$GetUserDataErrorStateImplCopyWithImpl<$Res>;
+abstract class _$$SignUpErrorStateImplCopyWith<$Res> {
+  factory _$$SignUpErrorStateImplCopyWith(_$SignUpErrorStateImpl value,
+          $Res Function(_$SignUpErrorStateImpl) then) =
+      __$$SignUpErrorStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String error});
 }
 
 /// @nodoc
-class __$$GetUserDataErrorStateImplCopyWithImpl<$Res>
-    extends _$AuthStateCopyWithImpl<$Res, _$GetUserDataErrorStateImpl>
-    implements _$$GetUserDataErrorStateImplCopyWith<$Res> {
-  __$$GetUserDataErrorStateImplCopyWithImpl(_$GetUserDataErrorStateImpl _value,
-      $Res Function(_$GetUserDataErrorStateImpl) _then)
+class __$$SignUpErrorStateImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$SignUpErrorStateImpl>
+    implements _$$SignUpErrorStateImplCopyWith<$Res> {
+  __$$SignUpErrorStateImplCopyWithImpl(_$SignUpErrorStateImpl _value,
+      $Res Function(_$SignUpErrorStateImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of AuthState
@@ -1075,7 +1069,7 @@ class __$$GetUserDataErrorStateImplCopyWithImpl<$Res>
   $Res call({
     Object? error = null,
   }) {
-    return _then(_$GetUserDataErrorStateImpl(
+    return _then(_$SignUpErrorStateImpl(
       error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -1086,22 +1080,22 @@ class __$$GetUserDataErrorStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$GetUserDataErrorStateImpl implements GetUserDataErrorState {
-  const _$GetUserDataErrorStateImpl({required this.error});
+class _$SignUpErrorStateImpl implements SignUpErrorState {
+  const _$SignUpErrorStateImpl({required this.error});
 
   @override
   final String error;
 
   @override
   String toString() {
-    return 'AuthState.getUserDataError(error: $error)';
+    return 'AuthState.signUpError(error: $error)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GetUserDataErrorStateImpl &&
+            other is _$SignUpErrorStateImpl &&
             (identical(other.error, error) || other.error == error));
   }
 
@@ -1113,9 +1107,9 @@ class _$GetUserDataErrorStateImpl implements GetUserDataErrorState {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$GetUserDataErrorStateImplCopyWith<_$GetUserDataErrorStateImpl>
-      get copyWith => __$$GetUserDataErrorStateImplCopyWithImpl<
-          _$GetUserDataErrorStateImpl>(this, _$identity);
+  _$$SignUpErrorStateImplCopyWith<_$SignUpErrorStateImpl> get copyWith =>
+      __$$SignUpErrorStateImplCopyWithImpl<_$SignUpErrorStateImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1125,12 +1119,12 @@ class _$GetUserDataErrorStateImpl implements GetUserDataErrorState {
     required TResult Function(LoginResponseModel loginResponseModel)
         loginSuccess,
     required TResult Function(String error) loginError,
-    required TResult Function() getUserDataLoading,
-    required TResult Function(UserProfileModel userProfileModel)
-        getUserDataSuccess,
-    required TResult Function(String error) getUserDataError,
+    required TResult Function() signUpLoading,
+    required TResult Function(SignUpResponseModel signUpResponseModel)
+        signUpSuccess,
+    required TResult Function(String error) signUpError,
   }) {
-    return getUserDataError(error);
+    return signUpError(error);
   }
 
   @override
@@ -1140,11 +1134,11 @@ class _$GetUserDataErrorStateImpl implements GetUserDataErrorState {
     TResult? Function()? loginLoading,
     TResult? Function(LoginResponseModel loginResponseModel)? loginSuccess,
     TResult? Function(String error)? loginError,
-    TResult? Function()? getUserDataLoading,
-    TResult? Function(UserProfileModel userProfileModel)? getUserDataSuccess,
-    TResult? Function(String error)? getUserDataError,
+    TResult? Function()? signUpLoading,
+    TResult? Function(SignUpResponseModel signUpResponseModel)? signUpSuccess,
+    TResult? Function(String error)? signUpError,
   }) {
-    return getUserDataError?.call(error);
+    return signUpError?.call(error);
   }
 
   @override
@@ -1154,13 +1148,13 @@ class _$GetUserDataErrorStateImpl implements GetUserDataErrorState {
     TResult Function()? loginLoading,
     TResult Function(LoginResponseModel loginResponseModel)? loginSuccess,
     TResult Function(String error)? loginError,
-    TResult Function()? getUserDataLoading,
-    TResult Function(UserProfileModel userProfileModel)? getUserDataSuccess,
-    TResult Function(String error)? getUserDataError,
+    TResult Function()? signUpLoading,
+    TResult Function(SignUpResponseModel signUpResponseModel)? signUpSuccess,
+    TResult Function(String error)? signUpError,
     required TResult orElse(),
   }) {
-    if (getUserDataError != null) {
-      return getUserDataError(error);
+    if (signUpError != null) {
+      return signUpError(error);
     }
     return orElse();
   }
@@ -1172,11 +1166,11 @@ class _$GetUserDataErrorStateImpl implements GetUserDataErrorState {
     required TResult Function(LoginLoadingState value) loginLoading,
     required TResult Function(LoginSuccessState value) loginSuccess,
     required TResult Function(LoginErrorState value) loginError,
-    required TResult Function(GetUserDataLoadingState value) getUserDataLoading,
-    required TResult Function(GetUserDataSuccessState value) getUserDataSuccess,
-    required TResult Function(GetUserDataErrorState value) getUserDataError,
+    required TResult Function(SignUpLoadingState value) signUpLoading,
+    required TResult Function(SignUpSuccessState value) signUpSuccess,
+    required TResult Function(SignUpErrorState value) signUpError,
   }) {
-    return getUserDataError(this);
+    return signUpError(this);
   }
 
   @override
@@ -1186,11 +1180,11 @@ class _$GetUserDataErrorStateImpl implements GetUserDataErrorState {
     TResult? Function(LoginLoadingState value)? loginLoading,
     TResult? Function(LoginSuccessState value)? loginSuccess,
     TResult? Function(LoginErrorState value)? loginError,
-    TResult? Function(GetUserDataLoadingState value)? getUserDataLoading,
-    TResult? Function(GetUserDataSuccessState value)? getUserDataSuccess,
-    TResult? Function(GetUserDataErrorState value)? getUserDataError,
+    TResult? Function(SignUpLoadingState value)? signUpLoading,
+    TResult? Function(SignUpSuccessState value)? signUpSuccess,
+    TResult? Function(SignUpErrorState value)? signUpError,
   }) {
-    return getUserDataError?.call(this);
+    return signUpError?.call(this);
   }
 
   @override
@@ -1200,27 +1194,27 @@ class _$GetUserDataErrorStateImpl implements GetUserDataErrorState {
     TResult Function(LoginLoadingState value)? loginLoading,
     TResult Function(LoginSuccessState value)? loginSuccess,
     TResult Function(LoginErrorState value)? loginError,
-    TResult Function(GetUserDataLoadingState value)? getUserDataLoading,
-    TResult Function(GetUserDataSuccessState value)? getUserDataSuccess,
-    TResult Function(GetUserDataErrorState value)? getUserDataError,
+    TResult Function(SignUpLoadingState value)? signUpLoading,
+    TResult Function(SignUpSuccessState value)? signUpSuccess,
+    TResult Function(SignUpErrorState value)? signUpError,
     required TResult orElse(),
   }) {
-    if (getUserDataError != null) {
-      return getUserDataError(this);
+    if (signUpError != null) {
+      return signUpError(this);
     }
     return orElse();
   }
 }
 
-abstract class GetUserDataErrorState implements AuthState {
-  const factory GetUserDataErrorState({required final String error}) =
-      _$GetUserDataErrorStateImpl;
+abstract class SignUpErrorState implements AuthState {
+  const factory SignUpErrorState({required final String error}) =
+      _$SignUpErrorStateImpl;
 
   String get error;
 
   /// Create a copy of AuthState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetUserDataErrorStateImplCopyWith<_$GetUserDataErrorStateImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$SignUpErrorStateImplCopyWith<_$SignUpErrorStateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

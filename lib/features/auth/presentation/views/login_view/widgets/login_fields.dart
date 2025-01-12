@@ -26,18 +26,11 @@ class _LoginFieldsState extends State<LoginFields> {
   }
 
   @override
-  void dispose() {
-    _authCubit.emailController.dispose();
-    _authCubit.passwordController.dispose();
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return CustomFadeInDown(
       duration: animationDuration,
       child: Form(
-        key: _authCubit.formKey,
+        key: _authCubit.loginFormKey,
         child: Column(
           children: [
             CustomTextField(

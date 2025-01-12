@@ -8,9 +8,9 @@ class AuthState with _$AuthState {
       {required LoginResponseModel loginResponseModel}) = LoginSuccessState;
   const factory AuthState.loginError({required String error}) = LoginErrorState;
 
-  const factory AuthState.getUserDataLoading() = GetUserDataLoadingState;
-  const factory AuthState.getUserDataSuccess(
-      {required UserProfileModel userProfileModel}) = GetUserDataSuccessState;
-  const factory AuthState.getUserDataError({required String error}) =
-      GetUserDataErrorState;
+  const factory AuthState.signUpLoading() = SignUpLoadingState;
+  const factory AuthState.signUpSuccess(
+      {required SignUpResponseModel signUpResponseModel}) = SignUpSuccessState;
+  const factory AuthState.signUpError({required String error}) =
+      SignUpErrorState;
 }
