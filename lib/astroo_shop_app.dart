@@ -1,7 +1,8 @@
 import 'package:astroo_store_app/core/Routers/app_router.dart';
 import 'package:astroo_store_app/core/Routers/routers.dart';
 import 'package:astroo_store_app/core/di/dependency_injection.dart';
-
+import 'package:astroo_store_app/core/helpers/shared_pref/shared_pref.dart';
+import 'package:astroo_store_app/core/helpers/shared_pref/shared_pref_keys.dart';
 import 'package:astroo_store_app/core/shared/app_cubit/app_settings_cubit_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -19,7 +20,7 @@ class AstrooShopApp extends StatelessWidget {
       designSize: const Size(390, 844),
       minTextAdapt: true,
       child: BlocProvider(
-        create: (_) => getIt<AppSettingsCubit>()
+        create: (context) => getIt<AppSettingsCubit>()
           ..getCurrenTheme()
           ..getCurrentLanguage(),
         child: const _AppSettingsHandler(),
@@ -36,14 +37,27 @@ class _AppSettingsHandler extends StatelessWidget {
     return BlocBuilder<AppSettingsCubit, AppSettingsState>(
       buildWhen: (previous, current) => previous != current,
       builder: (context, state) {
-        return const _InitialRouteResolver();
+        var appCubit = context.read<AppSettingsCubit>();
+        final isDarkTheme = appCubit.isDark;
+        final locale = Locale(appCubit.language);
+
+        return _InitialRouteResolver(
+          isDarkTheme: isDarkTheme,
+          locale: locale,
+        );
       },
     );
   }
 }
 
 class _InitialRouteResolver extends StatelessWidget {
-  const _InitialRouteResolver();
+  final bool isDarkTheme;
+  final Locale locale;
+
+  const _InitialRouteResolver({
+    required this.isDarkTheme,
+    required this.locale,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +72,11 @@ class _InitialRouteResolver extends StatelessWidget {
         }
 
         final initialRoute = snapshot.data ?? Routers.login;
-        return _AstrooMaterialApp(initialRoute: initialRoute);
+        return _AstrooMaterialApp(
+          initialRoute: initialRoute,
+          isDarkTheme: isDarkTheme,
+          locale: locale,
+        );
       },
     );
   }
@@ -66,17 +84,21 @@ class _InitialRouteResolver extends StatelessWidget {
 
 class _AstrooMaterialApp extends StatelessWidget {
   final String initialRoute;
+  final bool isDarkTheme;
+  final Locale locale;
 
-  const _AstrooMaterialApp({required this.initialRoute});
+  const _AstrooMaterialApp({
+    required this.initialRoute,
+    required this.isDarkTheme,
+    required this.locale,
+  });
 
   @override
   Widget build(BuildContext context) {
-    final appCubit = context.read<AppSettingsCubit>();
-
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: appCubit.isDark ? darkTheme() : lightTheme(),
-      locale: Locale(appCubit.language),
+      theme: isDarkTheme ? darkTheme() : lightTheme(),
+      locale: locale,
       localizationsDelegates: _localizationDelegateList,
       supportedLocales: S.delegate.supportedLocales,
       onGenerateRoute: AppRouter.generateRoute,
