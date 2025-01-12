@@ -72,6 +72,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "sign_up": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "sign_up_welcome": MessageLookupByLibrary.simpleMessage(
             "Welcome, Please add your information"),
+        "signed_up_error":
+            MessageLookupByLibrary.simpleMessage("An error occured. Try again"),
+        "signed_up_successfully": MessageLookupByLibrary.simpleMessage(
+            "You account has been created successfully"),
         "subscribed_to_notifications": MessageLookupByLibrary.simpleMessage(
             "Notifications have been subscribed"),
         "sure": MessageLookupByLibrary.simpleMessage("Sure"),
@@ -82,7 +86,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "valid_name":
             MessageLookupByLibrary.simpleMessage("Please enter your full name"),
         "valid_passwrod": MessageLookupByLibrary.simpleMessage(
-            "Please enter a valid password, not less than 6 characters"),
+            "Please enter a valid password"),
         "valid_pick_image": MessageLookupByLibrary.simpleMessage(
             "Please Select Your Image Avatar"),
         "view_all": MessageLookupByLibrary.simpleMessage("View all"),

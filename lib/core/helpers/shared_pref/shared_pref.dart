@@ -1,14 +1,18 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SharedPref {
   SharedPref._();
   static final SharedPref instance = SharedPref._();
+  static late FlutterSecureStorage _storage;
 
   static late SharedPreferences _preferences;
 
   /// Initialize the SharedPreferences instance.
   static Future<void> init() async {
     _preferences = await SharedPreferences.getInstance();
+    _storage = FlutterSecureStorage();
   }
 
   /// Set a value (generic method for all types).
@@ -42,5 +46,20 @@ class SharedPref {
   /// Clear all preferences.
   Future<void> clear() async {
     await _preferences.clear();
+  }
+
+  Future<void> setSecuredString(String key, String? value) async {
+    await _storage.write(key: key, value: value);
+    debugPrint(
+        "FlutterSecureStorage : setSecuredString with key : $key and value : $value");
+  }
+
+  Future<String?> getSecuredString(String key) async {
+    debugPrint('FlutterSecureStorage : getSecuredString with key : $key');
+    return await _storage.read(key: key) ?? '';
+  }
+
+  Future<void> deleteAllSecuredData() async {
+    await _storage.deleteAll();
   }
 }

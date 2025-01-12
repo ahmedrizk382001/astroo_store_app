@@ -34,15 +34,39 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-  firebase_core: ^3.9.0 # Core Firebase package for Flutter, required to initialize Firebase services.
-  flutter_launcher_icons: ^0.14.2 # A package to generate launcher icons for your Flutter app.
-  flutter_native_splash: ^2.4.4 # Adds a native splash screen to your Flutter app for a better user experience during app startup.
-  flutter_screenutil: ^5.9.3 # A package for responsive and adaptive UI design, supports different screen sizes and resolutions.
-  animate_do: ^3.3.4 # Provides pre-built, customizable animations for Flutter widgets.
-  freezed: ^2.5.7 # Code generator for immutable classes and union types in Dart.
-  freezed_annotation: ^2.4.4
+
+  # Core Firebase Package
+  firebase_core: ^3.9.0 # Required to initialize Firebase services in your Flutter app.
+
+  # State Management
   flutter_bloc: ^8.1.6 # State management library using the BLoC (Business Logic Component) pattern.
-  shared_preferences: ^2.3.5 # Enables storing key-value pairs locally on the user's device for small amounts of persistent data.
+
+  # Code Generation and Data Classes
+  freezed: ^2.5.7 # A code generator for creating immutable classes and union types in Dart.
+  freezed_annotation: ^2.4.4 # Annotations used by the `freezed` package for code generation.
+  json_annotation: ^4.9.0 # Annotations used for JSON serialization and deserialization.
+
+  # Networking
+  dio: ^5.7.0 # A powerful HTTP client for making network requests in Flutter.
+  retrofit: ^4.4.0 # A type-safe HTTP client generator for Dart using annotations.
+  pretty_dio_logger: ^1.4.0 # Provides detailed logs for Dio requests, helpful during development and debugging.
+
+  # Local Storage
+  shared_preferences: ^2.3.5 # Allows storing small amounts of persistent data locally on the user's device.
+  flutter_secure_storage: ^9.2.4 # Provides API to store data in secure storage.
+
+  # UI Design and Animations
+  flutter_screenutil: ^5.9.3 # Enables responsive and adaptive UI design for various screen sizes and resolutions.
+  animate_do: ^3.3.4 # A package that provides pre-built, customizable animations for Flutter widgets.
+
+  # App Configuration
+  flutter_launcher_icons: ^0.14.2 # Generates launcher icons for your Flutter app.
+  flutter_native_splash: ^2.4.4 # Adds a native splash screen to enhance the user experience during app startup.
+
+  # Logging
+  logger: ^2.4.0 # A flexible logging utility for better debug information during development.
+  get_it: ^8.0.3
+  fluttertoast: ^8.2.10
 
 dev_dependencies:
   flutter_test:
@@ -56,9 +80,12 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
-  build_runner: ^2.4.14
   # to generate code use the below command
   # dart run build_runner build --delete-conflicting-outputs
+  build_runner: ^2.4.14
+  retrofit_generator: ^9.0.0 # for Dart 3.3 use ^9.0.0
+  json_serializable: ^6.9.2
+ 
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

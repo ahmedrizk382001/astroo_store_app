@@ -130,10 +130,10 @@ class S {
     );
   }
 
-  /// `Please enter a valid password, not less than 6 characters`
+  /// `Please enter a valid password`
   String get valid_passwrod {
     return Intl.message(
-      'Please enter a valid password, not less than 6 characters',
+      'Please enter a valid password',
       name: 'valid_passwrod',
       desc: '',
       args: [],
@@ -255,6 +255,26 @@ class S {
     return Intl.message(
       'At least 8 characters long',
       name: 'has_min_lenght',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You account has been created successfully`
+  String get signed_up_successfully {
+    return Intl.message(
+      'You account has been created successfully',
+      name: 'signed_up_successfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An error occured. Try again`
+  String get signed_up_error {
+    return Intl.message(
+      'An error occured. Try again',
+      name: 'signed_up_error',
       desc: '',
       args: [],
     );

@@ -4,6 +4,17 @@ class AppRegex {
         .hasMatch(email);
   }
 
+  static bool isPasswordValid(String password) {
+    if (hasLowerCase(password) &&
+        hasUpperCase(password) &&
+        hasNumber(password) &&
+        hasMinLength(password)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   static bool hasLowerCase(String password) {
     return RegExp(r'^(?=.*[a-z])').hasMatch(password);
   }

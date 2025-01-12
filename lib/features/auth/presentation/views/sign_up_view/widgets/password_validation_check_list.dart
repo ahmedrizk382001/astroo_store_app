@@ -9,15 +9,10 @@ class PasswordValidationCheckList extends StatelessWidget {
       {super.key,
       required this.hasLowerCase,
       required this.hasUpperCase,
-      required this.hasSpecialChar,
       required this.hasOneNum,
       required this.hasMinLength});
 
-  final bool hasLowerCase,
-      hasUpperCase,
-      hasSpecialChar,
-      hasOneNum,
-      hasMinLength;
+  final bool hasLowerCase, hasUpperCase, hasOneNum, hasMinLength;
 
   @override
   Widget build(BuildContext context) {
@@ -35,13 +30,6 @@ class PasswordValidationCheckList extends StatelessWidget {
           PasswordValidatorItem(
             condition: S.of(context).has_upper_case,
             isValidated: hasUpperCase,
-          ),
-          SizedBox(
-            height: 4.h,
-          ),
-          PasswordValidatorItem(
-            condition: S.of(context).has_special_char,
-            isValidated: hasSpecialChar,
           ),
           SizedBox(
             height: 4.h,
