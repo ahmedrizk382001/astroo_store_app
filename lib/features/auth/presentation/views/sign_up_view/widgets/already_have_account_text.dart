@@ -33,7 +33,7 @@ class AlreadyHaveAccountText extends StatelessWidget {
             ),
             child: Text(
               S.of(context).login_now,
-              style: AppTextStyles.font14Bold(context).copyWith(
+              style: AppTextStyles.font16Bold(context).copyWith(
                 color: context.color.bluePinkLight,
               ),
             ),

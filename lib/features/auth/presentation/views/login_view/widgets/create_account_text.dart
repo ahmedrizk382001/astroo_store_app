@@ -31,7 +31,7 @@ class CreateAccountText extends StatelessWidget {
             ),
             child: Text(
               S.of(context).create_account,
-              style: AppTextStyles.font14Bold(context).copyWith(
+              style: AppTextStyles.font16Bold(context).copyWith(
                 color: context.color.bluePinkLight,
               ),
             ),

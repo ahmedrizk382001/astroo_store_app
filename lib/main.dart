@@ -14,9 +14,9 @@ void main() async {
   Bloc.observer = MyBlocObserver();
   await SharedPref.init();
 
-  SharedPref.instance
-    ..clear()
-    ..deleteAllSecuredData();
+  // SharedPref.instance
+  //   ..clear()
+  //   ..deleteAllSecuredData();
 
   await setUpGetIt();
   await Firebase.initializeApp(

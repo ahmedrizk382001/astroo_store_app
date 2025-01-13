@@ -58,6 +58,7 @@ dependencies:
   # UI Design and Animations
   flutter_screenutil: ^5.9.3 # Enables responsive and adaptive UI design for various screen sizes and resolutions.
   animate_do: ^3.3.4 # A package that provides pre-built, customizable animations for Flutter widgets.
+  flutter_zoom_drawer: ^3.2.0 #custom implementation of the Side Menu (Drawer)
 
   # App Configuration
   flutter_launcher_icons: ^0.14.2 # Generates launcher icons for your Flutter app.
@@ -102,6 +103,7 @@ flutter:
     - assets/images/app_icon/
     - assets/images/splash_screen_icon/
     - assets/svg/
+    - assets/images/admin/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
@@ -131,3 +133,9 @@ flutter:
   # see https://flutter.dev/to/font-from-package
 flutter_intl:
   enabled: true
+
+flutter_assets:
+  assets_path: assets/svg/
+  output_path: lib/core/styles/images/
+  filename: app_images.dart
+  field_prefix: 

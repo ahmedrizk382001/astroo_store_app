@@ -50,7 +50,7 @@ class LightModeAndLanguage extends StatelessWidget {
               padding: EdgeInsets.symmetric(vertical: 8, horizontal: 0),
               child: Text(
                 S.of(context).language,
-                style: AppTextStyles.font14Bold(context),
+                style: AppTextStyles.font16Bold(context),
               ),
             ),
           ),

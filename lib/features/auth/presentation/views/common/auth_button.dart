@@ -22,7 +22,7 @@ class AuthButton extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 12.h),
           child: Text(
             buttonText.toUpperCase(),
-            style: AppTextStyles.font14Bold(context),
+            style: AppTextStyles.font16Bold(context),
           ),
         ),
       ),
