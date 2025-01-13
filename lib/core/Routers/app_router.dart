@@ -1,6 +1,6 @@
 import 'package:astroo_store_app/core/Routers/routers.dart';
 import 'package:astroo_store_app/core/di/dependency_injection.dart';
-import 'package:astroo_store_app/features/admin/home/presentation/views/admin_home.dart';
+import 'package:astroo_store_app/features/admin/admin_drawer/presentation/views/widgets/admin_home.dart';
 import 'package:astroo_store_app/features/auth/presentation/cubit/cubit/auth_cubit.dart';
 import 'package:astroo_store_app/features/auth/presentation/views/login_view/login_view.dart';
 import 'package:astroo_store_app/features/auth/presentation/views/sign_up_view/sign_up_view.dart';

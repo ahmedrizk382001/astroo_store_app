@@ -39,8 +39,23 @@ class AppTextStyles {
     fontWeight: FontWeightHelper.regular,
     color: Colors.red,
   );
-  static TextStyle font14Bold(BuildContext context) => TextStyle(
+
+  static TextStyle font15Bold(BuildContext context) => TextStyle(
+        fontSize: 15.sp,
+        fontFamily: FontFamilyHelper.getFontFamily(),
+        fontWeight: FontWeightHelper.bold,
+        color: context.color.textColor,
+      );
+
+  static TextStyle font16Bold(BuildContext context) => TextStyle(
         fontSize: 16.sp,
+        fontFamily: FontFamilyHelper.getFontFamily(),
+        fontWeight: FontWeightHelper.bold,
+        color: context.color.textColor,
+      );
+
+  static TextStyle font18Bold(BuildContext context) => TextStyle(
+        fontSize: 18.sp,
         fontFamily: FontFamilyHelper.getFontFamily(),
         fontWeight: FontWeightHelper.bold,
         color: context.color.textColor,

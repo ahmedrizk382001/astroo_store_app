@@ -3,6 +3,7 @@ import 'package:astroo_store_app/core/Routers/routers.dart';
 import 'package:astroo_store_app/core/di/dependency_injection.dart';
 
 import 'package:astroo_store_app/core/shared/app_cubit/app_settings_cubit_cubit.dart';
+import 'package:astroo_store_app/features/admin/admin_drawer/presentation/views/admin_drawer_view.dart';
 import 'package:astroo_store_app/features/auth/presentation/cubit/cubit/auth_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -93,8 +94,9 @@ class _AstrooMaterialApp extends StatelessWidget {
       locale: locale,
       localizationsDelegates: _localizationDelegateList,
       supportedLocales: S.delegate.supportedLocales,
-      onGenerateRoute: AppRouter.generateRoute,
-      initialRoute: initialRoute,
+      // onGenerateRoute: AppRouter.generateRoute,
+      // initialRoute: initialRoute,
+      home: AdminDrawerView(),
     );
   }
 
