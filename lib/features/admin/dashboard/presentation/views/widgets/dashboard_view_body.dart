@@ -42,8 +42,6 @@ class DashboardViewBody extends StatelessWidget {
               height: 24.h,
             ),
             UsersDashboardBloc(),
-
-            // Ensures enough scrollable space
           ],
         ),
       ),
