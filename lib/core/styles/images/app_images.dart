@@ -2,8 +2,14 @@
 class Assets {
   Assets._();
 
-  static const String pngMobileShopping =
-      "assets/images/admin/mobile_shopping.png";
+  static const String pngDashboardCategories =
+      "assets/images/admin/dashboard_categories.png";
+
+  static const String pngDashboardProducts =
+      "assets/images/admin/dashboard_products.png";
+
+  static const String pngDashboardUsers =
+      "assets/images/admin/dashboard_users.png";
 
   /// Assets for svgArrowBack
   /// assets/svg/arrow_back.svg

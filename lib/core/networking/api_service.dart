@@ -1,4 +1,7 @@
 import 'package:astroo_store_app/core/networking/api_constants.dart';
+import 'package:astroo_store_app/features/admin/dashboard/data/models/categories_number_model.dart';
+import 'package:astroo_store_app/features/admin/dashboard/data/models/products_number_model.dart';
+import 'package:astroo_store_app/features/admin/dashboard/data/models/users_number_model.dart';
 import 'package:astroo_store_app/features/auth/data/models/login_response_model.dart';
 import 'package:astroo_store_app/features/auth/data/models/sign_up_response_model.dart';
 import 'package:astroo_store_app/features/auth/data/models/user_profile_model.dart';
@@ -18,4 +21,16 @@ abstract class ApiService {
 
   @POST(ApiConstants.graphQL)
   Future<SignUpResponseModel> signUp(@Body() Map<String, dynamic> signUpReq);
+
+  @POST(ApiConstants.graphQL)
+  Future<ProductsNumberModel> getProductsNumber(
+      @Body() Map<String, dynamic> productsReq);
+
+  @POST(ApiConstants.graphQL)
+  Future<CategoriesNumberModel> getCategoriesNumber(
+      @Body() Map<String, dynamic> categoriesReq);
+
+  @POST(ApiConstants.graphQL)
+  Future<UsersNumberModel> getUsersNumber(
+      @Body() Map<String, dynamic> usersReq);
 }

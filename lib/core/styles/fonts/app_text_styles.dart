@@ -60,4 +60,11 @@ class AppTextStyles {
         fontWeight: FontWeightHelper.bold,
         color: context.color.textColor,
       );
+
+  static TextStyle font24Bold(BuildContext context) => TextStyle(
+        fontSize: 24.sp,
+        fontFamily: FontFamilyHelper.getFontFamily(),
+        fontWeight: FontWeightHelper.bold,
+        color: context.color.textColor,
+      );
 }
