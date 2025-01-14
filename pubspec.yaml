@@ -68,6 +68,7 @@ dependencies:
   logger: ^2.4.0 # A flexible logging utility for better debug information during development.
   get_it: ^8.0.3
   fluttertoast: ^8.2.10
+  shimmer: ^3.0.0
 
 dev_dependencies:
   flutter_test:

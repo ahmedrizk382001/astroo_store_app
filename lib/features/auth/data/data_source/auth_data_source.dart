@@ -5,7 +5,7 @@ import 'package:astroo_store_app/features/auth/data/models/sign_up_response_mode
 import 'package:astroo_store_app/features/auth/data/models/user_profile_model.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import '../../../../core/networking/graphQl/graphQl_queries/auth_queries.dart';
+import '../../../../core/networking/graphQl/graphQl_queries/auth_queries/auth_queries.dart';
 import '../models/login_request_model.dart';
 
 class AuthDataSource {
