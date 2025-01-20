@@ -19,7 +19,15 @@ class AdminCatergoryItemImage extends StatelessWidget {
         imageUrl: image,
         fit: BoxFit.cover,
         placeholder: (context, url) => LoadingShimmer(),
-        errorWidget: (context, url, error) => Center(child: Icon(Icons.error)),
+        errorWidget: (context, url, error) => Container(
+          color: Colors.black54,
+          child: Center(
+              child: Icon(
+            Icons.error,
+            size: 48.sp,
+            color: Colors.red,
+          )),
+        ),
       ),
     );
   }

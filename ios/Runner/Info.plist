@@ -52,5 +52,11 @@
     		<string>en</string>
     		<string>ar</string>
 		</array>
+		<key>NSPhotoLibraryUsageDescription</key>
+		<string>We need access to your photo library to allow you to upload images.</string>
+		<key>NSCameraUsageDescription</key>
+		<string>We need access to your camera to allow you to take photos.</string>
+		<key>NSMicrophoneUsageDescription</key>
+		<string>We need access to your microphone for recording videos.</string>
 	</dict>
 </plist>

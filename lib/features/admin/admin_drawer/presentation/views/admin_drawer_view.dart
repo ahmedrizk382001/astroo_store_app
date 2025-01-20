@@ -1,4 +1,5 @@
 import 'package:astroo_store_app/core/extensions/context_extension.dart';
+import 'package:astroo_store_app/features/admin/admin_categories/presentation/views/admin_categories_view.dart';
 import 'package:astroo_store_app/features/admin/admin_drawer/presentation/views/widgets/drawer_menu_screen.dart';
 import 'package:astroo_store_app/features/admin/dashboard/presentation/views/dashboard_view.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,7 @@ class AdminDrawerView extends StatefulWidget {
 
 class _AdminDrawerViewState extends State<AdminDrawerView> {
   late ZoomDrawerController zoomDrawerController;
-  Widget currentScreen = DashboardView();
+  Widget currentScreen = AdminCategoriesView();
 
   @override
   void initState() {

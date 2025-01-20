@@ -1,6 +1,8 @@
 import 'package:astroo_store_app/core/networking/api_result.dart';
 import 'package:astroo_store_app/features/admin/admin_categories/data/data_source/admin_categories_data_source.dart';
+import 'package:astroo_store_app/features/admin/admin_categories/data/models/add_category_response.dart';
 import 'package:astroo_store_app/features/admin/admin_categories/data/models/categories_model.dart';
+import 'package:astroo_store_app/features/admin/admin_categories/data/models/add_category_request_model.dart';
 
 class AdminCategoriesRepo {
   final AdminCategoriesDataSource _adminCategoriesDataSource;
@@ -10,6 +12,16 @@ class AdminCategoriesRepo {
   Future<ApiResult<CategoriesModel>> getAllCategories() async {
     try {
       var result = await _adminCategoriesDataSource.getAllCategories();
+      return ApiResult.success(result);
+    } catch (e) {
+      return ApiResult.failure(e.toString());
+    }
+  }
+
+  Future<ApiResult<AddCategoryResponse>> addCategory(
+      {required AddCategoryResponseModel body}) async {
+    try {
+      var result = await _adminCategoriesDataSource.addCategory(body: body);
       return ApiResult.success(result);
     } catch (e) {
       return ApiResult.failure(e.toString());

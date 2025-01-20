@@ -14,7 +14,7 @@ class CategoriesModel {
     if (data.categories.isEmpty) {
       return [];
     } else {
-      return data.categories;
+      return data.categories.reversed.toList();
     }
   }
 }

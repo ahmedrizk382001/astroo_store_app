@@ -1,6 +1,6 @@
 import 'package:astroo_store_app/core/extensions/context_extension.dart';
 import 'package:astroo_store_app/features/admin/admin_categories/presentation/bloc/get_admin_categories/get_admin_categories_bloc.dart';
-import 'package:astroo_store_app/features/admin/admin_categories/presentation/views/widgets/common/add_category_button.dart';
+import 'package:astroo_store_app/features/admin/admin_categories/presentation/views/widgets/add_category/add_category_button.dart';
 import 'package:astroo_store_app/features/admin/admin_categories/presentation/views/widgets/common/admin_categories_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -31,14 +31,7 @@ class AdminCategoriesViewBody extends StatelessWidget {
                 height: 24.h,
               ),
             ),
-            SliverFillRemaining(
-              child: AdminCategoriesList(),
-            ),
-            SliverToBoxAdapter(
-              child: SizedBox(
-                height: 24.h,
-              ),
-            ),
+            AdminCategoriesList(),
           ],
         ),
       ),

@@ -17,37 +17,55 @@ class AdminCategoriesList extends StatelessWidget {
       builder: (context, state) {
         return state.when(
           loading: () {
-            return ListView.separated(
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              itemBuilder: (context, index) {
-                return LoadingShimmer(
-                  height: 130.h,
-                  borderRadius: 15,
-                );
-              },
-              separatorBuilder: (context, index) => SizedBox(height: 15.h),
-              itemCount: 5,
-            );
-          },
-          success: (categoriesModel) {
-            return ListView.separated(
-              physics: NeverScrollableScrollPhysics(),
-              itemCount: categoriesModel.getCategoriesList().length,
-              itemBuilder: (context, index) {
-                return AdminCategoryItem(
-                  categoryItemModel: categoriesModel.getCategoriesList()[index],
-                );
-              },
-              separatorBuilder: (context, index) => SizedBox(
-                height: 16.h,
+            return SliverList(
+              delegate: SliverChildBuilderDelegate(
+                (context, index) {
+                  if (index.isEven) {
+                    return LoadingShimmer(
+                      height: 130.h,
+                      borderRadius: 15,
+                    );
+                  } else {
+                    return SizedBox(height: 16.h); // Separator
+                  }
+                },
+                childCount: 5 * 2 - 1, // Total items + separators
               ),
             );
           },
-          empty: () => EmptyScreen(
-            title: "No categories to show...",
-          ),
-          error: Text.new,
+          success: (categoriesModel) {
+            final categories = categoriesModel.getCategoriesList();
+            return SliverList(
+              delegate: SliverChildBuilderDelegate(
+                (context, index) {
+                  if (index.isEven) {
+                    return AdminCategoryItem(
+                      categoryItemModel: categories[index ~/ 2],
+                    );
+                  } else {
+                    return SizedBox(height: 16.h); // Separator
+                  }
+                },
+                childCount:
+                    categories.length * 2 - 1, // Total items + separators
+              ),
+            );
+          },
+          empty: () {
+            return SliverToBoxAdapter(
+              child: EmptyScreen(
+                title: "No categories to show...",
+              ),
+            );
+          },
+          error: (error) {
+            return SliverToBoxAdapter(
+              child: Text(
+                error,
+                style: TextStyle(color: Colors.red),
+              ),
+            );
+          },
         );
       },
     );

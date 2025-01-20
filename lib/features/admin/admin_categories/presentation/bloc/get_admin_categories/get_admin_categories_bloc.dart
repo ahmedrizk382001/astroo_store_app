@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:astroo_store_app/features/admin/admin_categories/data/models/categories_model.dart';
 import 'package:astroo_store_app/features/admin/admin_categories/data/repo/admin_categories_repo.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -30,6 +31,7 @@ class GetAdminCategoriesBloc
         if (data.getCategoriesList().isEmpty) {
           emit(GetAdminCategoriesState.empty());
         } else {
+          debugPrint("${data.getCategoriesList().length}");
           emit(GetAdminCategoriesState.success(categoriesModel: data));
         }
       },
