@@ -54,10 +54,24 @@ class AppTextStyles {
         color: context.color.textColor,
       );
 
+  static TextStyle font16Medium(BuildContext context) => TextStyle(
+        fontSize: 16.sp,
+        fontFamily: FontFamilyHelper.getFontFamily(),
+        fontWeight: FontWeightHelper.medium,
+        color: context.color.textColor,
+      );
+
   static TextStyle font18Bold(BuildContext context) => TextStyle(
         fontSize: 18.sp,
         fontFamily: FontFamilyHelper.getFontFamily(),
         fontWeight: FontWeightHelper.bold,
+        color: context.color.textColor,
+      );
+
+  static TextStyle font18Medium(BuildContext context) => TextStyle(
+        fontSize: 18.sp,
+        fontFamily: FontFamilyHelper.getFontFamily(),
+        fontWeight: FontWeightHelper.medium,
         color: context.color.textColor,
       );
 

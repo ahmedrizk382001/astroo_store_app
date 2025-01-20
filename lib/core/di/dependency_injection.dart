@@ -1,6 +1,9 @@
 import 'package:astroo_store_app/core/networking/api_service.dart';
 import 'package:astroo_store_app/core/networking/dio_factory.dart';
 import 'package:astroo_store_app/core/shared/app_cubit/app_settings_cubit_cubit.dart';
+import 'package:astroo_store_app/features/admin/admin_categories/data/data_source/admin_categories_data_source.dart';
+import 'package:astroo_store_app/features/admin/admin_categories/data/repo/admin_categories_repo.dart';
+import 'package:astroo_store_app/features/admin/admin_categories/presentation/bloc/get_admin_categories/get_admin_categories_bloc.dart';
 import 'package:astroo_store_app/features/admin/dashboard/data/data_source/dashboard_data_source.dart';
 import 'package:astroo_store_app/features/admin/dashboard/data/repos/dashboard_repo.dart';
 import 'package:astroo_store_app/features/admin/dashboard/presentation/bloc/categories_number/categories_number_bloc.dart';
@@ -18,6 +21,7 @@ Future<void> setUpGetIt() async {
   await initCore();
   await initAuth();
   await initDashboard();
+  await initAdminCategories();
 }
 
 Future<void> initCore() async {
@@ -60,5 +64,18 @@ Future<void> initDashboard() async {
     )
     ..registerFactory(
       () => UsersNumberBloc(getIt<DashboardRepo>()),
+    );
+}
+
+Future<void> initAdminCategories() async {
+  getIt
+    ..registerLazySingleton(
+      () => AdminCategoriesDataSource(getIt<ApiService>()),
+    )
+    ..registerLazySingleton(
+      () => AdminCategoriesRepo(getIt<AdminCategoriesDataSource>()),
+    )
+    ..registerFactory(
+      () => GetAdminCategoriesBloc(getIt<AdminCategoriesRepo>()),
     );
 }
