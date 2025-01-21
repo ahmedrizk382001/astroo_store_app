@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'add_category_bloc.dart';
+part of 'delete_category_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,65 +15,65 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$AddCategoryEvent {
+mixin _$DeleteCategoryEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(AddCategoryRequsetModel body) addNewCategory,
+    required TResult Function(String id) deleteCategory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(AddCategoryRequsetModel body)? addNewCategory,
+    TResult? Function(String id)? deleteCategory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(AddCategoryRequsetModel body)? addNewCategory,
+    TResult Function(String id)? deleteCategory,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(AddNewCategoryEvent value) addNewCategory,
+    required TResult Function(RemoveCategoryEvent value) deleteCategory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(AddNewCategoryEvent value)? addNewCategory,
+    TResult? Function(RemoveCategoryEvent value)? deleteCategory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(AddNewCategoryEvent value)? addNewCategory,
+    TResult Function(RemoveCategoryEvent value)? deleteCategory,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AddCategoryEventCopyWith<$Res> {
-  factory $AddCategoryEventCopyWith(
-          AddCategoryEvent value, $Res Function(AddCategoryEvent) then) =
-      _$AddCategoryEventCopyWithImpl<$Res, AddCategoryEvent>;
+abstract class $DeleteCategoryEventCopyWith<$Res> {
+  factory $DeleteCategoryEventCopyWith(
+          DeleteCategoryEvent value, $Res Function(DeleteCategoryEvent) then) =
+      _$DeleteCategoryEventCopyWithImpl<$Res, DeleteCategoryEvent>;
 }
 
 /// @nodoc
-class _$AddCategoryEventCopyWithImpl<$Res, $Val extends AddCategoryEvent>
-    implements $AddCategoryEventCopyWith<$Res> {
-  _$AddCategoryEventCopyWithImpl(this._value, this._then);
+class _$DeleteCategoryEventCopyWithImpl<$Res, $Val extends DeleteCategoryEvent>
+    implements $DeleteCategoryEventCopyWith<$Res> {
+  _$DeleteCategoryEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of AddCategoryEvent
+  /// Create a copy of DeleteCategoryEvent
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -86,13 +86,13 @@ abstract class _$$StartedImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$StartedImplCopyWithImpl<$Res>
-    extends _$AddCategoryEventCopyWithImpl<$Res, _$StartedImpl>
+    extends _$DeleteCategoryEventCopyWithImpl<$Res, _$StartedImpl>
     implements _$$StartedImplCopyWith<$Res> {
   __$$StartedImplCopyWithImpl(
       _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AddCategoryEvent
+  /// Create a copy of DeleteCategoryEvent
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -103,7 +103,7 @@ class _$StartedImpl implements _Started {
 
   @override
   String toString() {
-    return 'AddCategoryEvent.started()';
+    return 'DeleteCategoryEvent.started()';
   }
 
   @override
@@ -119,7 +119,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(AddCategoryRequsetModel body) addNewCategory,
+    required TResult Function(String id) deleteCategory,
   }) {
     return started();
   }
@@ -128,7 +128,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(AddCategoryRequsetModel body)? addNewCategory,
+    TResult? Function(String id)? deleteCategory,
   }) {
     return started?.call();
   }
@@ -137,7 +137,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(AddCategoryRequsetModel body)? addNewCategory,
+    TResult Function(String id)? deleteCategory,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -150,7 +150,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(AddNewCategoryEvent value) addNewCategory,
+    required TResult Function(RemoveCategoryEvent value) deleteCategory,
   }) {
     return started(this);
   }
@@ -159,7 +159,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(AddNewCategoryEvent value)? addNewCategory,
+    TResult? Function(RemoveCategoryEvent value)? deleteCategory,
   }) {
     return started?.call(this);
   }
@@ -168,7 +168,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(AddNewCategoryEvent value)? addNewCategory,
+    TResult Function(RemoveCategoryEvent value)? deleteCategory,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -178,103 +178,103 @@ class _$StartedImpl implements _Started {
   }
 }
 
-abstract class _Started implements AddCategoryEvent {
+abstract class _Started implements DeleteCategoryEvent {
   const factory _Started() = _$StartedImpl;
 }
 
 /// @nodoc
-abstract class _$$AddNewCategoryEventImplCopyWith<$Res> {
-  factory _$$AddNewCategoryEventImplCopyWith(_$AddNewCategoryEventImpl value,
-          $Res Function(_$AddNewCategoryEventImpl) then) =
-      __$$AddNewCategoryEventImplCopyWithImpl<$Res>;
+abstract class _$$RemoveCategoryEventImplCopyWith<$Res> {
+  factory _$$RemoveCategoryEventImplCopyWith(_$RemoveCategoryEventImpl value,
+          $Res Function(_$RemoveCategoryEventImpl) then) =
+      __$$RemoveCategoryEventImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({AddCategoryRequsetModel body});
+  $Res call({String id});
 }
 
 /// @nodoc
-class __$$AddNewCategoryEventImplCopyWithImpl<$Res>
-    extends _$AddCategoryEventCopyWithImpl<$Res, _$AddNewCategoryEventImpl>
-    implements _$$AddNewCategoryEventImplCopyWith<$Res> {
-  __$$AddNewCategoryEventImplCopyWithImpl(_$AddNewCategoryEventImpl _value,
-      $Res Function(_$AddNewCategoryEventImpl) _then)
+class __$$RemoveCategoryEventImplCopyWithImpl<$Res>
+    extends _$DeleteCategoryEventCopyWithImpl<$Res, _$RemoveCategoryEventImpl>
+    implements _$$RemoveCategoryEventImplCopyWith<$Res> {
+  __$$RemoveCategoryEventImplCopyWithImpl(_$RemoveCategoryEventImpl _value,
+      $Res Function(_$RemoveCategoryEventImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AddCategoryEvent
+  /// Create a copy of DeleteCategoryEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? body = null,
+    Object? id = null,
   }) {
-    return _then(_$AddNewCategoryEventImpl(
-      body: null == body
-          ? _value.body
-          : body // ignore: cast_nullable_to_non_nullable
-              as AddCategoryRequsetModel,
+    return _then(_$RemoveCategoryEventImpl(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
 
-class _$AddNewCategoryEventImpl implements AddNewCategoryEvent {
-  const _$AddNewCategoryEventImpl({required this.body});
+class _$RemoveCategoryEventImpl implements RemoveCategoryEvent {
+  const _$RemoveCategoryEventImpl({required this.id});
 
   @override
-  final AddCategoryRequsetModel body;
+  final String id;
 
   @override
   String toString() {
-    return 'AddCategoryEvent.addNewCategory(body: $body)';
+    return 'DeleteCategoryEvent.deleteCategory(id: $id)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$AddNewCategoryEventImpl &&
-            (identical(other.body, body) || other.body == body));
+            other is _$RemoveCategoryEventImpl &&
+            (identical(other.id, id) || other.id == id));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, body);
+  int get hashCode => Object.hash(runtimeType, id);
 
-  /// Create a copy of AddCategoryEvent
+  /// Create a copy of DeleteCategoryEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$AddNewCategoryEventImplCopyWith<_$AddNewCategoryEventImpl> get copyWith =>
-      __$$AddNewCategoryEventImplCopyWithImpl<_$AddNewCategoryEventImpl>(
+  _$$RemoveCategoryEventImplCopyWith<_$RemoveCategoryEventImpl> get copyWith =>
+      __$$RemoveCategoryEventImplCopyWithImpl<_$RemoveCategoryEventImpl>(
           this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(AddCategoryRequsetModel body) addNewCategory,
+    required TResult Function(String id) deleteCategory,
   }) {
-    return addNewCategory(body);
+    return deleteCategory(id);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(AddCategoryRequsetModel body)? addNewCategory,
+    TResult? Function(String id)? deleteCategory,
   }) {
-    return addNewCategory?.call(body);
+    return deleteCategory?.call(id);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(AddCategoryRequsetModel body)? addNewCategory,
+    TResult Function(String id)? deleteCategory,
     required TResult orElse(),
   }) {
-    if (addNewCategory != null) {
-      return addNewCategory(body);
+    if (deleteCategory != null) {
+      return deleteCategory(id);
     }
     return orElse();
   }
@@ -283,50 +283,49 @@ class _$AddNewCategoryEventImpl implements AddNewCategoryEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(AddNewCategoryEvent value) addNewCategory,
+    required TResult Function(RemoveCategoryEvent value) deleteCategory,
   }) {
-    return addNewCategory(this);
+    return deleteCategory(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(AddNewCategoryEvent value)? addNewCategory,
+    TResult? Function(RemoveCategoryEvent value)? deleteCategory,
   }) {
-    return addNewCategory?.call(this);
+    return deleteCategory?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(AddNewCategoryEvent value)? addNewCategory,
+    TResult Function(RemoveCategoryEvent value)? deleteCategory,
     required TResult orElse(),
   }) {
-    if (addNewCategory != null) {
-      return addNewCategory(this);
+    if (deleteCategory != null) {
+      return deleteCategory(this);
     }
     return orElse();
   }
 }
 
-abstract class AddNewCategoryEvent implements AddCategoryEvent {
-  const factory AddNewCategoryEvent(
-          {required final AddCategoryRequsetModel body}) =
-      _$AddNewCategoryEventImpl;
+abstract class RemoveCategoryEvent implements DeleteCategoryEvent {
+  const factory RemoveCategoryEvent({required final String id}) =
+      _$RemoveCategoryEventImpl;
 
-  AddCategoryRequsetModel get body;
+  String get id;
 
-  /// Create a copy of AddCategoryEvent
+  /// Create a copy of DeleteCategoryEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AddNewCategoryEventImplCopyWith<_$AddNewCategoryEventImpl> get copyWith =>
+  _$$RemoveCategoryEventImplCopyWith<_$RemoveCategoryEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-mixin _$AddCategoryState {
+mixin _$DeleteCategoryState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
@@ -380,23 +379,23 @@ mixin _$AddCategoryState {
 }
 
 /// @nodoc
-abstract class $AddCategoryStateCopyWith<$Res> {
-  factory $AddCategoryStateCopyWith(
-          AddCategoryState value, $Res Function(AddCategoryState) then) =
-      _$AddCategoryStateCopyWithImpl<$Res, AddCategoryState>;
+abstract class $DeleteCategoryStateCopyWith<$Res> {
+  factory $DeleteCategoryStateCopyWith(
+          DeleteCategoryState value, $Res Function(DeleteCategoryState) then) =
+      _$DeleteCategoryStateCopyWithImpl<$Res, DeleteCategoryState>;
 }
 
 /// @nodoc
-class _$AddCategoryStateCopyWithImpl<$Res, $Val extends AddCategoryState>
-    implements $AddCategoryStateCopyWith<$Res> {
-  _$AddCategoryStateCopyWithImpl(this._value, this._then);
+class _$DeleteCategoryStateCopyWithImpl<$Res, $Val extends DeleteCategoryState>
+    implements $DeleteCategoryStateCopyWith<$Res> {
+  _$DeleteCategoryStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of AddCategoryState
+  /// Create a copy of DeleteCategoryState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -409,13 +408,13 @@ abstract class _$$InitialImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$InitialImplCopyWithImpl<$Res>
-    extends _$AddCategoryStateCopyWithImpl<$Res, _$InitialImpl>
+    extends _$DeleteCategoryStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AddCategoryState
+  /// Create a copy of DeleteCategoryState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -426,7 +425,7 @@ class _$InitialImpl implements _Initial {
 
   @override
   String toString() {
-    return 'AddCategoryState.initial()';
+    return 'DeleteCategoryState.initial()';
   }
 
   @override
@@ -513,7 +512,7 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements AddCategoryState {
+abstract class _Initial implements DeleteCategoryState {
   const factory _Initial() = _$InitialImpl;
 }
 
@@ -526,13 +525,13 @@ abstract class _$$LoadingStateImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$LoadingStateImplCopyWithImpl<$Res>
-    extends _$AddCategoryStateCopyWithImpl<$Res, _$LoadingStateImpl>
+    extends _$DeleteCategoryStateCopyWithImpl<$Res, _$LoadingStateImpl>
     implements _$$LoadingStateImplCopyWith<$Res> {
   __$$LoadingStateImplCopyWithImpl(
       _$LoadingStateImpl _value, $Res Function(_$LoadingStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AddCategoryState
+  /// Create a copy of DeleteCategoryState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -543,7 +542,7 @@ class _$LoadingStateImpl implements LoadingState {
 
   @override
   String toString() {
-    return 'AddCategoryState.loading()';
+    return 'DeleteCategoryState.loading()';
   }
 
   @override
@@ -630,7 +629,7 @@ class _$LoadingStateImpl implements LoadingState {
   }
 }
 
-abstract class LoadingState implements AddCategoryState {
+abstract class LoadingState implements DeleteCategoryState {
   const factory LoadingState() = _$LoadingStateImpl;
 }
 
@@ -643,13 +642,13 @@ abstract class _$$SuccessStateImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$SuccessStateImplCopyWithImpl<$Res>
-    extends _$AddCategoryStateCopyWithImpl<$Res, _$SuccessStateImpl>
+    extends _$DeleteCategoryStateCopyWithImpl<$Res, _$SuccessStateImpl>
     implements _$$SuccessStateImplCopyWith<$Res> {
   __$$SuccessStateImplCopyWithImpl(
       _$SuccessStateImpl _value, $Res Function(_$SuccessStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AddCategoryState
+  /// Create a copy of DeleteCategoryState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -660,7 +659,7 @@ class _$SuccessStateImpl implements SuccessState {
 
   @override
   String toString() {
-    return 'AddCategoryState.success()';
+    return 'DeleteCategoryState.success()';
   }
 
   @override
@@ -747,7 +746,7 @@ class _$SuccessStateImpl implements SuccessState {
   }
 }
 
-abstract class SuccessState implements AddCategoryState {
+abstract class SuccessState implements DeleteCategoryState {
   const factory SuccessState() = _$SuccessStateImpl;
 }
 
@@ -762,13 +761,13 @@ abstract class _$$ErrorStateImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ErrorStateImplCopyWithImpl<$Res>
-    extends _$AddCategoryStateCopyWithImpl<$Res, _$ErrorStateImpl>
+    extends _$DeleteCategoryStateCopyWithImpl<$Res, _$ErrorStateImpl>
     implements _$$ErrorStateImplCopyWith<$Res> {
   __$$ErrorStateImplCopyWithImpl(
       _$ErrorStateImpl _value, $Res Function(_$ErrorStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AddCategoryState
+  /// Create a copy of DeleteCategoryState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -794,7 +793,7 @@ class _$ErrorStateImpl implements ErrorState {
 
   @override
   String toString() {
-    return 'AddCategoryState.error(error: $error)';
+    return 'DeleteCategoryState.error(error: $error)';
   }
 
   @override
@@ -808,7 +807,7 @@ class _$ErrorStateImpl implements ErrorState {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of AddCategoryState
+  /// Create a copy of DeleteCategoryState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -891,12 +890,12 @@ class _$ErrorStateImpl implements ErrorState {
   }
 }
 
-abstract class ErrorState implements AddCategoryState {
+abstract class ErrorState implements DeleteCategoryState {
   const factory ErrorState({required final String error}) = _$ErrorStateImpl;
 
   String get error;
 
-  /// Create a copy of AddCategoryState
+  /// Create a copy of DeleteCategoryState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorStateImplCopyWith<_$ErrorStateImpl> get copyWith =>

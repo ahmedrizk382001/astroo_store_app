@@ -1,27 +1,31 @@
-import 'package:astroo_store_app/core/di/dependency_injection.dart';
+import 'dart:ffi';
+
 import 'package:astroo_store_app/core/extensions/context_extension.dart';
 import 'package:astroo_store_app/core/shared/upload_image/upload_image_cubit/upload_image_cubit.dart';
 import 'package:astroo_store_app/core/shared/widgets/show_toast.dart';
 import 'package:astroo_store_app/core/styles/fonts/app_text_styles.dart';
-import 'package:astroo_store_app/features/admin/admin_categories/data/models/add_category_request_model.dart';
-import 'package:astroo_store_app/features/admin/admin_categories/presentation/bloc/add_category_bloc/add_category_bloc.dart';
+import 'package:astroo_store_app/features/admin/admin_categories/data/models/update_category_request_model.dart';
+import 'package:astroo_store_app/features/admin/admin_categories/presentation/bloc/update_category_bloc/update_category_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class CreateCategoryButton extends StatelessWidget {
-  const CreateCategoryButton({
+class UpdateCategoryButton extends StatelessWidget {
+  const UpdateCategoryButton({
     super.key,
+    required this.id,
   });
+
+  final String id;
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<AddCategoryBloc, AddCategoryState>(
+    return BlocConsumer<UpdateCategoryBloc, UpdateCategoryState>(
       listener: (context, state) {
         state.whenOrNull(
           success: () {
             context.pop();
             ShowToast.showToastSuccessButtom(
-              message: 'Category created successfully',
+              message: 'Category Updated successfully',
             );
           },
           error: (error) {
@@ -32,7 +36,7 @@ class CreateCategoryButton extends StatelessWidget {
         );
       },
       builder: (context, state) {
-        var addCategoryCubit = context.read<AddCategoryBloc>();
+        var updateCategoryCubit = context.read<UpdateCategoryBloc>();
 
         return state.maybeWhen(
           loading: () => Center(
@@ -44,19 +48,16 @@ class CreateCategoryButton extends StatelessWidget {
             width: double.infinity,
             child: ElevatedButton(
                 onPressed: () {
-                  if (!addCategoryCubit.formKey.currentState!.validate() ||
+                  if (!updateCategoryCubit.formKey.currentState!.validate() ||
                       context.read<UploadImageCubit>().imageUrl.isEmpty) {
                     ShowToast.showToastErrorButtom(
                         message: "Please fill the required fields");
                   } else {
-                    addCategoryCubit.add(
-                      AddCategoryEvent.addNewCategory(
-                        body: AddCategoryRequsetModel(
-                          name: addCategoryCubit.nameController.text,
-                          image: context.read<UploadImageCubit>().imageUrl,
-                        ),
-                      ),
-                    );
+                    updateCategoryCubit.add(UpdateCategoryEvent.updateCategory(
+                        body: UpdateCategoryRequestModel(
+                            id: id,
+                            name: updateCategoryCubit.nameController.text,
+                            image: context.read<UploadImageCubit>().imageUrl)));
                   }
                 },
                 style: ButtonStyle(
@@ -64,7 +65,7 @@ class CreateCategoryButton extends StatelessWidget {
                       WidgetStatePropertyAll(context.color.mainColor),
                 ),
                 child: Text(
-                  "Create",
+                  "Update",
                   style: AppTextStyles.font14Medium(context),
                 )),
           ),

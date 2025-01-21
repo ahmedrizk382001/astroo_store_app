@@ -6,15 +6,15 @@ part of 'add_category_request_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-AddCategoryResponseModel _$AddCategoryResponseModelFromJson(
+AddCategoryRequsetModel _$AddCategoryRequsetModelFromJson(
         Map<String, dynamic> json) =>
-    AddCategoryResponseModel(
+    AddCategoryRequsetModel(
       name: json['name'] as String?,
       image: json['image'] as String?,
     );
 
-Map<String, dynamic> _$AddCategoryResponseModelToJson(
-        AddCategoryResponseModel instance) =>
+Map<String, dynamic> _$AddCategoryRequsetModelToJson(
+        AddCategoryRequsetModel instance) =>
     <String, dynamic>{
       'name': instance.name,
       'image': instance.image,

@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'add_category_bloc.dart';
+part of 'update_category_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,65 +15,65 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$AddCategoryEvent {
+mixin _$UpdateCategoryEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(AddCategoryRequsetModel body) addNewCategory,
+    required TResult Function(UpdateCategoryRequestModel body) updateCategory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(AddCategoryRequsetModel body)? addNewCategory,
+    TResult? Function(UpdateCategoryRequestModel body)? updateCategory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(AddCategoryRequsetModel body)? addNewCategory,
+    TResult Function(UpdateCategoryRequestModel body)? updateCategory,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(AddNewCategoryEvent value) addNewCategory,
+    required TResult Function(EditCategoryEvent value) updateCategory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(AddNewCategoryEvent value)? addNewCategory,
+    TResult? Function(EditCategoryEvent value)? updateCategory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(AddNewCategoryEvent value)? addNewCategory,
+    TResult Function(EditCategoryEvent value)? updateCategory,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AddCategoryEventCopyWith<$Res> {
-  factory $AddCategoryEventCopyWith(
-          AddCategoryEvent value, $Res Function(AddCategoryEvent) then) =
-      _$AddCategoryEventCopyWithImpl<$Res, AddCategoryEvent>;
+abstract class $UpdateCategoryEventCopyWith<$Res> {
+  factory $UpdateCategoryEventCopyWith(
+          UpdateCategoryEvent value, $Res Function(UpdateCategoryEvent) then) =
+      _$UpdateCategoryEventCopyWithImpl<$Res, UpdateCategoryEvent>;
 }
 
 /// @nodoc
-class _$AddCategoryEventCopyWithImpl<$Res, $Val extends AddCategoryEvent>
-    implements $AddCategoryEventCopyWith<$Res> {
-  _$AddCategoryEventCopyWithImpl(this._value, this._then);
+class _$UpdateCategoryEventCopyWithImpl<$Res, $Val extends UpdateCategoryEvent>
+    implements $UpdateCategoryEventCopyWith<$Res> {
+  _$UpdateCategoryEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of AddCategoryEvent
+  /// Create a copy of UpdateCategoryEvent
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -86,13 +86,13 @@ abstract class _$$StartedImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$StartedImplCopyWithImpl<$Res>
-    extends _$AddCategoryEventCopyWithImpl<$Res, _$StartedImpl>
+    extends _$UpdateCategoryEventCopyWithImpl<$Res, _$StartedImpl>
     implements _$$StartedImplCopyWith<$Res> {
   __$$StartedImplCopyWithImpl(
       _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AddCategoryEvent
+  /// Create a copy of UpdateCategoryEvent
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -103,7 +103,7 @@ class _$StartedImpl implements _Started {
 
   @override
   String toString() {
-    return 'AddCategoryEvent.started()';
+    return 'UpdateCategoryEvent.started()';
   }
 
   @override
@@ -119,7 +119,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(AddCategoryRequsetModel body) addNewCategory,
+    required TResult Function(UpdateCategoryRequestModel body) updateCategory,
   }) {
     return started();
   }
@@ -128,7 +128,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(AddCategoryRequsetModel body)? addNewCategory,
+    TResult? Function(UpdateCategoryRequestModel body)? updateCategory,
   }) {
     return started?.call();
   }
@@ -137,7 +137,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(AddCategoryRequsetModel body)? addNewCategory,
+    TResult Function(UpdateCategoryRequestModel body)? updateCategory,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -150,7 +150,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(AddNewCategoryEvent value) addNewCategory,
+    required TResult Function(EditCategoryEvent value) updateCategory,
   }) {
     return started(this);
   }
@@ -159,7 +159,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(AddNewCategoryEvent value)? addNewCategory,
+    TResult? Function(EditCategoryEvent value)? updateCategory,
   }) {
     return started?.call(this);
   }
@@ -168,7 +168,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(AddNewCategoryEvent value)? addNewCategory,
+    TResult Function(EditCategoryEvent value)? updateCategory,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -178,103 +178,103 @@ class _$StartedImpl implements _Started {
   }
 }
 
-abstract class _Started implements AddCategoryEvent {
+abstract class _Started implements UpdateCategoryEvent {
   const factory _Started() = _$StartedImpl;
 }
 
 /// @nodoc
-abstract class _$$AddNewCategoryEventImplCopyWith<$Res> {
-  factory _$$AddNewCategoryEventImplCopyWith(_$AddNewCategoryEventImpl value,
-          $Res Function(_$AddNewCategoryEventImpl) then) =
-      __$$AddNewCategoryEventImplCopyWithImpl<$Res>;
+abstract class _$$EditCategoryEventImplCopyWith<$Res> {
+  factory _$$EditCategoryEventImplCopyWith(_$EditCategoryEventImpl value,
+          $Res Function(_$EditCategoryEventImpl) then) =
+      __$$EditCategoryEventImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({AddCategoryRequsetModel body});
+  $Res call({UpdateCategoryRequestModel body});
 }
 
 /// @nodoc
-class __$$AddNewCategoryEventImplCopyWithImpl<$Res>
-    extends _$AddCategoryEventCopyWithImpl<$Res, _$AddNewCategoryEventImpl>
-    implements _$$AddNewCategoryEventImplCopyWith<$Res> {
-  __$$AddNewCategoryEventImplCopyWithImpl(_$AddNewCategoryEventImpl _value,
-      $Res Function(_$AddNewCategoryEventImpl) _then)
+class __$$EditCategoryEventImplCopyWithImpl<$Res>
+    extends _$UpdateCategoryEventCopyWithImpl<$Res, _$EditCategoryEventImpl>
+    implements _$$EditCategoryEventImplCopyWith<$Res> {
+  __$$EditCategoryEventImplCopyWithImpl(_$EditCategoryEventImpl _value,
+      $Res Function(_$EditCategoryEventImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AddCategoryEvent
+  /// Create a copy of UpdateCategoryEvent
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? body = null,
   }) {
-    return _then(_$AddNewCategoryEventImpl(
+    return _then(_$EditCategoryEventImpl(
       body: null == body
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
-              as AddCategoryRequsetModel,
+              as UpdateCategoryRequestModel,
     ));
   }
 }
 
 /// @nodoc
 
-class _$AddNewCategoryEventImpl implements AddNewCategoryEvent {
-  const _$AddNewCategoryEventImpl({required this.body});
+class _$EditCategoryEventImpl implements EditCategoryEvent {
+  const _$EditCategoryEventImpl({required this.body});
 
   @override
-  final AddCategoryRequsetModel body;
+  final UpdateCategoryRequestModel body;
 
   @override
   String toString() {
-    return 'AddCategoryEvent.addNewCategory(body: $body)';
+    return 'UpdateCategoryEvent.updateCategory(body: $body)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$AddNewCategoryEventImpl &&
+            other is _$EditCategoryEventImpl &&
             (identical(other.body, body) || other.body == body));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, body);
 
-  /// Create a copy of AddCategoryEvent
+  /// Create a copy of UpdateCategoryEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$AddNewCategoryEventImplCopyWith<_$AddNewCategoryEventImpl> get copyWith =>
-      __$$AddNewCategoryEventImplCopyWithImpl<_$AddNewCategoryEventImpl>(
+  _$$EditCategoryEventImplCopyWith<_$EditCategoryEventImpl> get copyWith =>
+      __$$EditCategoryEventImplCopyWithImpl<_$EditCategoryEventImpl>(
           this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(AddCategoryRequsetModel body) addNewCategory,
+    required TResult Function(UpdateCategoryRequestModel body) updateCategory,
   }) {
-    return addNewCategory(body);
+    return updateCategory(body);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(AddCategoryRequsetModel body)? addNewCategory,
+    TResult? Function(UpdateCategoryRequestModel body)? updateCategory,
   }) {
-    return addNewCategory?.call(body);
+    return updateCategory?.call(body);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(AddCategoryRequsetModel body)? addNewCategory,
+    TResult Function(UpdateCategoryRequestModel body)? updateCategory,
     required TResult orElse(),
   }) {
-    if (addNewCategory != null) {
-      return addNewCategory(body);
+    if (updateCategory != null) {
+      return updateCategory(body);
     }
     return orElse();
   }
@@ -283,50 +283,50 @@ class _$AddNewCategoryEventImpl implements AddNewCategoryEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(AddNewCategoryEvent value) addNewCategory,
+    required TResult Function(EditCategoryEvent value) updateCategory,
   }) {
-    return addNewCategory(this);
+    return updateCategory(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(AddNewCategoryEvent value)? addNewCategory,
+    TResult? Function(EditCategoryEvent value)? updateCategory,
   }) {
-    return addNewCategory?.call(this);
+    return updateCategory?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(AddNewCategoryEvent value)? addNewCategory,
+    TResult Function(EditCategoryEvent value)? updateCategory,
     required TResult orElse(),
   }) {
-    if (addNewCategory != null) {
-      return addNewCategory(this);
+    if (updateCategory != null) {
+      return updateCategory(this);
     }
     return orElse();
   }
 }
 
-abstract class AddNewCategoryEvent implements AddCategoryEvent {
-  const factory AddNewCategoryEvent(
-          {required final AddCategoryRequsetModel body}) =
-      _$AddNewCategoryEventImpl;
+abstract class EditCategoryEvent implements UpdateCategoryEvent {
+  const factory EditCategoryEvent(
+          {required final UpdateCategoryRequestModel body}) =
+      _$EditCategoryEventImpl;
 
-  AddCategoryRequsetModel get body;
+  UpdateCategoryRequestModel get body;
 
-  /// Create a copy of AddCategoryEvent
+  /// Create a copy of UpdateCategoryEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AddNewCategoryEventImplCopyWith<_$AddNewCategoryEventImpl> get copyWith =>
+  _$$EditCategoryEventImplCopyWith<_$EditCategoryEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-mixin _$AddCategoryState {
+mixin _$UpdateCategoryState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
@@ -355,7 +355,7 @@ mixin _$AddCategoryState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingState value) loading,
+    required TResult Function(LodaingState value) loading,
     required TResult Function(SuccessState value) success,
     required TResult Function(ErrorState value) error,
   }) =>
@@ -363,7 +363,7 @@ mixin _$AddCategoryState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingState value)? loading,
+    TResult? Function(LodaingState value)? loading,
     TResult? Function(SuccessState value)? success,
     TResult? Function(ErrorState value)? error,
   }) =>
@@ -371,7 +371,7 @@ mixin _$AddCategoryState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(LoadingState value)? loading,
+    TResult Function(LodaingState value)? loading,
     TResult Function(SuccessState value)? success,
     TResult Function(ErrorState value)? error,
     required TResult orElse(),
@@ -380,23 +380,23 @@ mixin _$AddCategoryState {
 }
 
 /// @nodoc
-abstract class $AddCategoryStateCopyWith<$Res> {
-  factory $AddCategoryStateCopyWith(
-          AddCategoryState value, $Res Function(AddCategoryState) then) =
-      _$AddCategoryStateCopyWithImpl<$Res, AddCategoryState>;
+abstract class $UpdateCategoryStateCopyWith<$Res> {
+  factory $UpdateCategoryStateCopyWith(
+          UpdateCategoryState value, $Res Function(UpdateCategoryState) then) =
+      _$UpdateCategoryStateCopyWithImpl<$Res, UpdateCategoryState>;
 }
 
 /// @nodoc
-class _$AddCategoryStateCopyWithImpl<$Res, $Val extends AddCategoryState>
-    implements $AddCategoryStateCopyWith<$Res> {
-  _$AddCategoryStateCopyWithImpl(this._value, this._then);
+class _$UpdateCategoryStateCopyWithImpl<$Res, $Val extends UpdateCategoryState>
+    implements $UpdateCategoryStateCopyWith<$Res> {
+  _$UpdateCategoryStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of AddCategoryState
+  /// Create a copy of UpdateCategoryState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -409,13 +409,13 @@ abstract class _$$InitialImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$InitialImplCopyWithImpl<$Res>
-    extends _$AddCategoryStateCopyWithImpl<$Res, _$InitialImpl>
+    extends _$UpdateCategoryStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AddCategoryState
+  /// Create a copy of UpdateCategoryState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -426,7 +426,7 @@ class _$InitialImpl implements _Initial {
 
   @override
   String toString() {
-    return 'AddCategoryState.initial()';
+    return 'UpdateCategoryState.initial()';
   }
 
   @override
@@ -479,7 +479,7 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingState value) loading,
+    required TResult Function(LodaingState value) loading,
     required TResult Function(SuccessState value) success,
     required TResult Function(ErrorState value) error,
   }) {
@@ -490,7 +490,7 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingState value)? loading,
+    TResult? Function(LodaingState value)? loading,
     TResult? Function(SuccessState value)? success,
     TResult? Function(ErrorState value)? error,
   }) {
@@ -501,7 +501,7 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(LoadingState value)? loading,
+    TResult Function(LodaingState value)? loading,
     TResult Function(SuccessState value)? success,
     TResult Function(ErrorState value)? error,
     required TResult orElse(),
@@ -513,43 +513,43 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements AddCategoryState {
+abstract class _Initial implements UpdateCategoryState {
   const factory _Initial() = _$InitialImpl;
 }
 
 /// @nodoc
-abstract class _$$LoadingStateImplCopyWith<$Res> {
-  factory _$$LoadingStateImplCopyWith(
-          _$LoadingStateImpl value, $Res Function(_$LoadingStateImpl) then) =
-      __$$LoadingStateImplCopyWithImpl<$Res>;
+abstract class _$$LodaingStateImplCopyWith<$Res> {
+  factory _$$LodaingStateImplCopyWith(
+          _$LodaingStateImpl value, $Res Function(_$LodaingStateImpl) then) =
+      __$$LodaingStateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadingStateImplCopyWithImpl<$Res>
-    extends _$AddCategoryStateCopyWithImpl<$Res, _$LoadingStateImpl>
-    implements _$$LoadingStateImplCopyWith<$Res> {
-  __$$LoadingStateImplCopyWithImpl(
-      _$LoadingStateImpl _value, $Res Function(_$LoadingStateImpl) _then)
+class __$$LodaingStateImplCopyWithImpl<$Res>
+    extends _$UpdateCategoryStateCopyWithImpl<$Res, _$LodaingStateImpl>
+    implements _$$LodaingStateImplCopyWith<$Res> {
+  __$$LodaingStateImplCopyWithImpl(
+      _$LodaingStateImpl _value, $Res Function(_$LodaingStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AddCategoryState
+  /// Create a copy of UpdateCategoryState
   /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 
-class _$LoadingStateImpl implements LoadingState {
-  const _$LoadingStateImpl();
+class _$LodaingStateImpl implements LodaingState {
+  const _$LodaingStateImpl();
 
   @override
   String toString() {
-    return 'AddCategoryState.loading()';
+    return 'UpdateCategoryState.loading()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingStateImpl);
+        (other.runtimeType == runtimeType && other is _$LodaingStateImpl);
   }
 
   @override
@@ -596,7 +596,7 @@ class _$LoadingStateImpl implements LoadingState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingState value) loading,
+    required TResult Function(LodaingState value) loading,
     required TResult Function(SuccessState value) success,
     required TResult Function(ErrorState value) error,
   }) {
@@ -607,7 +607,7 @@ class _$LoadingStateImpl implements LoadingState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingState value)? loading,
+    TResult? Function(LodaingState value)? loading,
     TResult? Function(SuccessState value)? success,
     TResult? Function(ErrorState value)? error,
   }) {
@@ -618,7 +618,7 @@ class _$LoadingStateImpl implements LoadingState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(LoadingState value)? loading,
+    TResult Function(LodaingState value)? loading,
     TResult Function(SuccessState value)? success,
     TResult Function(ErrorState value)? error,
     required TResult orElse(),
@@ -630,8 +630,8 @@ class _$LoadingStateImpl implements LoadingState {
   }
 }
 
-abstract class LoadingState implements AddCategoryState {
-  const factory LoadingState() = _$LoadingStateImpl;
+abstract class LodaingState implements UpdateCategoryState {
+  const factory LodaingState() = _$LodaingStateImpl;
 }
 
 /// @nodoc
@@ -643,13 +643,13 @@ abstract class _$$SuccessStateImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$SuccessStateImplCopyWithImpl<$Res>
-    extends _$AddCategoryStateCopyWithImpl<$Res, _$SuccessStateImpl>
+    extends _$UpdateCategoryStateCopyWithImpl<$Res, _$SuccessStateImpl>
     implements _$$SuccessStateImplCopyWith<$Res> {
   __$$SuccessStateImplCopyWithImpl(
       _$SuccessStateImpl _value, $Res Function(_$SuccessStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AddCategoryState
+  /// Create a copy of UpdateCategoryState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -660,7 +660,7 @@ class _$SuccessStateImpl implements SuccessState {
 
   @override
   String toString() {
-    return 'AddCategoryState.success()';
+    return 'UpdateCategoryState.success()';
   }
 
   @override
@@ -713,7 +713,7 @@ class _$SuccessStateImpl implements SuccessState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingState value) loading,
+    required TResult Function(LodaingState value) loading,
     required TResult Function(SuccessState value) success,
     required TResult Function(ErrorState value) error,
   }) {
@@ -724,7 +724,7 @@ class _$SuccessStateImpl implements SuccessState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingState value)? loading,
+    TResult? Function(LodaingState value)? loading,
     TResult? Function(SuccessState value)? success,
     TResult? Function(ErrorState value)? error,
   }) {
@@ -735,7 +735,7 @@ class _$SuccessStateImpl implements SuccessState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(LoadingState value)? loading,
+    TResult Function(LodaingState value)? loading,
     TResult Function(SuccessState value)? success,
     TResult Function(ErrorState value)? error,
     required TResult orElse(),
@@ -747,7 +747,7 @@ class _$SuccessStateImpl implements SuccessState {
   }
 }
 
-abstract class SuccessState implements AddCategoryState {
+abstract class SuccessState implements UpdateCategoryState {
   const factory SuccessState() = _$SuccessStateImpl;
 }
 
@@ -762,13 +762,13 @@ abstract class _$$ErrorStateImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ErrorStateImplCopyWithImpl<$Res>
-    extends _$AddCategoryStateCopyWithImpl<$Res, _$ErrorStateImpl>
+    extends _$UpdateCategoryStateCopyWithImpl<$Res, _$ErrorStateImpl>
     implements _$$ErrorStateImplCopyWith<$Res> {
   __$$ErrorStateImplCopyWithImpl(
       _$ErrorStateImpl _value, $Res Function(_$ErrorStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AddCategoryState
+  /// Create a copy of UpdateCategoryState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -794,7 +794,7 @@ class _$ErrorStateImpl implements ErrorState {
 
   @override
   String toString() {
-    return 'AddCategoryState.error(error: $error)';
+    return 'UpdateCategoryState.error(error: $error)';
   }
 
   @override
@@ -808,7 +808,7 @@ class _$ErrorStateImpl implements ErrorState {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of AddCategoryState
+  /// Create a copy of UpdateCategoryState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -857,7 +857,7 @@ class _$ErrorStateImpl implements ErrorState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingState value) loading,
+    required TResult Function(LodaingState value) loading,
     required TResult Function(SuccessState value) success,
     required TResult Function(ErrorState value) error,
   }) {
@@ -868,7 +868,7 @@ class _$ErrorStateImpl implements ErrorState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingState value)? loading,
+    TResult? Function(LodaingState value)? loading,
     TResult? Function(SuccessState value)? success,
     TResult? Function(ErrorState value)? error,
   }) {
@@ -879,7 +879,7 @@ class _$ErrorStateImpl implements ErrorState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(LoadingState value)? loading,
+    TResult Function(LodaingState value)? loading,
     TResult Function(SuccessState value)? success,
     TResult Function(ErrorState value)? error,
     required TResult orElse(),
@@ -891,12 +891,12 @@ class _$ErrorStateImpl implements ErrorState {
   }
 }
 
-abstract class ErrorState implements AddCategoryState {
+abstract class ErrorState implements UpdateCategoryState {
   const factory ErrorState({required final String error}) = _$ErrorStateImpl;
 
   String get error;
 
-  /// Create a copy of AddCategoryState
+  /// Create a copy of UpdateCategoryState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorStateImplCopyWith<_$ErrorStateImpl> get copyWith =>
