@@ -2,6 +2,8 @@
 class Assets {
   Assets._();
 
+  static const String pngEmptyScreen = "assets/images/common/empty_screen.png";
+
   static const String pngDashboardCategories =
       "assets/images/admin/dashboard_categories.png";
 

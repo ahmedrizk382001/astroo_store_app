@@ -1,6 +1,15 @@
 import 'package:astroo_store_app/core/networking/api_service.dart';
 import 'package:astroo_store_app/core/networking/dio_factory.dart';
 import 'package:astroo_store_app/core/shared/app_cubit/app_settings_cubit_cubit.dart';
+import 'package:astroo_store_app/core/shared/upload_image/data_source/upload_image_data_source.dart';
+import 'package:astroo_store_app/core/shared/upload_image/repo/upload_image_repo.dart';
+import 'package:astroo_store_app/core/shared/upload_image/upload_image_cubit/upload_image_cubit.dart';
+import 'package:astroo_store_app/features/admin/admin_categories/data/data_source/admin_categories_data_source.dart';
+import 'package:astroo_store_app/features/admin/admin_categories/data/repo/admin_categories_repo.dart';
+import 'package:astroo_store_app/features/admin/admin_categories/presentation/bloc/add_category_bloc/add_category_bloc.dart';
+import 'package:astroo_store_app/features/admin/admin_categories/presentation/bloc/bloc/delete_category_bloc.dart';
+import 'package:astroo_store_app/features/admin/admin_categories/presentation/bloc/update_category_bloc/update_category_bloc.dart';
+import 'package:astroo_store_app/features/admin/admin_categories/presentation/bloc/get_admin_categories/get_admin_categories_bloc.dart';
 import 'package:astroo_store_app/features/admin/dashboard/data/data_source/dashboard_data_source.dart';
 import 'package:astroo_store_app/features/admin/dashboard/data/repos/dashboard_repo.dart';
 import 'package:astroo_store_app/features/admin/dashboard/presentation/bloc/categories_number/categories_number_bloc.dart';
@@ -16,8 +25,10 @@ final GetIt getIt = GetIt.instance;
 
 Future<void> setUpGetIt() async {
   await initCore();
+  await initImageUpload();
   await initAuth();
   await initDashboard();
+  await initAdminCategories();
 }
 
 Future<void> initCore() async {
@@ -60,5 +71,40 @@ Future<void> initDashboard() async {
     )
     ..registerFactory(
       () => UsersNumberBloc(getIt<DashboardRepo>()),
+    );
+}
+
+Future<void> initAdminCategories() async {
+  getIt
+    ..registerLazySingleton(
+      () => AdminCategoriesDataSource(getIt<ApiService>()),
+    )
+    ..registerLazySingleton(
+      () => AdminCategoriesRepo(getIt<AdminCategoriesDataSource>()),
+    )
+    ..registerFactory(
+      () => GetAdminCategoriesBloc(getIt<AdminCategoriesRepo>()),
+    )
+    ..registerFactory(
+      () => AddCategoryBloc(getIt<AdminCategoriesRepo>()),
+    )
+    ..registerFactory(
+      () => UpdateCategoryBloc(getIt<AdminCategoriesRepo>()),
+    )
+    ..registerFactory(
+      () => DeleteCategoryBloc(getIt<AdminCategoriesRepo>()),
+    );
+}
+
+Future<void> initImageUpload() async {
+  getIt
+    ..registerLazySingleton(
+      () => UploadImageDataSource(getIt<ApiService>()),
+    )
+    ..registerLazySingleton(
+      () => UploadImageRepo(getIt<UploadImageDataSource>()),
+    )
+    ..registerFactory(
+      () => UploadImageCubit(getIt<UploadImageRepo>()),
     );
 }

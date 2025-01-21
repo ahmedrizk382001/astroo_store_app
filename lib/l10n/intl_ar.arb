@@ -23,7 +23,7 @@
      "signed_up_successfully": "تم إنشاء حسابك بنجاح",
     "signed_up_error": "حدث خطأ. حاول مرة أخرى",
     "full_name": "الاسم الكامل",
-    "valid_name":"من فضلك إدخال اسمك كاملا",
+    "valid_name":"من فضلك إدخال اسم صحيح",
     "valid_pick_image":  "الرجاء تحديد الصورة الرمزية الخاصة بك",
     "image_uploaded":  "تم تحميل الصورة بنجاح",
     "image_removed":  "تم مسح الصورة",

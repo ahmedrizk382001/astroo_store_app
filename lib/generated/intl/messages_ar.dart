@@ -82,7 +82,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "valid_email": MessageLookupByLibrary.simpleMessage(
             "من فضلك إدخال البريد الإلكتروني الصحيح"),
         "valid_name":
-            MessageLookupByLibrary.simpleMessage("من فضلك إدخال اسمك كاملا"),
+            MessageLookupByLibrary.simpleMessage("من فضلك إدخال اسم صحيح"),
         "valid_passwrod": MessageLookupByLibrary.simpleMessage(
             "من فضلك إدخال كلمة مرور صحيحة"),
         "valid_pick_image": MessageLookupByLibrary.simpleMessage(

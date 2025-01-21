@@ -23,7 +23,7 @@
     "signed_up_successfully": "You account has been created successfully",
     "signed_up_error":"An error occured. Try again",
     "full_name": "Full Name",
-    "valid_name":"Please enter your full name",
+    "valid_name":"Please enter a valid name",
     "valid_pick_image":  "Please Select Your Image Avatar",
     "image_uploaded":  "The image has been uploaded successfully.",
     "image_removed":  "The image has been Deleted.",

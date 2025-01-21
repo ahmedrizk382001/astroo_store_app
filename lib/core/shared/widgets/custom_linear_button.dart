@@ -6,15 +6,11 @@ class CustomLinearButton extends StatelessWidget {
   const CustomLinearButton({
     required this.onPressed,
     required this.child,
-    this.height,
-    this.width,
     super.key,
     this.padding,
   });
   final VoidCallback onPressed;
   final Widget child;
-  final double? height;
-  final double? width;
   final EdgeInsetsGeometry? padding;
 
   @override

@@ -290,10 +290,10 @@ class S {
     );
   }
 
-  /// `Please enter your full name`
+  /// `Please enter a valid name`
   String get valid_name {
     return Intl.message(
-      'Please enter your full name',
+      'Please enter a valid name',
       name: 'valid_name',
       desc: '',
       args: [],
