@@ -21,14 +21,14 @@ class AddCategoryBody extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(
-            height: 8.h,
+            height: 16.h,
           ),
           Text(
             "Create Category",
             style: AppTextStyles.font18Bold(context),
           ),
           SizedBox(
-            height: 16.h,
+            height: 32.h,
           ),
           Align(
             alignment: Alignment.centerLeft,
@@ -38,11 +38,11 @@ class AddCategoryBody extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 8.h,
+            height: 16.h,
           ),
           AddCategoryImage(),
           SizedBox(
-            height: 16.h,
+            height: 32.h,
           ),
           Align(
             alignment: Alignment.centerLeft,
@@ -52,7 +52,7 @@ class AddCategoryBody extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 8.h,
+            height: 16.h,
           ),
           CustomTextField(
             controller: addCategoryBloc.nameController,
@@ -70,7 +70,7 @@ class AddCategoryBody extends StatelessWidget {
           ),
           CreateCategoryButton(),
           SizedBox(
-            height: 32.h,
+            height: 16.h,
           ),
         ],
       ),

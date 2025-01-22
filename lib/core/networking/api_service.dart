@@ -3,6 +3,8 @@ import 'package:astroo_store_app/core/shared/upload_image/model/upload_image_res
 import 'package:astroo_store_app/features/admin/admin_categories/data/models/add_category_response.dart';
 import 'package:astroo_store_app/features/admin/admin_categories/data/models/categories_model.dart';
 import 'package:astroo_store_app/features/admin/admin_categories/data/models/update_category_response_model.dart';
+import 'package:astroo_store_app/features/admin/admin_products/data/models/add_product_response_model.dart';
+import 'package:astroo_store_app/features/admin/admin_products/data/models/products_model.dart';
 import 'package:astroo_store_app/features/admin/dashboard/data/models/categories_number_model.dart';
 import 'package:astroo_store_app/features/admin/dashboard/data/models/products_number_model.dart';
 import 'package:astroo_store_app/features/admin/dashboard/data/models/users_number_model.dart';
@@ -55,4 +57,12 @@ abstract class ApiService {
 
   @POST(ApiConstants.graphQL)
   Future<void> deleteCategory(@Body() Map<String, dynamic> categoryReq);
+
+  @POST(ApiConstants.graphQL)
+  Future<ProductsModel> getAllProducts(
+      @Body() Map<String, dynamic> allProductsReq);
+
+  @POST(ApiConstants.graphQL)
+  Future<AddProductResponseModel> addProduct(
+      @Body() Map<String, dynamic> addProductReq);
 }

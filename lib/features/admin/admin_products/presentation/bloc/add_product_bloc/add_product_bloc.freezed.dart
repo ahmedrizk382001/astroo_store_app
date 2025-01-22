@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'upload_image_cubit.dart';
+part of 'add_product_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,13 +15,322 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$UploadImageState {
+mixin _$AddProductEvent {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(AddProductRequestModel body) addProduct,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(AddProductRequestModel body)? addProduct,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(AddProductRequestModel body)? addProduct,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(AddNewProductEvent value) addProduct,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(AddNewProductEvent value)? addProduct,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(AddNewProductEvent value)? addProduct,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $AddProductEventCopyWith<$Res> {
+  factory $AddProductEventCopyWith(
+          AddProductEvent value, $Res Function(AddProductEvent) then) =
+      _$AddProductEventCopyWithImpl<$Res, AddProductEvent>;
+}
+
+/// @nodoc
+class _$AddProductEventCopyWithImpl<$Res, $Val extends AddProductEvent>
+    implements $AddProductEventCopyWith<$Res> {
+  _$AddProductEventCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of AddProductEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+abstract class _$$StartedImplCopyWith<$Res> {
+  factory _$$StartedImplCopyWith(
+          _$StartedImpl value, $Res Function(_$StartedImpl) then) =
+      __$$StartedImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$StartedImplCopyWithImpl<$Res>
+    extends _$AddProductEventCopyWithImpl<$Res, _$StartedImpl>
+    implements _$$StartedImplCopyWith<$Res> {
+  __$$StartedImplCopyWithImpl(
+      _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AddProductEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$StartedImpl implements _Started {
+  const _$StartedImpl();
+
+  @override
+  String toString() {
+    return 'AddProductEvent.started()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$StartedImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(AddProductRequestModel body) addProduct,
+  }) {
+    return started();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(AddProductRequestModel body)? addProduct,
+  }) {
+    return started?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(AddProductRequestModel body)? addProduct,
+    required TResult orElse(),
+  }) {
+    if (started != null) {
+      return started();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(AddNewProductEvent value) addProduct,
+  }) {
+    return started(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(AddNewProductEvent value)? addProduct,
+  }) {
+    return started?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(AddNewProductEvent value)? addProduct,
+    required TResult orElse(),
+  }) {
+    if (started != null) {
+      return started(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Started implements AddProductEvent {
+  const factory _Started() = _$StartedImpl;
+}
+
+/// @nodoc
+abstract class _$$AddNewProductEventImplCopyWith<$Res> {
+  factory _$$AddNewProductEventImplCopyWith(_$AddNewProductEventImpl value,
+          $Res Function(_$AddNewProductEventImpl) then) =
+      __$$AddNewProductEventImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({AddProductRequestModel body});
+}
+
+/// @nodoc
+class __$$AddNewProductEventImplCopyWithImpl<$Res>
+    extends _$AddProductEventCopyWithImpl<$Res, _$AddNewProductEventImpl>
+    implements _$$AddNewProductEventImplCopyWith<$Res> {
+  __$$AddNewProductEventImplCopyWithImpl(_$AddNewProductEventImpl _value,
+      $Res Function(_$AddNewProductEventImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AddProductEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? body = null,
+  }) {
+    return _then(_$AddNewProductEventImpl(
+      body: null == body
+          ? _value.body
+          : body // ignore: cast_nullable_to_non_nullable
+              as AddProductRequestModel,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AddNewProductEventImpl implements AddNewProductEvent {
+  const _$AddNewProductEventImpl({required this.body});
+
+  @override
+  final AddProductRequestModel body;
+
+  @override
+  String toString() {
+    return 'AddProductEvent.addProduct(body: $body)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddNewProductEventImpl &&
+            (identical(other.body, body) || other.body == body));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, body);
+
+  /// Create a copy of AddProductEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddNewProductEventImplCopyWith<_$AddNewProductEventImpl> get copyWith =>
+      __$$AddNewProductEventImplCopyWithImpl<_$AddNewProductEventImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(AddProductRequestModel body) addProduct,
+  }) {
+    return addProduct(body);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(AddProductRequestModel body)? addProduct,
+  }) {
+    return addProduct?.call(body);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(AddProductRequestModel body)? addProduct,
+    required TResult orElse(),
+  }) {
+    if (addProduct != null) {
+      return addProduct(body);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(AddNewProductEvent value) addProduct,
+  }) {
+    return addProduct(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(AddNewProductEvent value)? addProduct,
+  }) {
+    return addProduct?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(AddNewProductEvent value)? addProduct,
+    required TResult orElse(),
+  }) {
+    if (addProduct != null) {
+      return addProduct(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddNewProductEvent implements AddProductEvent {
+  const factory AddNewProductEvent(
+      {required final AddProductRequestModel body}) = _$AddNewProductEventImpl;
+
+  AddProductRequestModel get body;
+
+  /// Create a copy of AddProductEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AddNewProductEventImplCopyWith<_$AddNewProductEventImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+mixin _$AddProductState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(int index) loadingList,
-    required TResult Function(String imageUrl) success,
+    required TResult Function() success,
     required TResult Function(String error) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -29,8 +338,7 @@ mixin _$UploadImageState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(int index)? loadingList,
-    TResult? Function(String imageUrl)? success,
+    TResult? Function()? success,
     TResult? Function(String error)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -38,8 +346,7 @@ mixin _$UploadImageState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(int index)? loadingList,
-    TResult Function(String imageUrl)? success,
+    TResult Function()? success,
     TResult Function(String error)? error,
     required TResult orElse(),
   }) =>
@@ -48,7 +355,6 @@ mixin _$UploadImageState {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(LoadingState value) loading,
-    required TResult Function(LoadingListState value) loadingList,
     required TResult Function(SuccessState value) success,
     required TResult Function(ErrorState value) error,
   }) =>
@@ -57,7 +363,6 @@ mixin _$UploadImageState {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(LoadingState value)? loading,
-    TResult? Function(LoadingListState value)? loadingList,
     TResult? Function(SuccessState value)? success,
     TResult? Function(ErrorState value)? error,
   }) =>
@@ -66,7 +371,6 @@ mixin _$UploadImageState {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(LoadingState value)? loading,
-    TResult Function(LoadingListState value)? loadingList,
     TResult Function(SuccessState value)? success,
     TResult Function(ErrorState value)? error,
     required TResult orElse(),
@@ -75,23 +379,23 @@ mixin _$UploadImageState {
 }
 
 /// @nodoc
-abstract class $UploadImageStateCopyWith<$Res> {
-  factory $UploadImageStateCopyWith(
-          UploadImageState value, $Res Function(UploadImageState) then) =
-      _$UploadImageStateCopyWithImpl<$Res, UploadImageState>;
+abstract class $AddProductStateCopyWith<$Res> {
+  factory $AddProductStateCopyWith(
+          AddProductState value, $Res Function(AddProductState) then) =
+      _$AddProductStateCopyWithImpl<$Res, AddProductState>;
 }
 
 /// @nodoc
-class _$UploadImageStateCopyWithImpl<$Res, $Val extends UploadImageState>
-    implements $UploadImageStateCopyWith<$Res> {
-  _$UploadImageStateCopyWithImpl(this._value, this._then);
+class _$AddProductStateCopyWithImpl<$Res, $Val extends AddProductState>
+    implements $AddProductStateCopyWith<$Res> {
+  _$AddProductStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of UploadImageState
+  /// Create a copy of AddProductState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -104,13 +408,13 @@ abstract class _$$InitialImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$InitialImplCopyWithImpl<$Res>
-    extends _$UploadImageStateCopyWithImpl<$Res, _$InitialImpl>
+    extends _$AddProductStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of UploadImageState
+  /// Create a copy of AddProductState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -121,7 +425,7 @@ class _$InitialImpl implements _Initial {
 
   @override
   String toString() {
-    return 'UploadImageState.initial()';
+    return 'AddProductState.initial()';
   }
 
   @override
@@ -138,8 +442,7 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(int index) loadingList,
-    required TResult Function(String imageUrl) success,
+    required TResult Function() success,
     required TResult Function(String error) error,
   }) {
     return initial();
@@ -150,8 +453,7 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(int index)? loadingList,
-    TResult? Function(String imageUrl)? success,
+    TResult? Function()? success,
     TResult? Function(String error)? error,
   }) {
     return initial?.call();
@@ -162,8 +464,7 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(int index)? loadingList,
-    TResult Function(String imageUrl)? success,
+    TResult Function()? success,
     TResult Function(String error)? error,
     required TResult orElse(),
   }) {
@@ -178,7 +479,6 @@ class _$InitialImpl implements _Initial {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(LoadingState value) loading,
-    required TResult Function(LoadingListState value) loadingList,
     required TResult Function(SuccessState value) success,
     required TResult Function(ErrorState value) error,
   }) {
@@ -190,7 +490,6 @@ class _$InitialImpl implements _Initial {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(LoadingState value)? loading,
-    TResult? Function(LoadingListState value)? loadingList,
     TResult? Function(SuccessState value)? success,
     TResult? Function(ErrorState value)? error,
   }) {
@@ -202,7 +501,6 @@ class _$InitialImpl implements _Initial {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(LoadingState value)? loading,
-    TResult Function(LoadingListState value)? loadingList,
     TResult Function(SuccessState value)? success,
     TResult Function(ErrorState value)? error,
     required TResult orElse(),
@@ -214,7 +512,7 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements UploadImageState {
+abstract class _Initial implements AddProductState {
   const factory _Initial() = _$InitialImpl;
 }
 
@@ -227,13 +525,13 @@ abstract class _$$LoadingStateImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$LoadingStateImplCopyWithImpl<$Res>
-    extends _$UploadImageStateCopyWithImpl<$Res, _$LoadingStateImpl>
+    extends _$AddProductStateCopyWithImpl<$Res, _$LoadingStateImpl>
     implements _$$LoadingStateImplCopyWith<$Res> {
   __$$LoadingStateImplCopyWithImpl(
       _$LoadingStateImpl _value, $Res Function(_$LoadingStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of UploadImageState
+  /// Create a copy of AddProductState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -244,7 +542,7 @@ class _$LoadingStateImpl implements LoadingState {
 
   @override
   String toString() {
-    return 'UploadImageState.loading()';
+    return 'AddProductState.loading()';
   }
 
   @override
@@ -261,8 +559,7 @@ class _$LoadingStateImpl implements LoadingState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(int index) loadingList,
-    required TResult Function(String imageUrl) success,
+    required TResult Function() success,
     required TResult Function(String error) error,
   }) {
     return loading();
@@ -273,8 +570,7 @@ class _$LoadingStateImpl implements LoadingState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(int index)? loadingList,
-    TResult? Function(String imageUrl)? success,
+    TResult? Function()? success,
     TResult? Function(String error)? error,
   }) {
     return loading?.call();
@@ -285,8 +581,7 @@ class _$LoadingStateImpl implements LoadingState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(int index)? loadingList,
-    TResult Function(String imageUrl)? success,
+    TResult Function()? success,
     TResult Function(String error)? error,
     required TResult orElse(),
   }) {
@@ -301,7 +596,6 @@ class _$LoadingStateImpl implements LoadingState {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(LoadingState value) loading,
-    required TResult Function(LoadingListState value) loadingList,
     required TResult Function(SuccessState value) success,
     required TResult Function(ErrorState value) error,
   }) {
@@ -313,7 +607,6 @@ class _$LoadingStateImpl implements LoadingState {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(LoadingState value)? loading,
-    TResult? Function(LoadingListState value)? loadingList,
     TResult? Function(SuccessState value)? success,
     TResult? Function(ErrorState value)? error,
   }) {
@@ -325,7 +618,6 @@ class _$LoadingStateImpl implements LoadingState {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(LoadingState value)? loading,
-    TResult Function(LoadingListState value)? loadingList,
     TResult Function(SuccessState value)? success,
     TResult Function(ErrorState value)? error,
     required TResult orElse(),
@@ -337,168 +629,8 @@ class _$LoadingStateImpl implements LoadingState {
   }
 }
 
-abstract class LoadingState implements UploadImageState {
+abstract class LoadingState implements AddProductState {
   const factory LoadingState() = _$LoadingStateImpl;
-}
-
-/// @nodoc
-abstract class _$$LoadingListStateImplCopyWith<$Res> {
-  factory _$$LoadingListStateImplCopyWith(_$LoadingListStateImpl value,
-          $Res Function(_$LoadingListStateImpl) then) =
-      __$$LoadingListStateImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({int index});
-}
-
-/// @nodoc
-class __$$LoadingListStateImplCopyWithImpl<$Res>
-    extends _$UploadImageStateCopyWithImpl<$Res, _$LoadingListStateImpl>
-    implements _$$LoadingListStateImplCopyWith<$Res> {
-  __$$LoadingListStateImplCopyWithImpl(_$LoadingListStateImpl _value,
-      $Res Function(_$LoadingListStateImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of UploadImageState
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? index = null,
-  }) {
-    return _then(_$LoadingListStateImpl(
-      index: null == index
-          ? _value.index
-          : index // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$LoadingListStateImpl implements LoadingListState {
-  const _$LoadingListStateImpl({required this.index});
-
-  @override
-  final int index;
-
-  @override
-  String toString() {
-    return 'UploadImageState.loadingList(index: $index)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$LoadingListStateImpl &&
-            (identical(other.index, index) || other.index == index));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, index);
-
-  /// Create a copy of UploadImageState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$LoadingListStateImplCopyWith<_$LoadingListStateImpl> get copyWith =>
-      __$$LoadingListStateImplCopyWithImpl<_$LoadingListStateImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(int index) loadingList,
-    required TResult Function(String imageUrl) success,
-    required TResult Function(String error) error,
-  }) {
-    return loadingList(index);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(int index)? loadingList,
-    TResult? Function(String imageUrl)? success,
-    TResult? Function(String error)? error,
-  }) {
-    return loadingList?.call(index);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(int index)? loadingList,
-    TResult Function(String imageUrl)? success,
-    TResult Function(String error)? error,
-    required TResult orElse(),
-  }) {
-    if (loadingList != null) {
-      return loadingList(index);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(LoadingState value) loading,
-    required TResult Function(LoadingListState value) loadingList,
-    required TResult Function(SuccessState value) success,
-    required TResult Function(ErrorState value) error,
-  }) {
-    return loadingList(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(LoadingState value)? loading,
-    TResult? Function(LoadingListState value)? loadingList,
-    TResult? Function(SuccessState value)? success,
-    TResult? Function(ErrorState value)? error,
-  }) {
-    return loadingList?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(LoadingState value)? loading,
-    TResult Function(LoadingListState value)? loadingList,
-    TResult Function(SuccessState value)? success,
-    TResult Function(ErrorState value)? error,
-    required TResult orElse(),
-  }) {
-    if (loadingList != null) {
-      return loadingList(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class LoadingListState implements UploadImageState {
-  const factory LoadingListState({required final int index}) =
-      _$LoadingListStateImpl;
-
-  int get index;
-
-  /// Create a copy of UploadImageState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$LoadingListStateImplCopyWith<_$LoadingListStateImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -506,77 +638,48 @@ abstract class _$$SuccessStateImplCopyWith<$Res> {
   factory _$$SuccessStateImplCopyWith(
           _$SuccessStateImpl value, $Res Function(_$SuccessStateImpl) then) =
       __$$SuccessStateImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String imageUrl});
 }
 
 /// @nodoc
 class __$$SuccessStateImplCopyWithImpl<$Res>
-    extends _$UploadImageStateCopyWithImpl<$Res, _$SuccessStateImpl>
+    extends _$AddProductStateCopyWithImpl<$Res, _$SuccessStateImpl>
     implements _$$SuccessStateImplCopyWith<$Res> {
   __$$SuccessStateImplCopyWithImpl(
       _$SuccessStateImpl _value, $Res Function(_$SuccessStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of UploadImageState
+  /// Create a copy of AddProductState
   /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? imageUrl = null,
-  }) {
-    return _then(_$SuccessStateImpl(
-      imageUrl: null == imageUrl
-          ? _value.imageUrl
-          : imageUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
 }
 
 /// @nodoc
 
 class _$SuccessStateImpl implements SuccessState {
-  const _$SuccessStateImpl({required this.imageUrl});
-
-  @override
-  final String imageUrl;
+  const _$SuccessStateImpl();
 
   @override
   String toString() {
-    return 'UploadImageState.success(imageUrl: $imageUrl)';
+    return 'AddProductState.success()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$SuccessStateImpl &&
-            (identical(other.imageUrl, imageUrl) ||
-                other.imageUrl == imageUrl));
+        (other.runtimeType == runtimeType && other is _$SuccessStateImpl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, imageUrl);
-
-  /// Create a copy of UploadImageState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SuccessStateImplCopyWith<_$SuccessStateImpl> get copyWith =>
-      __$$SuccessStateImplCopyWithImpl<_$SuccessStateImpl>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(int index) loadingList,
-    required TResult Function(String imageUrl) success,
+    required TResult Function() success,
     required TResult Function(String error) error,
   }) {
-    return success(imageUrl);
+    return success();
   }
 
   @override
@@ -584,11 +687,10 @@ class _$SuccessStateImpl implements SuccessState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(int index)? loadingList,
-    TResult? Function(String imageUrl)? success,
+    TResult? Function()? success,
     TResult? Function(String error)? error,
   }) {
-    return success?.call(imageUrl);
+    return success?.call();
   }
 
   @override
@@ -596,13 +698,12 @@ class _$SuccessStateImpl implements SuccessState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(int index)? loadingList,
-    TResult Function(String imageUrl)? success,
+    TResult Function()? success,
     TResult Function(String error)? error,
     required TResult orElse(),
   }) {
     if (success != null) {
-      return success(imageUrl);
+      return success();
     }
     return orElse();
   }
@@ -612,7 +713,6 @@ class _$SuccessStateImpl implements SuccessState {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(LoadingState value) loading,
-    required TResult Function(LoadingListState value) loadingList,
     required TResult Function(SuccessState value) success,
     required TResult Function(ErrorState value) error,
   }) {
@@ -624,7 +724,6 @@ class _$SuccessStateImpl implements SuccessState {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(LoadingState value)? loading,
-    TResult? Function(LoadingListState value)? loadingList,
     TResult? Function(SuccessState value)? success,
     TResult? Function(ErrorState value)? error,
   }) {
@@ -636,7 +735,6 @@ class _$SuccessStateImpl implements SuccessState {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(LoadingState value)? loading,
-    TResult Function(LoadingListState value)? loadingList,
     TResult Function(SuccessState value)? success,
     TResult Function(ErrorState value)? error,
     required TResult orElse(),
@@ -648,17 +746,8 @@ class _$SuccessStateImpl implements SuccessState {
   }
 }
 
-abstract class SuccessState implements UploadImageState {
-  const factory SuccessState({required final String imageUrl}) =
-      _$SuccessStateImpl;
-
-  String get imageUrl;
-
-  /// Create a copy of UploadImageState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SuccessStateImplCopyWith<_$SuccessStateImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+abstract class SuccessState implements AddProductState {
+  const factory SuccessState() = _$SuccessStateImpl;
 }
 
 /// @nodoc
@@ -672,13 +761,13 @@ abstract class _$$ErrorStateImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ErrorStateImplCopyWithImpl<$Res>
-    extends _$UploadImageStateCopyWithImpl<$Res, _$ErrorStateImpl>
+    extends _$AddProductStateCopyWithImpl<$Res, _$ErrorStateImpl>
     implements _$$ErrorStateImplCopyWith<$Res> {
   __$$ErrorStateImplCopyWithImpl(
       _$ErrorStateImpl _value, $Res Function(_$ErrorStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of UploadImageState
+  /// Create a copy of AddProductState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -704,7 +793,7 @@ class _$ErrorStateImpl implements ErrorState {
 
   @override
   String toString() {
-    return 'UploadImageState.error(error: $error)';
+    return 'AddProductState.error(error: $error)';
   }
 
   @override
@@ -718,7 +807,7 @@ class _$ErrorStateImpl implements ErrorState {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of UploadImageState
+  /// Create a copy of AddProductState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -731,8 +820,7 @@ class _$ErrorStateImpl implements ErrorState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(int index) loadingList,
-    required TResult Function(String imageUrl) success,
+    required TResult Function() success,
     required TResult Function(String error) error,
   }) {
     return error(this.error);
@@ -743,8 +831,7 @@ class _$ErrorStateImpl implements ErrorState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(int index)? loadingList,
-    TResult? Function(String imageUrl)? success,
+    TResult? Function()? success,
     TResult? Function(String error)? error,
   }) {
     return error?.call(this.error);
@@ -755,8 +842,7 @@ class _$ErrorStateImpl implements ErrorState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(int index)? loadingList,
-    TResult Function(String imageUrl)? success,
+    TResult Function()? success,
     TResult Function(String error)? error,
     required TResult orElse(),
   }) {
@@ -771,7 +857,6 @@ class _$ErrorStateImpl implements ErrorState {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(LoadingState value) loading,
-    required TResult Function(LoadingListState value) loadingList,
     required TResult Function(SuccessState value) success,
     required TResult Function(ErrorState value) error,
   }) {
@@ -783,7 +868,6 @@ class _$ErrorStateImpl implements ErrorState {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(LoadingState value)? loading,
-    TResult? Function(LoadingListState value)? loadingList,
     TResult? Function(SuccessState value)? success,
     TResult? Function(ErrorState value)? error,
   }) {
@@ -795,7 +879,6 @@ class _$ErrorStateImpl implements ErrorState {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(LoadingState value)? loading,
-    TResult Function(LoadingListState value)? loadingList,
     TResult Function(SuccessState value)? success,
     TResult Function(ErrorState value)? error,
     required TResult orElse(),
@@ -807,12 +890,12 @@ class _$ErrorStateImpl implements ErrorState {
   }
 }
 
-abstract class ErrorState implements UploadImageState {
+abstract class ErrorState implements AddProductState {
   const factory ErrorState({required final String error}) = _$ErrorStateImpl;
 
   String get error;
 
-  /// Create a copy of UploadImageState
+  /// Create a copy of AddProductState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorStateImplCopyWith<_$ErrorStateImpl> get copyWith =>

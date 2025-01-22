@@ -29,7 +29,7 @@ class AdminCategoryItem extends StatelessWidget {
                     children: [
                       Text(
                         categoryItemModel.name,
-                        maxLines: 2,
+                        maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: AppTextStyles.font18Bold(context),
                       ),
