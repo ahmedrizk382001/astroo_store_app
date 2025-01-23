@@ -32,6 +32,7 @@ class ProductsDataModel {
 @JsonSerializable()
 class ProductItemModel {
   final String title, id;
+  final String description;
   final num price;
   final List<String> images;
   final ProductItemCategoryModel category;
@@ -45,6 +46,7 @@ class ProductItemModel {
     required this.price,
     required this.images,
     required this.category,
+    required this.description,
   });
 }
 

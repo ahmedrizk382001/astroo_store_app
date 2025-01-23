@@ -4,7 +4,9 @@ import 'package:astroo_store_app/features/admin/admin_categories/data/models/add
 import 'package:astroo_store_app/features/admin/admin_categories/data/models/categories_model.dart';
 import 'package:astroo_store_app/features/admin/admin_categories/data/models/update_category_response_model.dart';
 import 'package:astroo_store_app/features/admin/admin_products/data/models/add_product_response_model.dart';
+import 'package:astroo_store_app/features/admin/admin_products/data/models/product_response_model.dart';
 import 'package:astroo_store_app/features/admin/admin_products/data/models/products_model.dart';
+import 'package:astroo_store_app/features/admin/admin_products/data/models/update_product_response_model.dart';
 import 'package:astroo_store_app/features/admin/dashboard/data/models/categories_number_model.dart';
 import 'package:astroo_store_app/features/admin/dashboard/data/models/products_number_model.dart';
 import 'package:astroo_store_app/features/admin/dashboard/data/models/users_number_model.dart';
@@ -65,4 +67,12 @@ abstract class ApiService {
   @POST(ApiConstants.graphQL)
   Future<AddProductResponseModel> addProduct(
       @Body() Map<String, dynamic> addProductReq);
+
+  @POST(ApiConstants.graphQL)
+  Future<UpdateProductResponseModel> updateProduct(
+      @Body() Map<String, dynamic> updateProductReq);
+
+  @POST(ApiConstants.graphQL)
+  Future<ProductResponseModel> getProductById(
+      @Body() Map<String, dynamic> getProductReq);
 }

@@ -1,9 +1,7 @@
 import 'package:astroo_store_app/core/extensions/string_extension.dart';
 import 'package:astroo_store_app/core/shared/widgets/loading_shimmer.dart';
-import 'package:astroo_store_app/features/admin/admin_products/presentation/bloc/get_admin_products/get_admin_products_bloc.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AdminProductItemImage extends StatelessWidget {

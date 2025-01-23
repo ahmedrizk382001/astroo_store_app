@@ -7,13 +7,14 @@ import 'package:astroo_store_app/core/shared/upload_image/upload_image_cubit/upl
 import 'package:astroo_store_app/features/admin/admin_categories/data/data_source/admin_categories_data_source.dart';
 import 'package:astroo_store_app/features/admin/admin_categories/data/repo/admin_categories_repo.dart';
 import 'package:astroo_store_app/features/admin/admin_categories/presentation/bloc/add_category_bloc/add_category_bloc.dart';
-import 'package:astroo_store_app/features/admin/admin_categories/presentation/bloc/bloc/delete_category_bloc.dart';
+import 'package:astroo_store_app/features/admin/admin_categories/presentation/bloc/delete_category_bloc/delete_category_bloc.dart';
 import 'package:astroo_store_app/features/admin/admin_categories/presentation/bloc/update_category_bloc/update_category_bloc.dart';
 import 'package:astroo_store_app/features/admin/admin_categories/presentation/bloc/get_admin_categories/get_admin_categories_bloc.dart';
 import 'package:astroo_store_app/features/admin/admin_products/data/data_source/admin_products_data_source.dart';
 import 'package:astroo_store_app/features/admin/admin_products/data/repo/admin_products_repo.dart';
 import 'package:astroo_store_app/features/admin/admin_products/presentation/bloc/add_product_bloc/add_product_bloc.dart';
 import 'package:astroo_store_app/features/admin/admin_products/presentation/bloc/get_admin_products/get_admin_products_bloc.dart';
+import 'package:astroo_store_app/features/admin/admin_products/presentation/bloc/update_product_bloc/update_product_bloc.dart';
 import 'package:astroo_store_app/features/admin/dashboard/data/data_source/dashboard_data_source.dart';
 import 'package:astroo_store_app/features/admin/dashboard/data/repos/dashboard_repo.dart';
 import 'package:astroo_store_app/features/admin/dashboard/presentation/bloc/categories_number/categories_number_bloc.dart';
@@ -114,6 +115,9 @@ Future<void> initAdminProducts() async {
     )
     ..registerFactory(
       () => AddProductBloc(getIt<AdminProductsRepo>()),
+    )
+    ..registerFactory(
+      () => UpdateProductBloc(getIt<AdminProductsRepo>()),
     );
 }
 

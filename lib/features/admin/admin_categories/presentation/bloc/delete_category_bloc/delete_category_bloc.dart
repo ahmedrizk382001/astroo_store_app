@@ -17,7 +17,7 @@ class DeleteCategoryBloc
 
   FutureOr<void> _deleteCategory(
       RemoveCategoryEvent event, Emitter<DeleteCategoryState> emit) async {
-    emit(DeleteCategoryState.loading());
+    emit(DeleteCategoryState.loading(id: event.id));
 
     var response = await _adminCategoriesRepo.deleteCategory(id: event.id);
 

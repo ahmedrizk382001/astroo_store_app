@@ -2,6 +2,7 @@ import 'package:astroo_store_app/core/shared/widgets/custom_container_linear_adm
 import 'package:astroo_store_app/core/styles/fonts/app_text_styles.dart';
 import 'package:astroo_store_app/features/admin/admin_products/data/models/products_model.dart';
 import 'package:astroo_store_app/features/admin/admin_products/presentation/views/widgets/common/admin_product_item_image.dart';
+import 'package:astroo_store_app/features/admin/admin_products/presentation/views/widgets/update_product/edit_product_icon_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -34,14 +35,7 @@ class AdminProductItem extends StatelessWidget {
                 ),
               ),
               Spacer(),
-              GestureDetector(
-                onTap: () {},
-                child: Icon(
-                  Icons.edit,
-                  size: 24.sp,
-                  color: Colors.green,
-                ),
-              ),
+              EditProductIconButton(id: productItemModel.id),
             ],
           ),
           SizedBox(
