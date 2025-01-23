@@ -13,6 +13,9 @@ class UploadImageCubit extends Cubit<UploadImageState> {
 
   String imageUrl = '';
 
+  List<String> imagesList = ['', '', ''];
+
+  //pick an image, upload it to the api and save it in imageUrl
   Future<void> uploadImage() async {
     emit(UploadImageState.loading());
 
@@ -25,6 +28,37 @@ class UploadImageCubit extends Cubit<UploadImageState> {
       respones.when(
         success: (data) {
           if (data.imageUrl != null) {
+            emit(UploadImageState.success(imageUrl: data.imageUrl!));
+            imageUrl = data.imageUrl!;
+          } else {
+            emit(UploadImageState.error(error: "Error uploading image"));
+          }
+        },
+        failure: (error) {
+          emit(UploadImageState.error(error: error));
+        },
+      );
+    } else {
+      emit(UploadImageState.error(error: "No image selected"));
+    }
+  }
+
+  //pick an image, upload it to the api and save it in imagesList at its index
+  Future<void> uploadImageList({required int index}) async {
+    emit(UploadImageState.loadingList(index: index));
+
+    // Pick an image.
+    final ImagePicker picker = ImagePicker();
+    final XFile? image = await picker.pickImage(source: ImageSource.gallery);
+
+    if (image != null) {
+      var respones = await _uploadImageRepo.uploadImage(image: image);
+      respones.when(
+        success: (data) {
+          if (data.imageUrl != null) {
+            imagesList
+              ..removeAt(index)
+              ..insert(index, data.imageUrl!);
             emit(UploadImageState.success(imageUrl: data.imageUrl!));
             imageUrl = data.imageUrl!;
           } else {

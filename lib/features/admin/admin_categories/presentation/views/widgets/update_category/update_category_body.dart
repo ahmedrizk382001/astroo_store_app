@@ -24,14 +24,14 @@ class UpdateCategoryBody extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(
-            height: 8.h,
+            height: 16.h,
           ),
           Text(
             "Update Category",
             style: AppTextStyles.font18Bold(context),
           ),
           SizedBox(
-            height: 16.h,
+            height: 32.h,
           ),
           Align(
             alignment: Alignment.centerLeft,
@@ -41,11 +41,11 @@ class UpdateCategoryBody extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 8.h,
+            height: 16.h,
           ),
           UpdateCategoryImage(),
           SizedBox(
-            height: 16.h,
+            height: 32.h,
           ),
           Align(
             alignment: Alignment.centerLeft,
@@ -55,7 +55,7 @@ class UpdateCategoryBody extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 8.h,
+            height: 16.h,
           ),
           CustomTextField(
             controller: updateCategoryBloc.nameController,
@@ -75,7 +75,7 @@ class UpdateCategoryBody extends StatelessWidget {
             id: id,
           ),
           SizedBox(
-            height: 32.h,
+            height: 16.h,
           ),
         ],
       ),

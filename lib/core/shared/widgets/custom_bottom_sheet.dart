@@ -12,6 +12,8 @@ class CustomBottomSheet {
           Color? backgroundColor,
           FutureOr<void> Function()? whenComplete}) =>
       showModalBottomSheet(
+        constraints:
+            BoxConstraints(maxHeight: MediaQuery.sizeOf(context).height * 0.7),
         context: context,
         builder: (context) => SingleChildScrollView(
           child: Padding(

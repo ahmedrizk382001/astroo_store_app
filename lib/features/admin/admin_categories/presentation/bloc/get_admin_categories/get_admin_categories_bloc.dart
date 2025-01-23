@@ -32,6 +32,7 @@ class GetAdminCategoriesBloc
           emit(GetAdminCategoriesState.empty());
         } else {
           debugPrint("${data.getCategoriesList().length}");
+
           emit(GetAdminCategoriesState.success(categoriesModel: data));
         }
       },

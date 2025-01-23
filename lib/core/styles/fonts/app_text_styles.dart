@@ -12,10 +12,24 @@ class AppTextStyles {
         fontWeight: FontWeightHelper.bold,
         color: context.color.textColor,
       );
+
+  static TextStyle font12Medium(BuildContext context) => TextStyle(
+        fontSize: 12.sp,
+        fontFamily: FontFamilyHelper.getFontFamily(),
+        fontWeight: FontWeightHelper.medium,
+        color: context.color.textColor,
+      );
   static TextStyle font13Regular(BuildContext context) => TextStyle(
         fontSize: 13.sp,
         fontFamily: FontFamilyHelper.getFontFamily(),
         fontWeight: FontWeightHelper.regular,
+        color: context.color.textColor,
+      );
+
+  static TextStyle font13Medium(BuildContext context) => TextStyle(
+        fontSize: 13.sp,
+        fontFamily: FontFamilyHelper.getFontFamily(),
+        fontWeight: FontWeightHelper.medium,
         color: context.color.textColor,
       );
 
@@ -30,6 +44,13 @@ class AppTextStyles {
         fontSize: 14.sp,
         fontFamily: FontFamilyHelper.getFontFamily(),
         fontWeight: FontWeightHelper.medium,
+        color: context.color.textColor,
+      );
+
+  static TextStyle font14Bold(BuildContext context) => TextStyle(
+        fontSize: 14.sp,
+        fontFamily: FontFamilyHelper.getFontFamily(),
+        fontWeight: FontWeightHelper.bold,
         color: context.color.textColor,
       );
 

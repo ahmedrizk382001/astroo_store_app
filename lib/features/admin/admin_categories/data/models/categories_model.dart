@@ -17,6 +17,18 @@ class CategoriesModel {
       return data.categories.reversed.toList();
     }
   }
+
+  List<String> getCategoriesNames() {
+    if (data.categories.isEmpty) {
+      return [];
+    } else {
+      return data.categories
+          .map(
+            (e) => e.name,
+          )
+          .toList();
+    }
+  }
 }
 
 @JsonSerializable()
