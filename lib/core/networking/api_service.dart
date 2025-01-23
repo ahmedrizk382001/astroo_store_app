@@ -75,4 +75,7 @@ abstract class ApiService {
   @POST(ApiConstants.graphQL)
   Future<ProductResponseModel> getProductById(
       @Body() Map<String, dynamic> getProductReq);
+
+  @POST(ApiConstants.graphQL)
+  Future<void> deleteProduct(@Body() Map<String, dynamic> deletePrdocutReq);
 }

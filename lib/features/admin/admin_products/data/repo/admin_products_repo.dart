@@ -50,4 +50,13 @@ class AdminProductsRepo {
       return ApiResult.failure(e.toString());
     }
   }
+
+  Future<ApiResult<void>> deleteProducts({required String id}) async {
+    try {
+      var response = await _adminProductsDataSource.deleteProduct(id: id);
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(e.toString());
+    }
+  }
 }

@@ -137,4 +137,19 @@ class AdminProductsQueries {
       'variables': variables,
     };
   }
+
+  static Map<String, dynamic> deleteProduct({required String id}) {
+    const String mutation = r'''
+        mutation DeleteProduct($id: ID!){
+            deleteProduct(id: $id)
+        }
+    ''';
+    Map<String, dynamic> variables = {
+      'id': id,
+    };
+    return {
+      'query': mutation,
+      'variables': variables,
+    };
+  }
 }

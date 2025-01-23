@@ -37,4 +37,10 @@ class AdminProductsDataSource {
         .updateProduct(AdminProductsQueries.updateProductQuery(body: body));
     return response;
   }
+
+  Future<void> deleteProduct({required String id}) async {
+    var response = await _apiService
+        .deleteProduct(AdminProductsQueries.deleteProduct(id: id));
+    return response;
+  }
 }

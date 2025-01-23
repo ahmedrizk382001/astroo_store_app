@@ -13,6 +13,7 @@ import 'package:astroo_store_app/features/admin/admin_categories/presentation/bl
 import 'package:astroo_store_app/features/admin/admin_products/data/data_source/admin_products_data_source.dart';
 import 'package:astroo_store_app/features/admin/admin_products/data/repo/admin_products_repo.dart';
 import 'package:astroo_store_app/features/admin/admin_products/presentation/bloc/add_product_bloc/add_product_bloc.dart';
+import 'package:astroo_store_app/features/admin/admin_products/presentation/bloc/delete_product_bloc/delete_product_bloc.dart';
 import 'package:astroo_store_app/features/admin/admin_products/presentation/bloc/get_admin_products/get_admin_products_bloc.dart';
 import 'package:astroo_store_app/features/admin/admin_products/presentation/bloc/update_product_bloc/update_product_bloc.dart';
 import 'package:astroo_store_app/features/admin/dashboard/data/data_source/dashboard_data_source.dart';
@@ -118,6 +119,9 @@ Future<void> initAdminProducts() async {
     )
     ..registerFactory(
       () => UpdateProductBloc(getIt<AdminProductsRepo>()),
+    )
+    ..registerFactory(
+      () => DeleteProductBloc(getIt<AdminProductsRepo>()),
     );
 }
 
