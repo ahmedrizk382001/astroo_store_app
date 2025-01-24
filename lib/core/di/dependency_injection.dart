@@ -16,6 +16,10 @@ import 'package:astroo_store_app/features/admin/admin_products/presentation/bloc
 import 'package:astroo_store_app/features/admin/admin_products/presentation/bloc/delete_product_bloc/delete_product_bloc.dart';
 import 'package:astroo_store_app/features/admin/admin_products/presentation/bloc/get_admin_products/get_admin_products_bloc.dart';
 import 'package:astroo_store_app/features/admin/admin_products/presentation/bloc/update_product_bloc/update_product_bloc.dart';
+import 'package:astroo_store_app/features/admin/admin_users/data/data_source/admin_users_data_source.dart';
+import 'package:astroo_store_app/features/admin/admin_users/data/repo/admin_users_repo.dart';
+import 'package:astroo_store_app/features/admin/admin_users/presentation/bloc/bloc/admin_delete_user_bloc.dart';
+import 'package:astroo_store_app/features/admin/admin_users/presentation/bloc/get_users_bloc/get_users_bloc.dart';
 import 'package:astroo_store_app/features/admin/dashboard/data/data_source/dashboard_data_source.dart';
 import 'package:astroo_store_app/features/admin/dashboard/data/repos/dashboard_repo.dart';
 import 'package:astroo_store_app/features/admin/dashboard/presentation/bloc/categories_number/categories_number_bloc.dart';
@@ -36,6 +40,7 @@ Future<void> setUpGetIt() async {
   await initDashboard();
   await initAdminCategories();
   await initAdminProducts();
+  await initAdminUsers();
 }
 
 Future<void> initCore() async {
@@ -135,5 +140,21 @@ Future<void> initImageUpload() async {
     )
     ..registerFactory(
       () => UploadImageCubit(getIt<UploadImageRepo>()),
+    );
+}
+
+Future<void> initAdminUsers() async {
+  getIt
+    ..registerLazySingleton(
+      () => AdminUsersDataSource(getIt<ApiService>()),
+    )
+    ..registerLazySingleton(
+      () => AdminUsersRepo(getIt<AdminUsersDataSource>()),
+    )
+    ..registerFactory(
+      () => GetUsersBloc(getIt<AdminUsersRepo>()),
+    )
+    ..registerFactory(
+      () => AdminDeleteUserBloc(getIt<AdminUsersRepo>()),
     );
 }
