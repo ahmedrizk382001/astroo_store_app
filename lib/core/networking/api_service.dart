@@ -7,6 +7,7 @@ import 'package:astroo_store_app/features/admin/admin_products/data/models/add_p
 import 'package:astroo_store_app/features/admin/admin_products/data/models/product_response_model.dart';
 import 'package:astroo_store_app/features/admin/admin_products/data/models/products_model.dart';
 import 'package:astroo_store_app/features/admin/admin_products/data/models/update_product_response_model.dart';
+import 'package:astroo_store_app/features/admin/admin_users/data/models/get_users_model.dart';
 import 'package:astroo_store_app/features/admin/dashboard/data/models/categories_number_model.dart';
 import 'package:astroo_store_app/features/admin/dashboard/data/models/products_number_model.dart';
 import 'package:astroo_store_app/features/admin/dashboard/data/models/users_number_model.dart';
@@ -78,4 +79,10 @@ abstract class ApiService {
 
   @POST(ApiConstants.graphQL)
   Future<void> deleteProduct(@Body() Map<String, dynamic> deletePrdocutReq);
+
+  @POST(ApiConstants.graphQL)
+  Future<GetUsersModel> getUsers(@Body() Map<String, dynamic> getUsersReq);
+
+  @POST(ApiConstants.graphQL)
+  Future<void> deleteUser(@Body() Map<String, dynamic> deleteUserReq);
 }

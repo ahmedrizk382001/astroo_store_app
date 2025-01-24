@@ -7,6 +7,7 @@ class CustomContainerLinearAdmin extends StatelessWidget {
     required this.width,
     required this.child,
     this.padding,
+    this.margin,
     super.key,
   });
 
@@ -14,11 +15,13 @@ class CustomContainerLinearAdmin extends StatelessWidget {
   final double width;
   final Widget child;
   final EdgeInsetsGeometry? padding;
+  final EdgeInsetsGeometry? margin;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: padding ?? EdgeInsets.zero,
+      margin: margin ?? EdgeInsets.zero,
       width: width,
       height: height,
       decoration: BoxDecoration(
