@@ -1,7 +1,6 @@
 import 'package:astroo_store_app/core/extensions/context_extension.dart';
 import 'package:astroo_store_app/features/admin/admin_drawer/presentation/views/widgets/drawer_menu_screen.dart';
-import 'package:astroo_store_app/features/admin/admin_users/presentation/views/admin_users_view.dart';
-import 'package:astroo_store_app/features/admin/dashboard/presentation/views/dashboard_view.dart';
+import 'package:astroo_store_app/features/admin/admin_notifications/presentation/views/admin_notifications_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
@@ -17,7 +16,7 @@ class AdminDrawerView extends StatefulWidget {
 
 class _AdminDrawerViewState extends State<AdminDrawerView> {
   late ZoomDrawerController zoomDrawerController;
-  Widget currentScreen = AdminUsersView();
+  Widget currentScreen = AdminNotificationsView();
 
   @override
   void initState() {
