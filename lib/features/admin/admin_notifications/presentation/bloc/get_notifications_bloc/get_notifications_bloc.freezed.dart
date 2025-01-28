@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'users_number_bloc.dart';
+part of 'get_notifications_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,65 +15,66 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$UsersNumberEvent {
+mixin _$GetNotificationsEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() getUsersNumber,
+    required TResult Function(bool isLoading) getNotifications,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function()? getUsersNumber,
+    TResult? Function(bool isLoading)? getNotifications,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? getUsersNumber,
+    TResult Function(bool isLoading)? getNotifications,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(GetUsersNumber value) getUsersNumber,
+    required TResult Function(FetchNotificationsEvent value) getNotifications,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(GetUsersNumber value)? getUsersNumber,
+    TResult? Function(FetchNotificationsEvent value)? getNotifications,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(GetUsersNumber value)? getUsersNumber,
+    TResult Function(FetchNotificationsEvent value)? getNotifications,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UsersNumberEventCopyWith<$Res> {
-  factory $UsersNumberEventCopyWith(
-          UsersNumberEvent value, $Res Function(UsersNumberEvent) then) =
-      _$UsersNumberEventCopyWithImpl<$Res, UsersNumberEvent>;
+abstract class $GetNotificationsEventCopyWith<$Res> {
+  factory $GetNotificationsEventCopyWith(GetNotificationsEvent value,
+          $Res Function(GetNotificationsEvent) then) =
+      _$GetNotificationsEventCopyWithImpl<$Res, GetNotificationsEvent>;
 }
 
 /// @nodoc
-class _$UsersNumberEventCopyWithImpl<$Res, $Val extends UsersNumberEvent>
-    implements $UsersNumberEventCopyWith<$Res> {
-  _$UsersNumberEventCopyWithImpl(this._value, this._then);
+class _$GetNotificationsEventCopyWithImpl<$Res,
+        $Val extends GetNotificationsEvent>
+    implements $GetNotificationsEventCopyWith<$Res> {
+  _$GetNotificationsEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of UsersNumberEvent
+  /// Create a copy of GetNotificationsEvent
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -86,30 +87,24 @@ abstract class _$$StartedImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$StartedImplCopyWithImpl<$Res>
-    extends _$UsersNumberEventCopyWithImpl<$Res, _$StartedImpl>
+    extends _$GetNotificationsEventCopyWithImpl<$Res, _$StartedImpl>
     implements _$$StartedImplCopyWith<$Res> {
   __$$StartedImplCopyWithImpl(
       _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of UsersNumberEvent
+  /// Create a copy of GetNotificationsEvent
   /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 
-class _$StartedImpl with DiagnosticableTreeMixin implements _Started {
+class _$StartedImpl implements _Started {
   const _$StartedImpl();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'UsersNumberEvent.started()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'UsersNumberEvent.started'));
+  String toString() {
+    return 'GetNotificationsEvent.started()';
   }
 
   @override
@@ -125,7 +120,7 @@ class _$StartedImpl with DiagnosticableTreeMixin implements _Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() getUsersNumber,
+    required TResult Function(bool isLoading) getNotifications,
   }) {
     return started();
   }
@@ -134,7 +129,7 @@ class _$StartedImpl with DiagnosticableTreeMixin implements _Started {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function()? getUsersNumber,
+    TResult? Function(bool isLoading)? getNotifications,
   }) {
     return started?.call();
   }
@@ -143,7 +138,7 @@ class _$StartedImpl with DiagnosticableTreeMixin implements _Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? getUsersNumber,
+    TResult Function(bool isLoading)? getNotifications,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -156,7 +151,7 @@ class _$StartedImpl with DiagnosticableTreeMixin implements _Started {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(GetUsersNumber value) getUsersNumber,
+    required TResult Function(FetchNotificationsEvent value) getNotifications,
   }) {
     return started(this);
   }
@@ -165,7 +160,7 @@ class _$StartedImpl with DiagnosticableTreeMixin implements _Started {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(GetUsersNumber value)? getUsersNumber,
+    TResult? Function(FetchNotificationsEvent value)? getNotifications,
   }) {
     return started?.call(this);
   }
@@ -174,7 +169,7 @@ class _$StartedImpl with DiagnosticableTreeMixin implements _Started {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(GetUsersNumber value)? getUsersNumber,
+    TResult Function(FetchNotificationsEvent value)? getNotifications,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -184,84 +179,107 @@ class _$StartedImpl with DiagnosticableTreeMixin implements _Started {
   }
 }
 
-abstract class _Started implements UsersNumberEvent {
+abstract class _Started implements GetNotificationsEvent {
   const factory _Started() = _$StartedImpl;
 }
 
 /// @nodoc
-abstract class _$$GetUsersNumberImplCopyWith<$Res> {
-  factory _$$GetUsersNumberImplCopyWith(_$GetUsersNumberImpl value,
-          $Res Function(_$GetUsersNumberImpl) then) =
-      __$$GetUsersNumberImplCopyWithImpl<$Res>;
+abstract class _$$FetchNotificationsEventImplCopyWith<$Res> {
+  factory _$$FetchNotificationsEventImplCopyWith(
+          _$FetchNotificationsEventImpl value,
+          $Res Function(_$FetchNotificationsEventImpl) then) =
+      __$$FetchNotificationsEventImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({bool isLoading});
 }
 
 /// @nodoc
-class __$$GetUsersNumberImplCopyWithImpl<$Res>
-    extends _$UsersNumberEventCopyWithImpl<$Res, _$GetUsersNumberImpl>
-    implements _$$GetUsersNumberImplCopyWith<$Res> {
-  __$$GetUsersNumberImplCopyWithImpl(
-      _$GetUsersNumberImpl _value, $Res Function(_$GetUsersNumberImpl) _then)
+class __$$FetchNotificationsEventImplCopyWithImpl<$Res>
+    extends _$GetNotificationsEventCopyWithImpl<$Res,
+        _$FetchNotificationsEventImpl>
+    implements _$$FetchNotificationsEventImplCopyWith<$Res> {
+  __$$FetchNotificationsEventImplCopyWithImpl(
+      _$FetchNotificationsEventImpl _value,
+      $Res Function(_$FetchNotificationsEventImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of UsersNumberEvent
+  /// Create a copy of GetNotificationsEvent
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? isLoading = null,
+  }) {
+    return _then(_$FetchNotificationsEventImpl(
+      isLoading: null == isLoading
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$GetUsersNumberImpl
-    with DiagnosticableTreeMixin
-    implements GetUsersNumber {
-  const _$GetUsersNumberImpl();
+class _$FetchNotificationsEventImpl implements FetchNotificationsEvent {
+  const _$FetchNotificationsEventImpl({required this.isLoading});
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'UsersNumberEvent.getUsersNumber()';
-  }
+  final bool isLoading;
 
   @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-        .add(DiagnosticsProperty('type', 'UsersNumberEvent.getUsersNumber'));
+  String toString() {
+    return 'GetNotificationsEvent.getNotifications(isLoading: $isLoading)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$GetUsersNumberImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$FetchNotificationsEventImpl &&
+            (identical(other.isLoading, isLoading) ||
+                other.isLoading == isLoading));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, isLoading);
+
+  /// Create a copy of GetNotificationsEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FetchNotificationsEventImplCopyWith<_$FetchNotificationsEventImpl>
+      get copyWith => __$$FetchNotificationsEventImplCopyWithImpl<
+          _$FetchNotificationsEventImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() getUsersNumber,
+    required TResult Function(bool isLoading) getNotifications,
   }) {
-    return getUsersNumber();
+    return getNotifications(isLoading);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function()? getUsersNumber,
+    TResult? Function(bool isLoading)? getNotifications,
   }) {
-    return getUsersNumber?.call();
+    return getNotifications?.call(isLoading);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? getUsersNumber,
+    TResult Function(bool isLoading)? getNotifications,
     required TResult orElse(),
   }) {
-    if (getUsersNumber != null) {
-      return getUsersNumber();
+    if (getNotifications != null) {
+      return getNotifications(isLoading);
     }
     return orElse();
   }
@@ -270,58 +288,71 @@ class _$GetUsersNumberImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
-    required TResult Function(GetUsersNumber value) getUsersNumber,
+    required TResult Function(FetchNotificationsEvent value) getNotifications,
   }) {
-    return getUsersNumber(this);
+    return getNotifications(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
-    TResult? Function(GetUsersNumber value)? getUsersNumber,
+    TResult? Function(FetchNotificationsEvent value)? getNotifications,
   }) {
-    return getUsersNumber?.call(this);
+    return getNotifications?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
-    TResult Function(GetUsersNumber value)? getUsersNumber,
+    TResult Function(FetchNotificationsEvent value)? getNotifications,
     required TResult orElse(),
   }) {
-    if (getUsersNumber != null) {
-      return getUsersNumber(this);
+    if (getNotifications != null) {
+      return getNotifications(this);
     }
     return orElse();
   }
 }
 
-abstract class GetUsersNumber implements UsersNumberEvent {
-  const factory GetUsersNumber() = _$GetUsersNumberImpl;
+abstract class FetchNotificationsEvent implements GetNotificationsEvent {
+  const factory FetchNotificationsEvent({required final bool isLoading}) =
+      _$FetchNotificationsEventImpl;
+
+  bool get isLoading;
+
+  /// Create a copy of GetNotificationsEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FetchNotificationsEventImplCopyWith<_$FetchNotificationsEventImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-mixin _$UsersNumberState {
+mixin _$GetNotificationsState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
-    required TResult Function(String usersNum) success,
+    required TResult Function() empty,
+    required TResult Function(List<NotificationModel> notificationsList)
+        success,
     required TResult Function(String error) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
-    TResult? Function(String usersNum)? success,
+    TResult? Function()? empty,
+    TResult? Function(List<NotificationModel> notificationsList)? success,
     TResult? Function(String error)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(String usersNum)? success,
+    TResult Function()? empty,
+    TResult Function(List<NotificationModel> notificationsList)? success,
     TResult Function(String error)? error,
     required TResult orElse(),
   }) =>
@@ -329,6 +360,7 @@ mixin _$UsersNumberState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(LoadingState value) loading,
+    required TResult Function(EmptyState value) empty,
     required TResult Function(SuccessState value) success,
     required TResult Function(ErrorState value) error,
   }) =>
@@ -336,6 +368,7 @@ mixin _$UsersNumberState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(LoadingState value)? loading,
+    TResult? Function(EmptyState value)? empty,
     TResult? Function(SuccessState value)? success,
     TResult? Function(ErrorState value)? error,
   }) =>
@@ -343,6 +376,7 @@ mixin _$UsersNumberState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(LoadingState value)? loading,
+    TResult Function(EmptyState value)? empty,
     TResult Function(SuccessState value)? success,
     TResult Function(ErrorState value)? error,
     required TResult orElse(),
@@ -351,23 +385,24 @@ mixin _$UsersNumberState {
 }
 
 /// @nodoc
-abstract class $UsersNumberStateCopyWith<$Res> {
-  factory $UsersNumberStateCopyWith(
-          UsersNumberState value, $Res Function(UsersNumberState) then) =
-      _$UsersNumberStateCopyWithImpl<$Res, UsersNumberState>;
+abstract class $GetNotificationsStateCopyWith<$Res> {
+  factory $GetNotificationsStateCopyWith(GetNotificationsState value,
+          $Res Function(GetNotificationsState) then) =
+      _$GetNotificationsStateCopyWithImpl<$Res, GetNotificationsState>;
 }
 
 /// @nodoc
-class _$UsersNumberStateCopyWithImpl<$Res, $Val extends UsersNumberState>
-    implements $UsersNumberStateCopyWith<$Res> {
-  _$UsersNumberStateCopyWithImpl(this._value, this._then);
+class _$GetNotificationsStateCopyWithImpl<$Res,
+        $Val extends GetNotificationsState>
+    implements $GetNotificationsStateCopyWith<$Res> {
+  _$GetNotificationsStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of UsersNumberState
+  /// Create a copy of GetNotificationsState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -380,30 +415,24 @@ abstract class _$$LoadingStateImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$LoadingStateImplCopyWithImpl<$Res>
-    extends _$UsersNumberStateCopyWithImpl<$Res, _$LoadingStateImpl>
+    extends _$GetNotificationsStateCopyWithImpl<$Res, _$LoadingStateImpl>
     implements _$$LoadingStateImplCopyWith<$Res> {
   __$$LoadingStateImplCopyWithImpl(
       _$LoadingStateImpl _value, $Res Function(_$LoadingStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of UsersNumberState
+  /// Create a copy of GetNotificationsState
   /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 
-class _$LoadingStateImpl with DiagnosticableTreeMixin implements LoadingState {
+class _$LoadingStateImpl implements LoadingState {
   const _$LoadingStateImpl();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'UsersNumberState.loading()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'UsersNumberState.loading'));
+  String toString() {
+    return 'GetNotificationsState.loading()';
   }
 
   @override
@@ -419,7 +448,9 @@ class _$LoadingStateImpl with DiagnosticableTreeMixin implements LoadingState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
-    required TResult Function(String usersNum) success,
+    required TResult Function() empty,
+    required TResult Function(List<NotificationModel> notificationsList)
+        success,
     required TResult Function(String error) error,
   }) {
     return loading();
@@ -429,7 +460,8 @@ class _$LoadingStateImpl with DiagnosticableTreeMixin implements LoadingState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
-    TResult? Function(String usersNum)? success,
+    TResult? Function()? empty,
+    TResult? Function(List<NotificationModel> notificationsList)? success,
     TResult? Function(String error)? error,
   }) {
     return loading?.call();
@@ -439,7 +471,8 @@ class _$LoadingStateImpl with DiagnosticableTreeMixin implements LoadingState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(String usersNum)? success,
+    TResult Function()? empty,
+    TResult Function(List<NotificationModel> notificationsList)? success,
     TResult Function(String error)? error,
     required TResult orElse(),
   }) {
@@ -453,6 +486,7 @@ class _$LoadingStateImpl with DiagnosticableTreeMixin implements LoadingState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(LoadingState value) loading,
+    required TResult Function(EmptyState value) empty,
     required TResult Function(SuccessState value) success,
     required TResult Function(ErrorState value) error,
   }) {
@@ -463,6 +497,7 @@ class _$LoadingStateImpl with DiagnosticableTreeMixin implements LoadingState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(LoadingState value)? loading,
+    TResult? Function(EmptyState value)? empty,
     TResult? Function(SuccessState value)? success,
     TResult? Function(ErrorState value)? error,
   }) {
@@ -473,6 +508,7 @@ class _$LoadingStateImpl with DiagnosticableTreeMixin implements LoadingState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(LoadingState value)? loading,
+    TResult Function(EmptyState value)? empty,
     TResult Function(SuccessState value)? success,
     TResult Function(ErrorState value)? error,
     required TResult orElse(),
@@ -484,8 +520,126 @@ class _$LoadingStateImpl with DiagnosticableTreeMixin implements LoadingState {
   }
 }
 
-abstract class LoadingState implements UsersNumberState {
+abstract class LoadingState implements GetNotificationsState {
   const factory LoadingState() = _$LoadingStateImpl;
+}
+
+/// @nodoc
+abstract class _$$EmptyStateImplCopyWith<$Res> {
+  factory _$$EmptyStateImplCopyWith(
+          _$EmptyStateImpl value, $Res Function(_$EmptyStateImpl) then) =
+      __$$EmptyStateImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$EmptyStateImplCopyWithImpl<$Res>
+    extends _$GetNotificationsStateCopyWithImpl<$Res, _$EmptyStateImpl>
+    implements _$$EmptyStateImplCopyWith<$Res> {
+  __$$EmptyStateImplCopyWithImpl(
+      _$EmptyStateImpl _value, $Res Function(_$EmptyStateImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of GetNotificationsState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$EmptyStateImpl implements EmptyState {
+  const _$EmptyStateImpl();
+
+  @override
+  String toString() {
+    return 'GetNotificationsState.empty()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$EmptyStateImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() loading,
+    required TResult Function() empty,
+    required TResult Function(List<NotificationModel> notificationsList)
+        success,
+    required TResult Function(String error) error,
+  }) {
+    return empty();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? loading,
+    TResult? Function()? empty,
+    TResult? Function(List<NotificationModel> notificationsList)? success,
+    TResult? Function(String error)? error,
+  }) {
+    return empty?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loading,
+    TResult Function()? empty,
+    TResult Function(List<NotificationModel> notificationsList)? success,
+    TResult Function(String error)? error,
+    required TResult orElse(),
+  }) {
+    if (empty != null) {
+      return empty();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(LoadingState value) loading,
+    required TResult Function(EmptyState value) empty,
+    required TResult Function(SuccessState value) success,
+    required TResult Function(ErrorState value) error,
+  }) {
+    return empty(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(LoadingState value)? loading,
+    TResult? Function(EmptyState value)? empty,
+    TResult? Function(SuccessState value)? success,
+    TResult? Function(ErrorState value)? error,
+  }) {
+    return empty?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(LoadingState value)? loading,
+    TResult Function(EmptyState value)? empty,
+    TResult Function(SuccessState value)? success,
+    TResult Function(ErrorState value)? error,
+    required TResult orElse(),
+  }) {
+    if (empty != null) {
+      return empty(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EmptyState implements GetNotificationsState {
+  const factory EmptyState() = _$EmptyStateImpl;
 }
 
 /// @nodoc
@@ -494,52 +648,52 @@ abstract class _$$SuccessStateImplCopyWith<$Res> {
           _$SuccessStateImpl value, $Res Function(_$SuccessStateImpl) then) =
       __$$SuccessStateImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String usersNum});
+  $Res call({List<NotificationModel> notificationsList});
 }
 
 /// @nodoc
 class __$$SuccessStateImplCopyWithImpl<$Res>
-    extends _$UsersNumberStateCopyWithImpl<$Res, _$SuccessStateImpl>
+    extends _$GetNotificationsStateCopyWithImpl<$Res, _$SuccessStateImpl>
     implements _$$SuccessStateImplCopyWith<$Res> {
   __$$SuccessStateImplCopyWithImpl(
       _$SuccessStateImpl _value, $Res Function(_$SuccessStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of UsersNumberState
+  /// Create a copy of GetNotificationsState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? usersNum = null,
+    Object? notificationsList = null,
   }) {
     return _then(_$SuccessStateImpl(
-      usersNum: null == usersNum
-          ? _value.usersNum
-          : usersNum // ignore: cast_nullable_to_non_nullable
-              as String,
+      notificationsList: null == notificationsList
+          ? _value._notificationsList
+          : notificationsList // ignore: cast_nullable_to_non_nullable
+              as List<NotificationModel>,
     ));
   }
 }
 
 /// @nodoc
 
-class _$SuccessStateImpl with DiagnosticableTreeMixin implements SuccessState {
-  const _$SuccessStateImpl({required this.usersNum});
+class _$SuccessStateImpl implements SuccessState {
+  const _$SuccessStateImpl(
+      {required final List<NotificationModel> notificationsList})
+      : _notificationsList = notificationsList;
 
+  final List<NotificationModel> _notificationsList;
   @override
-  final String usersNum;
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'UsersNumberState.success(usersNum: $usersNum)';
+  List<NotificationModel> get notificationsList {
+    if (_notificationsList is EqualUnmodifiableListView)
+      return _notificationsList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_notificationsList);
   }
 
   @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'UsersNumberState.success'))
-      ..add(DiagnosticsProperty('usersNum', usersNum));
+  String toString() {
+    return 'GetNotificationsState.success(notificationsList: $notificationsList)';
   }
 
   @override
@@ -547,14 +701,15 @@ class _$SuccessStateImpl with DiagnosticableTreeMixin implements SuccessState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SuccessStateImpl &&
-            (identical(other.usersNum, usersNum) ||
-                other.usersNum == usersNum));
+            const DeepCollectionEquality()
+                .equals(other._notificationsList, _notificationsList));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, usersNum);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_notificationsList));
 
-  /// Create a copy of UsersNumberState
+  /// Create a copy of GetNotificationsState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -566,32 +721,36 @@ class _$SuccessStateImpl with DiagnosticableTreeMixin implements SuccessState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
-    required TResult Function(String usersNum) success,
+    required TResult Function() empty,
+    required TResult Function(List<NotificationModel> notificationsList)
+        success,
     required TResult Function(String error) error,
   }) {
-    return success(usersNum);
+    return success(notificationsList);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
-    TResult? Function(String usersNum)? success,
+    TResult? Function()? empty,
+    TResult? Function(List<NotificationModel> notificationsList)? success,
     TResult? Function(String error)? error,
   }) {
-    return success?.call(usersNum);
+    return success?.call(notificationsList);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(String usersNum)? success,
+    TResult Function()? empty,
+    TResult Function(List<NotificationModel> notificationsList)? success,
     TResult Function(String error)? error,
     required TResult orElse(),
   }) {
     if (success != null) {
-      return success(usersNum);
+      return success(notificationsList);
     }
     return orElse();
   }
@@ -600,6 +759,7 @@ class _$SuccessStateImpl with DiagnosticableTreeMixin implements SuccessState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(LoadingState value) loading,
+    required TResult Function(EmptyState value) empty,
     required TResult Function(SuccessState value) success,
     required TResult Function(ErrorState value) error,
   }) {
@@ -610,6 +770,7 @@ class _$SuccessStateImpl with DiagnosticableTreeMixin implements SuccessState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(LoadingState value)? loading,
+    TResult? Function(EmptyState value)? empty,
     TResult? Function(SuccessState value)? success,
     TResult? Function(ErrorState value)? error,
   }) {
@@ -620,6 +781,7 @@ class _$SuccessStateImpl with DiagnosticableTreeMixin implements SuccessState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(LoadingState value)? loading,
+    TResult Function(EmptyState value)? empty,
     TResult Function(SuccessState value)? success,
     TResult Function(ErrorState value)? error,
     required TResult orElse(),
@@ -631,13 +793,14 @@ class _$SuccessStateImpl with DiagnosticableTreeMixin implements SuccessState {
   }
 }
 
-abstract class SuccessState implements UsersNumberState {
-  const factory SuccessState({required final String usersNum}) =
+abstract class SuccessState implements GetNotificationsState {
+  const factory SuccessState(
+          {required final List<NotificationModel> notificationsList}) =
       _$SuccessStateImpl;
 
-  String get usersNum;
+  List<NotificationModel> get notificationsList;
 
-  /// Create a copy of UsersNumberState
+  /// Create a copy of GetNotificationsState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SuccessStateImplCopyWith<_$SuccessStateImpl> get copyWith =>
@@ -655,13 +818,13 @@ abstract class _$$ErrorStateImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ErrorStateImplCopyWithImpl<$Res>
-    extends _$UsersNumberStateCopyWithImpl<$Res, _$ErrorStateImpl>
+    extends _$GetNotificationsStateCopyWithImpl<$Res, _$ErrorStateImpl>
     implements _$$ErrorStateImplCopyWith<$Res> {
   __$$ErrorStateImplCopyWithImpl(
       _$ErrorStateImpl _value, $Res Function(_$ErrorStateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of UsersNumberState
+  /// Create a copy of GetNotificationsState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -679,23 +842,15 @@ class __$$ErrorStateImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErrorStateImpl with DiagnosticableTreeMixin implements ErrorState {
+class _$ErrorStateImpl implements ErrorState {
   const _$ErrorStateImpl({required this.error});
 
   @override
   final String error;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'UsersNumberState.error(error: $error)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'UsersNumberState.error'))
-      ..add(DiagnosticsProperty('error', error));
+  String toString() {
+    return 'GetNotificationsState.error(error: $error)';
   }
 
   @override
@@ -709,7 +864,7 @@ class _$ErrorStateImpl with DiagnosticableTreeMixin implements ErrorState {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of UsersNumberState
+  /// Create a copy of GetNotificationsState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -721,7 +876,9 @@ class _$ErrorStateImpl with DiagnosticableTreeMixin implements ErrorState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
-    required TResult Function(String usersNum) success,
+    required TResult Function() empty,
+    required TResult Function(List<NotificationModel> notificationsList)
+        success,
     required TResult Function(String error) error,
   }) {
     return error(this.error);
@@ -731,7 +888,8 @@ class _$ErrorStateImpl with DiagnosticableTreeMixin implements ErrorState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
-    TResult? Function(String usersNum)? success,
+    TResult? Function()? empty,
+    TResult? Function(List<NotificationModel> notificationsList)? success,
     TResult? Function(String error)? error,
   }) {
     return error?.call(this.error);
@@ -741,7 +899,8 @@ class _$ErrorStateImpl with DiagnosticableTreeMixin implements ErrorState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(String usersNum)? success,
+    TResult Function()? empty,
+    TResult Function(List<NotificationModel> notificationsList)? success,
     TResult Function(String error)? error,
     required TResult orElse(),
   }) {
@@ -755,6 +914,7 @@ class _$ErrorStateImpl with DiagnosticableTreeMixin implements ErrorState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(LoadingState value) loading,
+    required TResult Function(EmptyState value) empty,
     required TResult Function(SuccessState value) success,
     required TResult Function(ErrorState value) error,
   }) {
@@ -765,6 +925,7 @@ class _$ErrorStateImpl with DiagnosticableTreeMixin implements ErrorState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(LoadingState value)? loading,
+    TResult? Function(EmptyState value)? empty,
     TResult? Function(SuccessState value)? success,
     TResult? Function(ErrorState value)? error,
   }) {
@@ -775,6 +936,7 @@ class _$ErrorStateImpl with DiagnosticableTreeMixin implements ErrorState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(LoadingState value)? loading,
+    TResult Function(EmptyState value)? empty,
     TResult Function(SuccessState value)? success,
     TResult Function(ErrorState value)? error,
     required TResult orElse(),
@@ -786,12 +948,12 @@ class _$ErrorStateImpl with DiagnosticableTreeMixin implements ErrorState {
   }
 }
 
-abstract class ErrorState implements UsersNumberState {
+abstract class ErrorState implements GetNotificationsState {
   const factory ErrorState({required final String error}) = _$ErrorStateImpl;
 
   String get error;
 
-  /// Create a copy of UsersNumberState
+  /// Create a copy of GetNotificationsState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorStateImplCopyWith<_$ErrorStateImpl> get copyWith =>
