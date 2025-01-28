@@ -1,8 +1,9 @@
 import 'package:astroo_store_app/core/shared/widgets/custom_text_field.dart';
 import 'package:astroo_store_app/core/styles/fonts/app_text_styles.dart';
+import 'package:astroo_store_app/features/admin/admin_notifications/presentation/bloc/add_notification_bloc/add_notification_bloc.dart';
 import 'package:astroo_store_app/features/admin/admin_notifications/presentation/views/widgets/add_notification/create_notification_button.dart';
-import 'package:astroo_store_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AddNotificationBody extends StatelessWidget {
@@ -12,8 +13,9 @@ class AddNotificationBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var addNotificationBloc = context.read<AddNotificationBloc>();
     return Form(
-      key: GlobalKey(),
+      key: addNotificationBloc.formKey,
       child: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
         child: Column(
@@ -39,12 +41,12 @@ class AddNotificationBody extends StatelessWidget {
               height: 16.h,
             ),
             CustomTextField(
-              controller: TextEditingController(),
+              controller: addNotificationBloc.headerController,
               hintText: "Notification Header",
               maxLength: 3,
               validator: (value) {
                 if (value!.isEmpty || value.length < 5) {
-                  return S.of(context).valid_name;
+                  return "Please enter a valid header";
                 }
                 return null;
               },
@@ -63,12 +65,12 @@ class AddNotificationBody extends StatelessWidget {
               height: 16.h,
             ),
             CustomTextField(
-              controller: TextEditingController(),
+              controller: addNotificationBloc.contentController,
               hintText: "Notification Content",
               maxLength: 3,
               validator: (value) {
                 if (value!.isEmpty || value.length < 5) {
-                  return S.of(context).valid_name;
+                  return "Please enter a valid content";
                 }
                 return null;
               },
@@ -87,9 +89,10 @@ class AddNotificationBody extends StatelessWidget {
               height: 16.h,
             ),
             CustomTextField(
-              controller: TextEditingController(),
+              controller: addNotificationBloc.productIdController,
               hintText: "Product ID",
               maxLength: 1,
+              validator: (p0) => null,
             ),
             SizedBox(
               height: 32.h,

@@ -9,7 +9,11 @@ part of 'api_service.dart';
 // ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers,unused_element,unnecessary_string_interpolations
 
 class _ApiService implements ApiService {
-  _ApiService(this._dio, {this.baseUrl, this.errorLogger}) {
+  _ApiService(
+    this._dio, {
+    this.baseUrl,
+    this.errorLogger,
+  }) {
     baseUrl ??= 'https://api.escuelajs.co';
   }
 
@@ -26,16 +30,22 @@ class _ApiService implements ApiService {
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(loginReq);
-    final _options = _setStreamType<LoginResponseModel>(
-      Options(method: 'POST', headers: _headers, extra: _extra)
-          .compose(
-            _dio.options,
-            '/graphql',
-            queryParameters: queryParameters,
-            data: _data,
-          )
-          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
-    );
+    final _options = _setStreamType<LoginResponseModel>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          '/graphql',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late LoginResponseModel _value;
     try {
@@ -53,16 +63,22 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<UserProfileModel>(
-      Options(method: 'GET', headers: _headers, extra: _extra)
-          .compose(
-            _dio.options,
-            '/api/v1/auth/profile',
-            queryParameters: queryParameters,
-            data: _data,
-          )
-          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
-    );
+    final _options = _setStreamType<UserProfileModel>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          '/api/v1/auth/profile',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late UserProfileModel _value;
     try {
@@ -81,16 +97,22 @@ class _ApiService implements ApiService {
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(signUpReq);
-    final _options = _setStreamType<SignUpResponseModel>(
-      Options(method: 'POST', headers: _headers, extra: _extra)
-          .compose(
-            _dio.options,
-            '/graphql',
-            queryParameters: queryParameters,
-            data: _data,
-          )
-          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
-    );
+    final _options = _setStreamType<SignUpResponseModel>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          '/graphql',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late SignUpResponseModel _value;
     try {
@@ -104,23 +126,28 @@ class _ApiService implements ApiService {
 
   @override
   Future<ProductsNumberModel> getProductsNumber(
-    Map<String, dynamic> productsReq,
-  ) async {
+      Map<String, dynamic> productsReq) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(productsReq);
-    final _options = _setStreamType<ProductsNumberModel>(
-      Options(method: 'POST', headers: _headers, extra: _extra)
-          .compose(
-            _dio.options,
-            '/graphql',
-            queryParameters: queryParameters,
-            data: _data,
-          )
-          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
-    );
+    final _options = _setStreamType<ProductsNumberModel>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          '/graphql',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ProductsNumberModel _value;
     try {
@@ -134,23 +161,28 @@ class _ApiService implements ApiService {
 
   @override
   Future<CategoriesNumberModel> getCategoriesNumber(
-    Map<String, dynamic> categoriesReq,
-  ) async {
+      Map<String, dynamic> categoriesReq) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(categoriesReq);
-    final _options = _setStreamType<CategoriesNumberModel>(
-      Options(method: 'POST', headers: _headers, extra: _extra)
-          .compose(
-            _dio.options,
-            '/graphql',
-            queryParameters: queryParameters,
-            data: _data,
-          )
-          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
-    );
+    final _options = _setStreamType<CategoriesNumberModel>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          '/graphql',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late CategoriesNumberModel _value;
     try {
@@ -169,16 +201,22 @@ class _ApiService implements ApiService {
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(usersReq);
-    final _options = _setStreamType<UsersNumberModel>(
-      Options(method: 'POST', headers: _headers, extra: _extra)
-          .compose(
-            _dio.options,
-            '/graphql',
-            queryParameters: queryParameters,
-            data: _data,
-          )
-          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
-    );
+    final _options = _setStreamType<UsersNumberModel>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          '/graphql',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late UsersNumberModel _value;
     try {
@@ -196,16 +234,22 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = file;
-    final _options = _setStreamType<UploadImageResponseModel>(
-      Options(method: 'POST', headers: _headers, extra: _extra)
-          .compose(
-            _dio.options,
-            '/api/v1/files/upload',
-            queryParameters: queryParameters,
-            data: _data,
-          )
-          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
-    );
+    final _options = _setStreamType<UploadImageResponseModel>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          '/api/v1/files/upload',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late UploadImageResponseModel _value;
     try {
@@ -219,23 +263,28 @@ class _ApiService implements ApiService {
 
   @override
   Future<CategoriesModel> getAllCategories(
-    Map<String, dynamic> allCategoriesReq,
-  ) async {
+      Map<String, dynamic> allCategoriesReq) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(allCategoriesReq);
-    final _options = _setStreamType<CategoriesModel>(
-      Options(method: 'POST', headers: _headers, extra: _extra)
-          .compose(
-            _dio.options,
-            '/graphql',
-            queryParameters: queryParameters,
-            data: _data,
-          )
-          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
-    );
+    final _options = _setStreamType<CategoriesModel>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          '/graphql',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late CategoriesModel _value;
     try {
@@ -249,23 +298,28 @@ class _ApiService implements ApiService {
 
   @override
   Future<AddCategoryResponse> addCategory(
-    Map<String, dynamic> categoryReq,
-  ) async {
+      Map<String, dynamic> categoryReq) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(categoryReq);
-    final _options = _setStreamType<AddCategoryResponse>(
-      Options(method: 'POST', headers: _headers, extra: _extra)
-          .compose(
-            _dio.options,
-            '/graphql',
-            queryParameters: queryParameters,
-            data: _data,
-          )
-          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
-    );
+    final _options = _setStreamType<AddCategoryResponse>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          '/graphql',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late AddCategoryResponse _value;
     try {
@@ -279,23 +333,28 @@ class _ApiService implements ApiService {
 
   @override
   Future<UpdateCategoryResponse> updateCategory(
-    Map<String, dynamic> categoryReq,
-  ) async {
+      Map<String, dynamic> categoryReq) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(categoryReq);
-    final _options = _setStreamType<UpdateCategoryResponse>(
-      Options(method: 'POST', headers: _headers, extra: _extra)
-          .compose(
-            _dio.options,
-            '/graphql',
-            queryParameters: queryParameters,
-            data: _data,
-          )
-          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
-    );
+    final _options = _setStreamType<UpdateCategoryResponse>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          '/graphql',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late UpdateCategoryResponse _value;
     try {
@@ -314,38 +373,49 @@ class _ApiService implements ApiService {
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(categoryReq);
-    final _options = _setStreamType<void>(
-      Options(method: 'POST', headers: _headers, extra: _extra)
-          .compose(
-            _dio.options,
-            '/graphql',
-            queryParameters: queryParameters,
-            data: _data,
-          )
-          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
-    );
+    final _options = _setStreamType<void>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          '/graphql',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
     await _dio.fetch<void>(_options);
   }
 
   @override
   Future<ProductsModel> getAllProducts(
-    Map<String, dynamic> allProductsReq,
-  ) async {
+      Map<String, dynamic> allProductsReq) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(allProductsReq);
-    final _options = _setStreamType<ProductsModel>(
-      Options(method: 'POST', headers: _headers, extra: _extra)
-          .compose(
-            _dio.options,
-            '/graphql',
-            queryParameters: queryParameters,
-            data: _data,
-          )
-          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
-    );
+    final _options = _setStreamType<ProductsModel>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          '/graphql',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ProductsModel _value;
     try {
@@ -359,23 +429,28 @@ class _ApiService implements ApiService {
 
   @override
   Future<AddProductResponseModel> addProduct(
-    Map<String, dynamic> addProductReq,
-  ) async {
+      Map<String, dynamic> addProductReq) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(addProductReq);
-    final _options = _setStreamType<AddProductResponseModel>(
-      Options(method: 'POST', headers: _headers, extra: _extra)
-          .compose(
-            _dio.options,
-            '/graphql',
-            queryParameters: queryParameters,
-            data: _data,
-          )
-          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
-    );
+    final _options = _setStreamType<AddProductResponseModel>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          '/graphql',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late AddProductResponseModel _value;
     try {
@@ -389,23 +464,28 @@ class _ApiService implements ApiService {
 
   @override
   Future<UpdateProductResponseModel> updateProduct(
-    Map<String, dynamic> updateProductReq,
-  ) async {
+      Map<String, dynamic> updateProductReq) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(updateProductReq);
-    final _options = _setStreamType<UpdateProductResponseModel>(
-      Options(method: 'POST', headers: _headers, extra: _extra)
-          .compose(
-            _dio.options,
-            '/graphql',
-            queryParameters: queryParameters,
-            data: _data,
-          )
-          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
-    );
+    final _options = _setStreamType<UpdateProductResponseModel>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          '/graphql',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late UpdateProductResponseModel _value;
     try {
@@ -419,23 +499,28 @@ class _ApiService implements ApiService {
 
   @override
   Future<ProductResponseModel> getProductById(
-    Map<String, dynamic> getProductReq,
-  ) async {
+      Map<String, dynamic> getProductReq) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(getProductReq);
-    final _options = _setStreamType<ProductResponseModel>(
-      Options(method: 'POST', headers: _headers, extra: _extra)
-          .compose(
-            _dio.options,
-            '/graphql',
-            queryParameters: queryParameters,
-            data: _data,
-          )
-          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
-    );
+    final _options = _setStreamType<ProductResponseModel>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          '/graphql',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late ProductResponseModel _value;
     try {
@@ -454,16 +539,22 @@ class _ApiService implements ApiService {
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(deletePrdocutReq);
-    final _options = _setStreamType<void>(
-      Options(method: 'POST', headers: _headers, extra: _extra)
-          .compose(
-            _dio.options,
-            '/graphql',
-            queryParameters: queryParameters,
-            data: _data,
-          )
-          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
-    );
+    final _options = _setStreamType<void>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          '/graphql',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
     await _dio.fetch<void>(_options);
   }
 
@@ -474,16 +565,22 @@ class _ApiService implements ApiService {
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(getUsersReq);
-    final _options = _setStreamType<GetUsersModel>(
-      Options(method: 'POST', headers: _headers, extra: _extra)
-          .compose(
-            _dio.options,
-            '/graphql',
-            queryParameters: queryParameters,
-            data: _data,
-          )
-          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
-    );
+    final _options = _setStreamType<GetUsersModel>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          '/graphql',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late GetUsersModel _value;
     try {
@@ -502,16 +599,22 @@ class _ApiService implements ApiService {
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(deleteUserReq);
-    final _options = _setStreamType<void>(
-      Options(method: 'POST', headers: _headers, extra: _extra)
-          .compose(
-            _dio.options,
-            '/graphql',
-            queryParameters: queryParameters,
-            data: _data,
-          )
-          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
-    );
+    final _options = _setStreamType<void>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          '/graphql',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
     await _dio.fetch<void>(_options);
   }
 
@@ -528,7 +631,10 @@ class _ApiService implements ApiService {
     return requestOptions;
   }
 
-  String _combineBaseUrls(String dioBaseUrl, String? baseUrl) {
+  String _combineBaseUrls(
+    String dioBaseUrl,
+    String? baseUrl,
+  ) {
     if (baseUrl == null || baseUrl.trim().isEmpty) {
       return dioBaseUrl;
     }

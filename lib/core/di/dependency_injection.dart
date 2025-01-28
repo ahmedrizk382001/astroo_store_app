@@ -10,6 +10,11 @@ import 'package:astroo_store_app/features/admin/admin_categories/presentation/bl
 import 'package:astroo_store_app/features/admin/admin_categories/presentation/bloc/delete_category_bloc/delete_category_bloc.dart';
 import 'package:astroo_store_app/features/admin/admin_categories/presentation/bloc/update_category_bloc/update_category_bloc.dart';
 import 'package:astroo_store_app/features/admin/admin_categories/presentation/bloc/get_admin_categories/get_admin_categories_bloc.dart';
+import 'package:astroo_store_app/features/admin/admin_notifications/data/data_source/admin_notifications_data_source.dart';
+import 'package:astroo_store_app/features/admin/admin_notifications/data/repo/admin_notifications_repo.dart';
+import 'package:astroo_store_app/features/admin/admin_notifications/presentation/bloc/add_notification_bloc/add_notification_bloc.dart';
+import 'package:astroo_store_app/features/admin/admin_notifications/presentation/bloc/send_notification_bloc/send_notification_bloc.dart';
+import 'package:astroo_store_app/features/admin/admin_notifications/presentation/bloc/get_notifications_bloc/get_notifications_bloc.dart';
 import 'package:astroo_store_app/features/admin/admin_products/data/data_source/admin_products_data_source.dart';
 import 'package:astroo_store_app/features/admin/admin_products/data/repo/admin_products_repo.dart';
 import 'package:astroo_store_app/features/admin/admin_products/presentation/bloc/add_product_bloc/add_product_bloc.dart';
@@ -41,6 +46,7 @@ Future<void> setUpGetIt() async {
   await initAdminCategories();
   await initAdminProducts();
   await initAdminUsers();
+  await initAdminNotifications();
 }
 
 Future<void> initCore() async {
@@ -156,5 +162,24 @@ Future<void> initAdminUsers() async {
     )
     ..registerFactory(
       () => AdminDeleteUserBloc(getIt<AdminUsersRepo>()),
+    );
+}
+
+Future<void> initAdminNotifications() async {
+  getIt
+    ..registerLazySingleton(
+      () => AdminNotificationsDataSource(),
+    )
+    ..registerLazySingleton(
+      () => AdminNotificationsRepo(getIt<AdminNotificationsDataSource>()),
+    )
+    ..registerFactory(
+      () => AddNotificationBloc(getIt<AdminNotificationsRepo>()),
+    )
+    ..registerFactory(
+      () => GetNotificationsBloc(getIt<AdminNotificationsRepo>()),
+    )
+    ..registerFactory(
+      () => SendNotificationBloc(getIt<AdminNotificationsRepo>()),
     );
 }

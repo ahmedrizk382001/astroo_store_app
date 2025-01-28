@@ -1,11 +1,20 @@
 import 'package:astroo_store_app/core/extensions/context_extension.dart';
 import 'package:astroo_store_app/core/styles/fonts/app_text_styles.dart';
+import 'package:astroo_store_app/features/admin/admin_notifications/data/models/notification_model.dart';
+import 'package:astroo_store_app/features/admin/admin_notifications/presentation/bloc/get_notifications_bloc/get_notifications_bloc.dart';
+import 'package:astroo_store_app/features/admin/admin_notifications/presentation/views/widgets/delete_notification/delete_notification_button.dart';
+import 'package:astroo_store_app/features/admin/admin_notifications/presentation/views/widgets/send_notification/send_notification_button.dart';
 import 'package:astroo_store_app/features/admin/admin_notifications/presentation/views/widgets/update_notification/edit_notification_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AdminNotificationItem extends StatelessWidget {
-  const AdminNotificationItem({super.key});
+  const AdminNotificationItem(
+      {super.key, required this.notificationModel, required this.index});
+
+  final NotificationModel notificationModel;
+  final int index;
 
   @override
   Widget build(BuildContext context) {
@@ -36,9 +45,11 @@ class AdminNotificationItem extends StatelessWidget {
       child: Column(
         children: [
           ListTile(
-            contentPadding: EdgeInsets.symmetric(
-              horizontal: 16.w,
-              vertical: 16.h,
+            contentPadding: EdgeInsets.only(
+              right: 16.w,
+              left: 16.w,
+              top: 16.h,
+              bottom: 0,
             ),
             leading: Icon(
               Icons.notifications_active,
@@ -46,13 +57,13 @@ class AdminNotificationItem extends StatelessWidget {
               color: context.color.textColor,
             ),
             title: Text(
-              "Don't Miss Out! Exclusive Limited-Time Sale Just for You!",
+              notificationModel.header,
               maxLines: 3,
               overflow: TextOverflow.ellipsis,
               style: AppTextStyles.font18Bold(context),
             ),
             subtitle: Text(
-              "Your favorite items are on sale! 🕒 Hurry, up to 50% off on top brands. Sale ends tonight! 🛒 Tap to shop now.",
+              notificationModel.content,
               style: AppTextStyles.font12Medium(context),
               overflow: TextOverflow.ellipsis,
               maxLines: 3,
@@ -63,41 +74,16 @@ class AdminNotificationItem extends StatelessWidget {
             child: Row(
               children: [
                 Expanded(
-                  child: InkWell(
-                    onTap: () {},
-                    borderRadius: BorderRadius.circular(16.r),
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 8.w,
-                        vertical: 8.h,
-                      ),
-                      child: Icon(
-                        Icons.delete,
-                        color: Colors.red,
-                        size: 24.sp,
-                      ),
-                    ),
-                  ),
+                  child: DeleteNotificationButton(
+                      notificationModel: notificationModel),
                 ),
                 Expanded(
-                  child: EditNotificationButton(),
+                  child: EditNotificationButton(
+                      notificationModel: notificationModel),
                 ),
                 Expanded(
-                  child: InkWell(
-                    onTap: () {},
-                    borderRadius: BorderRadius.circular(16.r),
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 8.w,
-                        vertical: 8.h,
-                      ),
-                      child: Icon(
-                        Icons.send,
-                        color: Colors.green,
-                        size: 24.sp,
-                      ),
-                    ),
-                  ),
+                  child: SendNotificationButton(
+                      notificationModel: notificationModel),
                 ),
               ],
             ),
